@@ -1,0 +1,239 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CIVID Conflict Impact Record",
+    "type": "object",
+    "properties": {
+        "record_id": {
+            "type": "string"
+        },
+        "phase": {
+            "type": "string"
+        },
+        "country": {
+            "type": "string"
+        },
+        "conflict_name": {
+            "type": "string"
+        },
+        "event_id": {
+            "type": "string"
+        },
+        "event_date": {
+            "type": "string",
+            "format": "date"
+        },
+        "location": {
+            "type": "string"
+        },
+        "location_type": {
+            "type": "string"
+        },
+        "source_id": {
+            "type": "string"
+        },
+        "source_name": {
+            "type": "string"
+        },
+        "source_url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "source_type": {
+            "type": "string"
+        },
+        "source_date": {
+            "type": "string",
+            "format": "date"
+        },
+        "citation_text": {
+            "type": "string"
+        },
+        "verification_status": {
+            "type": "string",
+            "enum": [
+                "verified",
+                "estimated",
+                "unverified",
+                "disputed"
+            ]
+        },
+        "confidence_level": {
+            "type": "string",
+            "enum": [
+                "high",
+                "medium",
+                "low"
+            ]
+        },
+        "victim_name": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "victim_alias": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "victim_age": {
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "victim_age_group": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "victim_gender": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "victim_role": {
+            "type": "string",
+            "enum": [
+                "child",
+                "adult civilian",
+                "doctor",
+                "nurse",
+                "medic / paramedic",
+                "teacher",
+                "journalist",
+                "student",
+                "aid worker",
+                "political leader",
+                "military commander",
+                "local commander",
+                "fighter / combatant",
+                "unknown"
+            ]
+        },
+        "occupation": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "doctor_flag": {
+            "type": "boolean"
+        },
+        "nurse_flag": {
+            "type": "boolean"
+        },
+        "medic_flag": {
+            "type": "boolean"
+        },
+        "teacher_flag": {
+            "type": "boolean"
+        },
+        "journalist_flag": {
+            "type": "boolean"
+        },
+        "student_flag": {
+            "type": "boolean"
+        },
+        "child_flag": {
+            "type": "boolean"
+        },
+        "adult_flag": {
+            "type": "boolean"
+        },
+        "civilian_flag": {
+            "type": "boolean"
+        },
+        "combatant_flag": {
+            "type": "boolean"
+        },
+        "leader_flag": {
+            "type": "boolean"
+        },
+        "commander_flag": {
+            "type": "boolean"
+        },
+        "organization_affiliation": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "fatalities": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "minimum": 0
+        },
+        "injuries": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "minimum": 0
+        },
+        "missing": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "minimum": 0
+        },
+        "image_available": {
+            "type": "boolean"
+        },
+        "image_url": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri"
+        },
+        "image_source": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "image_license": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "image_caption": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "media_warning": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "notes": {
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    },
+    "required": [
+        "record_id",
+        "phase",
+        "country",
+        "event_date",
+        "source_id",
+        "source_url",
+        "citation_text",
+        "verification_status",
+        "confidence_level"
+    ],
+    "additionalProperties": false
+}
