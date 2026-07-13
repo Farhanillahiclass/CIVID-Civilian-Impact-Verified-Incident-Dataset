@@ -1,1 +1,6 @@
 source_id,source_name,source_url,source_type,source_date,citation_text,reliability_score
+icrc_sudan,ICRC Sudan Operations and Humanitarian Response,https://www.icrc.org/en/where-we-work/sudan,humanitarian agency,2026-07-02,"ICRC reports on humanitarian assistance, health facility support, displacement response, and field operations in Sudan; provides verified casualty and health system impact data.",0.94
+who_sudan_health,WHO Sudan Health Cluster,https://www.emro.who.int/sudan/,health agency,2026-07-12,"WHO provides health system assessments, disease surveillance, and health facility operational status in Sudan.",0.93
+unhcr_sudan_ref,UNHCR Sudan Refugee and Displacement Response,https://www.unhcr.org/sudan,refugee agency,2026-07-12,"UNHCR provides verified displacement figures, refugee movement data, and camp operational information.",0.92
+unocha_sudan_hum,UN OCHA Sudan Humanitarian Coordination,https://www.unocha.org/sudan,humanitarian coordinator,2026-07-12,"UN OCHA Sudan provides comprehensive situation reports and humanitarian response coordination.",0.91
+acled_sudan_conf,ACLED Sudan Conflict Events Database,https://acleddata.com/,conflict event database,2026-07-12,"ACLED provides structured conflict event data including armed clashes, violence patterns and locations.",0.89
