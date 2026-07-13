@@ -26,8 +26,8 @@ from urllib import request, error, parse
 
 # ---- Configuration ----------------------------------------------------
 
-RELIEFWEB_API = "https://api.reliefweb.int/v1/reports"
-APPNAME = "civid-dataset-research"  # ReliefWeb asks for an appname identifier
+RELIEFWEB_API = "https://api.reliefweb.int/v2/reports"
+APPNAME = "civid-dataset-research"  # ReliefWeb requires a PRE-APPROVED appname since Nov 2025 — see README_AUTOMATION.md
 
 PHASES = {
     "phase1_palestine": {
@@ -69,6 +69,13 @@ def fetch_reliefweb_reports(country: str, limit: int = 10) -> list[dict]:
     try:
         with request.urlopen(url, timeout=20) as resp:
             data = json.load(resp)
+    except error.HTTPError as e:
+        if e.code == 403:
+            print(f"[warn] ReliefWeb rejected the request (403) for '{country}' — "
+                  f"your appname may not be pre-approved yet. See README_AUTOMATION.md.")
+        else:
+            print(f"[warn] ReliefWeb API returned HTTP {e.code} for '{country}': {e}")
+        return []
     except error.URLError as e:
         print(f"[warn] Could not reach ReliefWeb API for '{country}': {e}")
         return []
