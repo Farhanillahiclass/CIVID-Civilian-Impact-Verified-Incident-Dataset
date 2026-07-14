@@ -1,7 +1,9 @@
 # CIVID Data Dictionary
 
 Full column reference for `events.csv`, `persons.csv`, and `sources.csv` across both phases.
-Source of truth: `.github/copilot-instructions.md` and `schema/civid_schema.json`.
+Source of truth: `schema/civid_schema.json`, `schema/persons_schema.json`, `schema/sources_schema.json`,
+`schema/media_schema.json`, `schema/entities_schema.json`, `schema/roles_schema.json`,
+`schema/famous_victims_schema.json`.
 
 ## events.csv
 

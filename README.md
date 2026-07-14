@@ -1,5 +1,8 @@
 # CIVID — Civilian Impact Verified Incident Dataset
 
+**Author / Maintainer:** Muhammad Farhan
+**License:** code MIT (© Muhammad Farhan); underlying data per publisher — see `DATA_LICENSE.md`.
+
 A clean, source-verified, multi-country conflict impact dataset built for research,
 analytics, and machine learning use — with strict citation, provenance, and ethics
 requirements on every record.
@@ -18,8 +21,8 @@ certain than the source allows.
 |---|---|---|---|---|
 | 1 | Palestine / Gaza | Active | 35 (27 verified, 8 unverified/pending review) | 16 (OCHA, UNRWA, OHCHR, ACLED, HDX, SCR) |
 | 2 | Sudan | First two batches complete | 12 verified/estimated | ICRC, ACLED (diversification flagged, see notes below) |
-| 3 | Iran-related events | Scaffolding only — empty by design | 0 | see `phase3_plan.md` |
-| 4 | Additional countries | Scaffolding only — empty by design | 0 | see `phase4_plan.md` |
+| 3 | Iran-related events | Scaffolding only — empty by design | 0 | see `docs/` phase notes |
+| 4 | Additional countries | Scaffolding only — empty by design | 0 | see `docs/` phase notes |
 
 > **Combined snapshot (from `exports/summary.json`):** 47 events (34 verified, 8 unverified),
 > 9 person records, 0 media, 0 famous-victim rows (the famous-victims special section is
@@ -46,21 +49,21 @@ in `sources.csv` and flagged for future diversification — it is not hidden or 
 
 ```
 CIVID/
-├── .github/copilot-instructions.md   # Project rules for AI assistants
 ├── data/
 │   ├── reference/                    # Controlled vocabularies (global)
 │   │   ├── roles.csv                 # Role taxonomy + hierarchy + flag mapping
 │   │   ├── location_types.csv        # Canonical location types + synonyms
 │   │   └── source_reliability_tiers.csv
-│   ├── phase1_palestine/             # events, persons, sources, media, entities
-│   ├── phase2_sudan/                 # events, persons, sources, media, entities
+│   ├── phase1_palestine/             # events, persons, sources, media, entities, famous_victims
+│   ├── phase2_sudan/                 # events, persons, sources, media, entities, famous_victims
 │   ├── phase3_iran/                  # scaffolding (headers only, no data yet)
 │   ├── phase4_additional/            # scaffolding (headers only, no data yet)
 │   └── staging/                      # pending_review.csv + rejected.csv (human-review queue)
-├── schema/                          # JSON Schemas: events, persons, sources, media, entities, roles
-├── docs/                            # Quality rules & policies (see below)
+├── schema/                          # JSON Schemas: events, persons, sources, media, entities, roles, famous_victims
+├── docs/                            # Quality rules & policies (dedup, normalization, reliability, entity resolution, role hierarchy, ambiguity, usage, famous-victims, infographic, daily script)
 ├── scripts/
 │   ├── validate_dataset.py          # Integrity + controlled-vocab checks (stdlib)
+│   ├── renumber_records.py          # Sequential record_id/famous_id, legacy preserved (stdlib)
 │   ├── build_exports.py             # Builds exports/ with derived dashboard/ML fields (stdlib)
 │   └── ... (daily_update, promote, infographic, etc.)
 ├── exports/                         # Generated, export-ready CSV/JSON (dashboard + ML ready)
@@ -68,7 +71,7 @@ CIVID/
 ├── LICENSE                          # MIT (code only)
 ├── DATA_LICENSE.md                  # Data terms & usage disclaimer
 ├── data_dictionary.md
-├── phase1_plan.md / phase2_plan.md / phase3_plan.md / phase4_plan.md
+├── CHANGELOG_renumber.md            # Record of each sequential renumbering run
 └── README.md
 ```
 
@@ -138,7 +141,7 @@ Age, gender, and role fields are never inferred — only recorded when a source 
 explicitly, and roles use a fixed controlled vocabulary. No victim or casualty imagery is
 collected or displayed; only source-provided, licensed images of infrastructure or aid
 response are eligible for inclusion, and only when the source's own license permits reuse.
-Full rules are defined in `.github/copilot-instructions.md`.
+Full rules are defined in `docs/` and `schema/*.json`.
 
 ## Licensing
 

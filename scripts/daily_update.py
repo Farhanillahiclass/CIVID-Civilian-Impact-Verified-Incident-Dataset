@@ -3,13 +3,13 @@ CIVID Daily Update Script (HDX + ReliefWeb multi-source)
 ===========================================================
 Scope is fixed to Palestine/Gaza (Phase 1) and Sudan (Phase 2) ONLY —
 do not add other countries here without updating the main project scope
-in .github/copilot-instructions.md first.
+in .internal/copilot-instructions.md first.
 
 Sources used:
 1. HDX (Humanitarian Data Exchange) CKAN API — NO registration required,
    run directly by OCHA. Primary source.
 2. ReliefWeb API — used as a secondary attempt; requires a pre-approved
-   appname (see README_AUTOMATION.md). If not yet approved, this source
+   appname (see .internal/README_AUTOMATION.md). If not yet approved, this source
    is skipped automatically without breaking the run.
 
 This script NEVER writes to the verified events.csv/persons.csv files.
