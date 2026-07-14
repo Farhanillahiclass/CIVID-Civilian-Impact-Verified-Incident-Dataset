@@ -4,3 +4,11 @@ ocha_snapshot_8july,UN OCHA Reported Impact Snapshot | Gaza Strip (8 July 2026),
 unrwa_gaza,UNRWA Gaza Response,https://www.unrwa.org/,humanitarian agency,2026-07-12,"UNRWA provides operational updates and humanitarian reporting relevant to Gaza and refugee response.",0.93
 ohchr_opt,OHCHR Occupied Palestinian Territory,https://www.ohchr.org/en/countries/occupied-palestinian-territory,rights monitoring,2026-07-12,"OHCHR reports on human rights conditions and incidents in the occupied Palestinian territory.",0.92
 acled_conflict,ACLED Conflict Data,https://acleddata.com/,conflict event database,2026-07-12,"ACLED provides structured conflict event data that can support corroboration around incident timelines.",0.90
+SRC-595c4384,OCHA occupied Palestinian territory (oPt),https://data.humdata.org/dataset/escalations-in-gaza-response-prioritization,HDX,2026-07-14,Escalations in Gaza - Response Prioritization,
+SRC-5843b32f,OCHA occupied Palestinian territory (oPt),https://data.humdata.org/dataset/state-of-palestine-other-0,HDX,2026-07-14,State of Palestine - Electric Power Plant,
+SRC-2c904c78,Palestinian Central Bureau of Statistics,https://data.humdata.org/dataset/state-of-palestine-israeli-occupation-violations-against-education,HDX,2026-07-14,State of Palestine: Violations Against Education,
+SRC-f9d7cf77,Country-Based Pooled Funds (OCHA),https://data.humdata.org/dataset/opt-cbpf-allocations-and-contributions,HDX,2026-07-14,oPt - CBPF Allocations and Contributions,
+SRC-fe0b6560,Food and Agriculture Organization (FAO) of the United Nations,https://data.humdata.org/dataset/pse-faostat-land-inputs,HDX,2026-07-13,"State of Palestine - Land Use, Fertilizers and Inputs",
+SRC-1d4dad65,Insecurity Insight,https://data.humdata.org/dataset/opt-violent-and-threatening-incidents-against-healthcare,HDX,2026-07-13,"State of Palestine (PSE): Attacks on Aid Operations, Education, Food and Water Systems, Health Care and IDP/Refugee Camps, and Conflict-Related Sexual Violence and Explosive Weapons Incident Data",
+SRC-d88d0276,Insecurity Insight,https://data.humdata.org/dataset/conflict-related-incidents-affecting-water-systems,HDX,2026-07-13,Conflict-Related Incidents Affecting Water Systems,
+SRC-fa07fb79,Insecurity Insight,https://data.humdata.org/dataset/conflict-hunger-and-aid-security,HDX,2026-07-13,Conflict-Related Incidents Affecting Food Systems,
