@@ -40,7 +40,13 @@
     "image_caption": { "type": ["string", "null"] },
     "media_warning": { "type": ["string", "null"] },
     "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
-    "notes": { "type": ["string", "null"] }
+    "notes": { "type": ["string", "null"] },
+    "is_famous": { "type": ["boolean", "string"] },
+    "fame_reason": { "type": ["string", "null"] },
+    "summary_brief": { "type": ["string", "null"] },
+    "death_context": { "type": ["string", "null"] },
+    "verified_by": { "type": ["string", "null"] },
+    "legacy_record_id": { "type": ["string", "null"] }
   },
   "required": ["record_id", "event_id", "victim_role", "verification_status"],
   "additionalProperties": false

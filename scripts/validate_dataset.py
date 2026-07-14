@@ -88,12 +88,13 @@ def main() -> int:
         persons = load(os.path.join(pdir, "persons.csv"))
         sources = load(os.path.join(pdir, "sources.csv"))
         media = load(os.path.join(pdir, "media.csv"))
+        famous = load(os.path.join(pdir, "famous_victims.csv"))
 
-        # header checks
-        if events and list(events[0].keys())[:len(EVENTS_HEADER)] != EVENTS_HEADER:
-            warnings.append(f"{phase}/events.csv header differs from canonical order.")
-        if sources and list(sources[0].keys())[:len(SOURCES_HEADER)] != SOURCES_HEADER:
-            warnings.append(f"{phase}/sources.csv header differs from canonical order.")
+        # header checks (required columns present; order-tolerant)
+        if events and not set(EVENTS_HEADER).issubset(events[0].keys()):
+            errors.append(f"{phase}/events.csv missing columns: {set(EVENTS_HEADER) - set(events[0].keys())}")
+        if sources and not set(SOURCES_HEADER).issubset(sources[0].keys()):
+            errors.append(f"{phase}/sources.csv missing columns: {set(SOURCES_HEADER) - set(sources[0].keys())}")
 
         # duplicates
         check_dupes(events, "event_id", f"{phase}/events")  # unique per phase
@@ -101,9 +102,11 @@ def main() -> int:
         check_dupes(sources, "source_id", f"{phase}/sources", global_source_ids)
         check_dupes(persons, "record_id", f"{phase}/persons")
         check_dupes(media, "media_id", f"{phase}/media")
+        check_dupes(famous, "famous_id", f"{phase}/famous_victims")
 
         src_ids = {(s.get("source_id") or "").strip() for s in sources}
         evt_ids = {(e.get("event_id") or "").strip() for e in events}
+        person_rec_ids = {(p.get("record_id") or "").strip() for p in persons}
 
         # FK + field checks on events
         for i, e in enumerate(events, start=2):
@@ -146,6 +149,24 @@ def main() -> int:
             msid = (m.get("source_id") or "").strip()
             if msid and msid not in src_ids:
                 errors.append(f"{lbl}: source_id '{msid}' not found in {phase}/sources.csv.")
+
+        # famous_victims FK + required provenance (only enforced when rows exist)
+        for i, f in enumerate(famous, start=2):
+            lbl = f"{phase}/famous_victims row {i}"
+            eid = (f.get("event_id") or "").strip()
+            if eid and eid not in evt_ids:
+                errors.append(f"{lbl}: event_id '{eid}' not found in {phase}/events.csv.")
+            pr = (f.get("person_record_id") or "").strip()
+            if pr and pr not in person_rec_ids:
+                errors.append(f"{lbl}: person_record_id '{pr}' not found in {phase}/persons.csv.")
+            fsid = (f.get("source_id") or "").strip()
+            if fsid and fsid not in src_ids:
+                errors.append(f"{lbl}: source_id '{fsid}' not found in {phase}/sources.csv.")
+            if not (f.get("citation_text") or "").strip() or not (f.get("verified_by") or "").strip():
+                errors.append(f"{lbl}: famous victim row missing required citation_text and/or verified_by.")
+            role = (f.get("victim_role") or "").strip()
+            if roles and role and role not in roles:
+                errors.append(f"{lbl}: victim_role '{role}' not in controlled vocabulary.")
 
         check_whitespace(events, EVENTS_HEADER, f"{phase}/events")
 

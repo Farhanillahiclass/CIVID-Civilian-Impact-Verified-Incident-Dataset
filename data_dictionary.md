@@ -141,3 +141,50 @@ These are computed, never hand-entered. Source data is joined and quality flags 
 
 Note: `event_id` is unique **per phase**; use `derived_global_event_key` (or `phase` + `event_id`)
 as the global key when combining phases.
+
+## New person fields (v3)
+
+Appended to every `persons.csv` (and mirrored in `famous_victims.csv`):
+
+| Column | Description | Format |
+|---|---|---|
+| `is_famous` | Whether this person is tracked in the famous-victims special section | `true`/`false` |
+| `fame_reason` | Why the person is notable (only if `is_famous`) | string or blank |
+| `summary_brief` | Short neutral, source-based summary | string or blank |
+| `death_context` | Neutral, source-stated circumstances | string or blank |
+| `verified_by` | Pipe-separated list of corroborating authoritative sources | e.g. `OHCHR\|Reuters` |
+| `legacy_record_id` | Original id before sequential renumbering (provenance) | string |
+
+## famous_victims.csv (7th table — special section)
+
+Separate, ethically-gated table for notable/publicly-reported individuals. **Never fabricated;
+starts empty and is populated only through the human-reviewed pipeline** in
+`docs/famous_victims_policy.md`. Schema: `schema/famous_victims_schema.json`.
+
+| Column | Description |
+|---|---|
+| `famous_id` | Sequential row id (unique per phase) |
+| `legacy_record_id` | Original id before renumbering |
+| `phase` / `country` / `conflict_name` | Context |
+| `event_id` / `person_record_id` | Optional links to events/persons |
+| `victim_name` / `victim_alias` | Identity (only if publicly & authoritatively reported) |
+| `victim_age` / `victim_age_group` / `victim_gender` | Demographics if stated |
+| `victim_role` | Controlled vocabulary |
+| `occupation` / `organization_affiliation` | If stated |
+| `is_famous` / `fame_reason` / `summary_brief` / `death_context` | Notability + neutral context |
+| `event_date` / `location` | When/where, if stated |
+| `image_*` / `media_warning` | Only public, licensed, ethically-safe media |
+| `source_id` / `source_url` / `citation_text` | Provenance (required) |
+| `verified_by` | Corroborating sources, pipe-separated (required, >=1) |
+| `verification_status` / `confidence_level` | Per-row certainty (required) |
+| `notes` | Context, caveats |
+
+## Record renumbering (v3)
+
+`scripts/renumber_records.py` re-generates each table's row primary key as a gap-free
+sequence `1..N` per table per phase:
+- `record_id` (events, persons), `famous_id` (famous_victims) become sequential integers.
+- The original id is preserved in `legacy_record_id` (never lost; idempotent on re-run).
+- `event_id` is the **stable** cross-table business key and is **never** renumbered.
+- `famous_victims.person_record_id` is remapped when persons are renumbered (FK-safe).
+- A change log is written to `CHANGELOG_renumber.md`.

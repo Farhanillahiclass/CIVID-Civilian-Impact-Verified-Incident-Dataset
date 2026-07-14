@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIVID Famous Victim Record",
+  "description": "Separate special-section table for notable/publicly-reported individuals. Every row requires multiple authoritative citations (verified_by) and passes human review. Named-person data is NEVER fabricated; ethically sensitive per docs/famous_victims_policy.md.",
+  "type": "object",
+  "properties": {
+    "famous_id": { "type": "string" },
+    "legacy_record_id": { "type": ["string", "null"] },
+    "phase": { "type": "string" },
+    "country": { "type": "string" },
+    "conflict_name": { "type": ["string", "null"] },
+    "event_id": { "type": ["string", "null"] },
+    "person_record_id": { "type": ["string", "null"] },
+    "victim_name": { "type": "string" },
+    "victim_alias": { "type": ["string", "null"] },
+    "victim_age": { "type": ["integer", "null"], "minimum": 0, "maximum": 130 },
+    "victim_age_group": { "type": ["string", "null"], "enum": ["child", "adult", "unknown", null] },
+    "victim_gender": { "type": ["string", "null"], "enum": ["male", "female", "unknown", null] },
+    "victim_role": {
+      "type": "string",
+      "enum": [
+        "child", "adult civilian", "doctor", "nurse", "medic / paramedic",
+        "teacher", "journalist", "student", "aid worker",
+        "political leader", "military commander", "local commander",
+        "fighter / combatant", "unknown"
+      ]
+    },
+    "occupation": { "type": ["string", "null"] },
+    "organization_affiliation": { "type": ["string", "null"] },
+    "is_famous": { "type": ["boolean", "string"] },
+    "fame_reason": { "type": ["string", "null"] },
+    "summary_brief": { "type": ["string", "null"] },
+    "death_context": { "type": ["string", "null"] },
+    "event_date": { "type": ["string", "null"], "format": "date" },
+    "location": { "type": ["string", "null"] },
+    "image_available": { "type": ["boolean", "string"] },
+    "image_url": { "type": ["string", "null"], "format": "uri" },
+    "image_source": { "type": ["string", "null"] },
+    "image_license": { "type": ["string", "null"] },
+    "image_caption": { "type": ["string", "null"] },
+    "media_warning": { "type": ["string", "null"] },
+    "source_id": { "type": ["string", "null"] },
+    "source_url": { "type": ["string", "null"], "format": "uri" },
+    "citation_text": { "type": "string" },
+    "verified_by": { "type": "string", "description": "Pipe-separated list of the authoritative sources that independently corroborate this record. At least one required." },
+    "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
+    "confidence_level": { "type": "string", "enum": ["high", "medium", "low"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["famous_id", "phase", "country", "victim_name", "victim_role", "citation_text", "verified_by", "verification_status", "confidence_level"],
+  "additionalProperties": false
+}

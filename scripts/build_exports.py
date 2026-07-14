@@ -60,6 +60,7 @@ def truthy(*vals):
 
 def main():
     all_events, all_persons, all_media = [], [], []
+    all_famous = []
     summary = {"phases": {}, "totals": {}}
 
     for phase in PHASES:
@@ -70,6 +71,7 @@ def main():
         persons = load(os.path.join(pdir, "persons.csv"))
         sources = load(os.path.join(pdir, "sources.csv"))
         media = load(os.path.join(pdir, "media.csv"))
+        famous = load(os.path.join(pdir, "famous_victims.csv"))
 
         src_by_id = {s.get("source_id"): s for s in sources}
 
@@ -103,6 +105,9 @@ def main():
         for m in media:
             m["phase_dir"] = phase
             all_media.append(m)
+        for f in famous:
+            f["phase_dir"] = phase
+            all_famous.append(f)
 
         summary["phases"][phase] = {
             "events": len(events),
@@ -111,6 +116,7 @@ def main():
             "persons": len(persons),
             "sources": len(sources),
             "media": len(media),
+            "famous_victims": len(famous),
         }
 
     # timeline ordering across the whole dataset (blank dates sort last)
@@ -119,7 +125,7 @@ def main():
         e["derived_timeline_order"] = idx
 
     event_fields = [
-        "record_id", "phase", "phase_dir", "country", "conflict_name", "event_id",
+        "record_id", "legacy_record_id", "phase", "phase_dir", "country", "conflict_name", "event_id",
         "derived_global_event_key", "event_date",
         "location", "location_type", "source_id", "source_name", "source_url", "source_type",
         "source_date", "reliability_score", "fatalities", "injuries", "missing",
@@ -141,6 +147,18 @@ def main():
     write_json(os.path.join(EXPORTS, "civid_persons_all.json"), all_persons)
     write_csv(os.path.join(EXPORTS, "civid_media_all.csv"), all_media, media_fields)
 
+    # famous victims export (special section)
+    famous_fields = list(all_famous[0].keys()) if all_famous else [
+        "famous_id", "legacy_record_id", "phase", "country", "conflict_name", "event_id",
+        "person_record_id", "victim_name", "victim_alias", "victim_age", "victim_age_group",
+        "victim_gender", "victim_role", "occupation", "organization_affiliation", "is_famous",
+        "fame_reason", "summary_brief", "death_context", "event_date", "location",
+        "image_available", "image_url", "image_source", "image_license", "image_caption",
+        "media_warning", "source_id", "source_url", "citation_text", "verified_by",
+        "verification_status", "confidence_level", "notes"]
+    write_csv(os.path.join(EXPORTS, "civid_famous_victims_all.csv"), all_famous, famous_fields)
+    write_json(os.path.join(EXPORTS, "civid_famous_victims_all.json"), all_famous)
+
     # image index: media rows that are images with a URL
     images = [m for m in all_media if (m.get("media_type") == "image" and (m.get("image_url") or "").strip())]
     write_csv(os.path.join(EXPORTS, "image_index.csv"), images, media_fields)
@@ -161,6 +179,7 @@ def main():
         "events_unverified": sum(1 for e in all_events if e.get("verification_status") == "unverified"),
         "persons": len(all_persons),
         "media": len(all_media),
+        "famous_victims": len(all_famous),
         "images_indexed": len(images),
         "needs_review": sum(1 for e in all_events if e.get("derived_needs_review") == "true"),
     }

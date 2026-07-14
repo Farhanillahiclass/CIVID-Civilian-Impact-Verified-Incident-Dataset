@@ -22,7 +22,9 @@ certain than the source allows.
 | 4 | Additional countries | Scaffolding only — empty by design | 0 | see `phase4_plan.md` |
 
 > **Combined snapshot (from `exports/summary.json`):** 47 events (34 verified, 8 unverified),
-> 9 person records, 0 media (no imagery collected). Regenerate with `python scripts/build_exports.py`.
+> 9 person records, 0 media, 0 famous-victim rows (the famous-victims special section is
+> present but empty by design — populated only via the human-reviewed pipeline in
+> `docs/famous_victims_policy.md`). Regenerate with `python scripts/build_exports.py`.
 
 **Phases 3 & 4 are intentionally empty.** Per the core no-fabrication principle, their full
 table structure and plan files exist, but **no event/victim data is added until backed by an
@@ -79,13 +81,21 @@ CIVID/
 | `sources.csv` | Source registry with reliability scores | `source_id` |
 | `media.csv` | Licensed media index (no victim imagery; ethics-gated) | `media_id` |
 | `entities.csv` | Organizations, conflict actors, facilities, named leaders | `entity_id` |
+| `famous_victims.csv` | Special section: notable publicly-reported individuals (ethics-gated, human-reviewed, empty by design) | `famous_id` |
 | `data/reference/roles.csv` | Global role taxonomy + hierarchy | `role_id` |
+
+Row primary keys (`record_id`/`famous_id`) are renumbered to a gap-free `1..N` sequence per
+table via `scripts/renumber_records.py`; the original id is preserved in `legacy_record_id`,
+and `event_id` stays stable as the cross-table link.
 
 ## Quality tooling
 
 ```bash
 python scripts/validate_dataset.py   # integrity, FK, controlled-vocab, dupes -> exit 0 if clean
+python scripts/renumber_records.py   # sequential record_id/famous_id (legacy preserved) + change log
 python scripts/build_exports.py      # regenerate exports/ (combined CSV/JSON + derived fields)
+python scripts/daily_update.py       # pull new report leads into the staging review queue (unverified)
+python scripts/infographic.py        # regenerate aggregate, non-graphic summary charts
 ```
 
 `build_exports.py` adds clearly-prefixed **derived** fields (never hand-entered):
@@ -102,6 +112,9 @@ python scripts/build_exports.py      # regenerate exports/ (combined CSV/JSON + 
 - `role_hierarchy.md` — role vocabulary → flags → categories
 - `ambiguity_and_missing_data.md` — missing/ambiguity flags + human-review queue
 - `usage_disclaimer.md` — safety, privacy, neutrality, and usage terms
+- `famous_victims_policy.md` — ethics rules + human-gated scraper pipeline for the famous-victims table
+- `infographic_generator.md` — design of the aggregate, non-graphic chart generator
+- `daily_extraction_script.md` — design of the source-safe daily lead-discovery pipeline
 
 ## How to run
 
