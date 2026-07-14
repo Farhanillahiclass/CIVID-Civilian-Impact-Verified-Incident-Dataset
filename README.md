@@ -16,8 +16,16 @@ certain than the source allows.
 
 | Phase | Country | Status | Events | Sources |
 |---|---|---|---|---|
-| 1 | Palestine / Gaza | Complete | 19 | 5 verified humanitarian agencies |
+| 1 | Palestine / Gaza | Active | 35 (27 verified, 8 unverified/pending review) | 16 (OCHA, UNRWA, OHCHR, ACLED, HDX, SCR) |
 | 2 | Sudan | First two batches complete | 12 | ICRC, ACLED (diversification flagged, see notes below) |
+
+**Phase 1 update (14 July 2026):** 8 verified events (EVT-028..035, from OCHA oPt SitRep
+10 July 2026, UNRWA SitRep #229, and a Security Council Report/OCHA briefing) were merged
+in from the `phase1_new_*.csv` drafts. Their draft `event_id`s (EVT-014..021) collided with
+existing rows and were renumbered to EVT-028..035 to preserve event-ID uniqueness and the
+persons→events foreign key; the renumbering is logged in each row's `notes`. The 8
+`unverified` HDX-derived rows (EVT-020..027) remain flagged `low` confidence and await
+manual source review before promotion.
 
 **Data quality note:** Phase 2's second batch is concentrated in ICRC and ACLED sources
 after WHO/UNHCR/OCHA direct-site fetches were blocked. This is logged as a `batch_note`
