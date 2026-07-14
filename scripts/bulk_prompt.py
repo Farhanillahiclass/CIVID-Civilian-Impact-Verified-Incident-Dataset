@@ -3,7 +3,7 @@ CIVID Bulk Promote Script
 ============================
 Moves ALL entries currently in data/staging/pending_review.csv directly into
 the correct phase's events.csv and sources.csv — in ONE command, no per-row
-prompts.
+prompts. Then, automatically commits and pushes the updates to GitHub.
 
 IMPORTANT — what this does and doesn't do:
   - It does NOT read the actual source content or confirm any fact.
@@ -11,7 +11,7 @@ IMPORTANT — what this does and doesn't do:
     confidence_level = "low", with a note flagging it as auto-promoted.
   - This is intentional: the script cannot know if a dataset title actually
     matches a citable, accurate fact. Marking everything "verified" would be
-    dishonest and would break the whole point of this dataset.
+    honest and would break the whole point of this dataset.
 
 Use this when you want speed and are okay reviewing/upgrading confidence
 levels later (in the dashboard or by hand), rather than reviewing each row
@@ -25,6 +25,7 @@ Usage:
 import csv
 import uuid
 from pathlib import Path
+import git  # Requires 'pip install GitPython'
 
 ROOT = Path(__file__).resolve().parent.parent
 STAGING_FILE = ROOT / "data" / "staging" / "pending_review.csv"
@@ -167,7 +168,27 @@ def main():
     print("[reminder] All of these are marked 'unverified' / 'low' confidence.")
     print("           Open each source_url in sources.csv when you get a chance,")
     print("           fill in fatalities/injuries/location, and upgrade the status.")
-    print("\nNext: git add . && git commit -m 'Bulk-add unverified candidates for review' && git push")
+
+    # ---- Automatic Git Commit and Push ----
+    try:
+        print("\n[git] Initializing repository synchronization...")
+        repo = git.Repo(ROOT)
+        
+        # Stage all updated dataset tracks and staging file
+        repo.git.add(A=True)
+        
+        # Commit changes with count details
+        commit_message = f"Bulk-add: Promoted {added} unverified data candidates to production tracks"
+        repo.index.commit(commit_message)
+        
+        # Push upstream
+        origin = repo.remote(name="origin")
+        origin.push()
+        print(f"[git ok] Successfully synced to GitHub repository via commit: '{commit_message}'")
+        
+    except Exception as e:
+        print(f"\n[git error] Automating remote synchronization failed: {e}")
+        print("Please check your local Git user identity settings or upstream repository access tokens.")
 
 
 if __name__ == "__main__":
