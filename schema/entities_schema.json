@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIVID Entity Record",
+  "description": "Organizations, conflict actors, facilities, and (only when explicitly named by a source) leaders. Leader names are never fabricated.",
+  "type": "object",
+  "properties": {
+    "entity_id": { "type": "string" },
+    "phase": { "type": "string" },
+    "entity_name": { "type": "string" },
+    "entity_type": { "type": "string", "enum": ["organization", "conflict_actor", "facility", "person", "government_body"] },
+    "aka": { "type": ["string", "null"] },
+    "role_category": { "type": ["string", "null"] },
+    "country": { "type": ["string", "null"] },
+    "organization_type": { "type": ["string", "null"] },
+    "related_event_id": { "type": ["string", "null"] },
+    "source_id": { "type": ["string", "null"] },
+    "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
+    "confidence_level": { "type": "string", "enum": ["high", "medium", "low"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["entity_id", "phase", "entity_name", "entity_type", "verification_status"],
+  "additionalProperties": false
+}

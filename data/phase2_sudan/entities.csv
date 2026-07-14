@@ -1,0 +1,7 @@
+entity_id,phase,entity_name,entity_type,aka,role_category,country,organization_type,related_event_id,source_id,verification_status,confidence_level,notes
+ENT-P2-01,2,International Committee of the Red Cross,organization,ICRC,humanitarian_reporter,Sudan,humanitarian agency,EVT-021,icrc_sudan,verified,high,"Primary humanitarian source for Phase 2 verified rows."
+ENT-P2-02,2,Sudanese Red Crescent,organization,SRC volunteers,humanitarian_ngo,Sudan,national society,EVT-025,icrc_sudan,verified,high,"36 trained volunteers deployed across displacement sites in Al Obeid (EVT-025)."
+ENT-P2-03,2,ACLED,organization,Armed Conflict Location & Event Data Project,conflict_data,Sudan,conflict event database,EVT-027,acled_sudan_conf,verified,high,"Structured conflict-event source for Khartoum/Darfur clashes."
+ENT-P2-04,2,Sudanese Armed Forces,conflict_actor,SAF,armed_actor,Sudan,state armed forces,EVT-027,acled_sudan_conf,verified,medium,"Primary belligerent in the Sudanese civil conflict per ACLED/phase context; not individually named in every CIVID citation."
+ENT-P2-05,2,Rapid Support Forces,conflict_actor,RSF,non_state_actor,Sudan,paramilitary,EVT-027,acled_sudan_conf,verified,medium,"Primary belligerent in the Sudanese civil conflict per ACLED/phase context; not individually named in every CIVID citation."
+ENT-P2-06,2,Al Obeid Teaching Hospital,facility,,health_facility,Sudan,hospital,EVT-022,icrc_sudan,verified,high,"Health facility treating weapon-wounded patients (EVT-022)."

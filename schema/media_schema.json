@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIVID Media Record",
+  "description": "Index of licensed, ethically usable media. No victim/casualty imagery is collected. No identifiable images of minors unless already public, relevant, and ethically safe for research.",
+  "type": "object",
+  "properties": {
+    "media_id": { "type": "string" },
+    "phase": { "type": "string" },
+    "event_id": { "type": ["string", "null"] },
+    "person_record_id": { "type": ["string", "null"] },
+    "media_type": { "type": "string", "enum": ["image", "map", "chart", "document", "other"] },
+    "image_url": { "type": ["string", "null"], "format": "uri" },
+    "image_source": { "type": ["string", "null"] },
+    "image_license": { "type": ["string", "null"] },
+    "image_caption": { "type": ["string", "null"] },
+    "media_warning": { "type": ["string", "null"] },
+    "subject_type": {
+      "type": ["string", "null"],
+      "enum": ["infrastructure", "aid response", "map", "chart", "location", "document", "other", null]
+    },
+    "contains_identifiable_person": { "type": "boolean" },
+    "ethics_review_status": { "type": "string", "enum": ["approved", "rejected", "pending"] },
+    "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
+    "source_id": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["media_id", "phase", "media_type", "image_license", "contains_identifiable_person", "ethics_review_status"],
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIVID Role Taxonomy Record",
+  "type": "object",
+  "properties": {
+    "role_id": { "type": "string" },
+    "role_label": {
+      "type": "string",
+      "enum": [
+        "child", "adult civilian", "doctor", "nurse", "medic / paramedic",
+        "teacher", "journalist", "student", "aid worker",
+        "political leader", "military commander", "local commander",
+        "fighter / combatant", "unknown"
+      ]
+    },
+    "role_category": { "type": "string" },
+    "parent_category": { "type": "string" },
+    "flag_column": { "type": "string" },
+    "default_civilian": { "type": "boolean" },
+    "default_combatant": { "type": "boolean" },
+    "hierarchy_level": { "type": "string" },
+    "description": { "type": "string" }
+  },
+  "required": ["role_id", "role_label", "role_category"],
+  "additionalProperties": false
+}

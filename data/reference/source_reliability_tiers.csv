@@ -1,0 +1,7 @@
+tier,score_min,score_max,label,examples,description
+A,0.95,1.00,Primary UN humanitarian agency,"UN OCHA, UNRWA, OHCHR, UNHCR, WHO","First-party UN humanitarian reporting with mandate and ground presence. Highest reliability."
+B,0.90,0.94,Established humanitarian / conflict monitor,"ICRC, ACLED","Reputable operational or structured-data organizations with rigorous methodology."
+C,0.80,0.89,Reputable secondary / corroboration,"Security Council Report, Reuters, AP, BBC, HRW, Amnesty","Well-sourced secondary summaries and major outlets used for corroboration, not sole basis."
+D,0.60,0.79,Aggregator landing / dataset index,"HDX dataset pages, ReliefWeb index entries","Aggregator entries pointing to primary data; figures must be extracted from the underlying report before promotion."
+E,0.00,0.59,Internal note / unscored / low,"batch notes, staging placeholders","Internal notes, placeholders, or sources not yet independently scored. Never a sole basis for a verified row."
+UNSET,,,Not yet scored,"newly staged sources","reliability_score left blank; row must stay verification_status=unverified until reviewed and scored."

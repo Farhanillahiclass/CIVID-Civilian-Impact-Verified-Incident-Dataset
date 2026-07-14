@@ -17,7 +17,16 @@ certain than the source allows.
 | Phase | Country | Status | Events | Sources |
 |---|---|---|---|---|
 | 1 | Palestine / Gaza | Active | 35 (27 verified, 8 unverified/pending review) | 16 (OCHA, UNRWA, OHCHR, ACLED, HDX, SCR) |
-| 2 | Sudan | First two batches complete | 12 | ICRC, ACLED (diversification flagged, see notes below) |
+| 2 | Sudan | First two batches complete | 12 verified/estimated | ICRC, ACLED (diversification flagged, see notes below) |
+| 3 | Iran-related events | Scaffolding only — empty by design | 0 | see `phase3_plan.md` |
+| 4 | Additional countries | Scaffolding only — empty by design | 0 | see `phase4_plan.md` |
+
+> **Combined snapshot (from `exports/summary.json`):** 47 events (34 verified, 8 unverified),
+> 9 person records, 0 media (no imagery collected). Regenerate with `python scripts/build_exports.py`.
+
+**Phases 3 & 4 are intentionally empty.** Per the core no-fabrication principle, their full
+table structure and plan files exist, but **no event/victim data is added until backed by an
+authoritative, cited source and human-reviewed.** Nothing is invented to "fill" a phase.
 
 **Phase 1 update (14 July 2026):** 8 verified events (EVT-028..035, from OCHA oPt SitRep
 10 July 2026, UNRWA SitRep #229, and a Security Council Report/OCHA briefing) were merged
@@ -35,27 +44,64 @@ in `sources.csv` and flagged for future diversification — it is not hidden or 
 
 ```
 CIVID/
-├── .github/copilot-instructions.md   # Full project rules and schema for AI assistants
+├── .github/copilot-instructions.md   # Project rules for AI assistants
 ├── data/
-│   ├── phase1_palestine/
-│   │   ├── events.csv
-│   │   ├── persons.csv
-│   │   └── sources.csv
-│   └── phase2_sudan/
-│       ├── events.csv
-│       ├── persons.csv
-│       └── sources.csv
-├── schema/
-│   └── civid_schema.json             # JSON Schema for validation
-├── notebooks/
-│   ├── phase1_analysis.ipynb
-│   ├── phase2_analysis.ipynb
-│   └── master_dashboard.ipynb        # Combined view across both phases
-├── setup.sh
-├── environment.yml
+│   ├── reference/                    # Controlled vocabularies (global)
+│   │   ├── roles.csv                 # Role taxonomy + hierarchy + flag mapping
+│   │   ├── location_types.csv        # Canonical location types + synonyms
+│   │   └── source_reliability_tiers.csv
+│   ├── phase1_palestine/             # events, persons, sources, media, entities
+│   ├── phase2_sudan/                 # events, persons, sources, media, entities
+│   ├── phase3_iran/                  # scaffolding (headers only, no data yet)
+│   ├── phase4_additional/            # scaffolding (headers only, no data yet)
+│   └── staging/                      # pending_review.csv + rejected.csv (human-review queue)
+├── schema/                          # JSON Schemas: events, persons, sources, media, entities, roles
+├── docs/                            # Quality rules & policies (see below)
+├── scripts/
+│   ├── validate_dataset.py          # Integrity + controlled-vocab checks (stdlib)
+│   ├── build_exports.py             # Builds exports/ with derived dashboard/ML fields (stdlib)
+│   └── ... (daily_update, promote, infographic, etc.)
+├── exports/                         # Generated, export-ready CSV/JSON (dashboard + ML ready)
+├── notebooks/                       # phase1, phase2, master_dashboard
+├── LICENSE                          # MIT (code only)
+├── DATA_LICENSE.md                  # Data terms & usage disclaimer
 ├── data_dictionary.md
+├── phase1_plan.md / phase2_plan.md / phase3_plan.md / phase4_plan.md
 └── README.md
 ```
+
+### Dataset tables (per phase, linkable)
+
+| Table | Purpose | Key |
+|---|---|---|
+| `events.csv` | Event-level incidents/impacts | `event_id` (unique per phase) |
+| `persons.csv` | Victim/person records (only when a source supports them) | `record_id` → `event_id` |
+| `sources.csv` | Source registry with reliability scores | `source_id` |
+| `media.csv` | Licensed media index (no victim imagery; ethics-gated) | `media_id` |
+| `entities.csv` | Organizations, conflict actors, facilities, named leaders | `entity_id` |
+| `data/reference/roles.csv` | Global role taxonomy + hierarchy | `role_id` |
+
+## Quality tooling
+
+```bash
+python scripts/validate_dataset.py   # integrity, FK, controlled-vocab, dupes -> exit 0 if clean
+python scripts/build_exports.py      # regenerate exports/ (combined CSV/JSON + derived fields)
+```
+
+`build_exports.py` adds clearly-prefixed **derived** fields (never hand-entered):
+`derived_year`, `derived_month`, `derived_timeline_order`, `derived_is_aggregate`,
+`derived_missing_data_flag`, `derived_ambiguity_flag`, `derived_needs_review`,
+`derived_global_event_key`. See `docs/ambiguity_and_missing_data.md`.
+
+### Quality policies (`docs/`)
+
+- `deduplication_rules.md` — dedup keys and merge/keep rules
+- `normalization_rules.md` — field normalization (what to fix, what never to touch)
+- `source_reliability_scoring.md` — reliability tiers A–E
+- `entity_resolution.md` — resolving repeated names to canonical entities
+- `role_hierarchy.md` — role vocabulary → flags → categories
+- `ambiguity_and_missing_data.md` — missing/ambiguity flags + human-review queue
+- `usage_disclaimer.md` — safety, privacy, neutrality, and usage terms
 
 ## How to run
 

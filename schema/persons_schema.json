@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIVID Person Record",
+  "type": "object",
+  "properties": {
+    "record_id": { "type": "string" },
+    "event_id": { "type": "string" },
+    "victim_name": { "type": ["string", "null"] },
+    "victim_alias": { "type": ["string", "null"] },
+    "victim_age": { "type": ["integer", "null"], "minimum": 0, "maximum": 130 },
+    "victim_age_group": { "type": ["string", "null"], "enum": ["child", "adult", "unknown", null] },
+    "victim_gender": { "type": ["string", "null"], "enum": ["male", "female", "unknown", null] },
+    "victim_role": {
+      "type": "string",
+      "enum": [
+        "child", "adult civilian", "doctor", "nurse", "medic / paramedic",
+        "teacher", "journalist", "student", "aid worker",
+        "political leader", "military commander", "local commander",
+        "fighter / combatant", "unknown"
+      ]
+    },
+    "occupation": { "type": ["string", "null"] },
+    "doctor_flag": { "type": "boolean" },
+    "nurse_flag": { "type": "boolean" },
+    "medic_flag": { "type": "boolean" },
+    "teacher_flag": { "type": "boolean" },
+    "journalist_flag": { "type": "boolean" },
+    "student_flag": { "type": "boolean" },
+    "child_flag": { "type": "boolean" },
+    "adult_flag": { "type": "boolean" },
+    "civilian_flag": { "type": "boolean" },
+    "combatant_flag": { "type": "boolean" },
+    "leader_flag": { "type": "boolean" },
+    "commander_flag": { "type": "boolean" },
+    "organization_affiliation": { "type": ["string", "null"] },
+    "image_available": { "type": "boolean" },
+    "image_url": { "type": ["string", "null"], "format": "uri" },
+    "image_source": { "type": ["string", "null"] },
+    "image_license": { "type": ["string", "null"] },
+    "image_caption": { "type": ["string", "null"] },
+    "media_warning": { "type": ["string", "null"] },
+    "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["record_id", "event_id", "victim_role", "verification_status"],
+  "additionalProperties": false
+}
