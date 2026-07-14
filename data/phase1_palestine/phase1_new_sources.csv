@@ -1,0 +1,4 @@
+source_id,source_name,source_url,source_type,source_date,citation_text,reliability_score
+SRC-P006,OCHA oPt,https://www.ochaopt.org/content/humanitarian-situation-report-10-july-2026,situation report,2026-07-10,"OCHA oPt Humanitarian Situation Report covering 29 June - 5 July 2026, published 10 July 2026.",0.95
+SRC-P007,UNRWA,https://www.unrwa.org/resources/reports/unrwa-situation-report-229-humanitarian-crisis-gaza-strip-and-occupied-west-bank,situation report,2026-07-07,"UNRWA Situation Report #229 on the Humanitarian Crisis in the Gaza Strip and Occupied West Bank, covering 1-7 July 2026.",0.95
+SRC-P008,Security Council Report / OCHA,https://www.securitycouncilreport.org/whatsinblue/2026/06/the-middle-east-including-the-palestinian-question-briefing-on-the-humanitarian-situation-in-gaza-3.php,briefing summary,2026-06-13,"Security Council Report briefing summarizing OCHA's 13 June 2026 update on Gaza water access funding shortfalls.",0.85

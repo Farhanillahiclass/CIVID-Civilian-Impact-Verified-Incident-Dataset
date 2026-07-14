@@ -17,13 +17,19 @@ whole point of the project.
 ## One-time setup
 
 ### Step 0: Register your appname (required since Nov 2025)
-ReliefWeb now requires a **pre-approved appname** before the API will respond.
-1. Go to ReliefWeb's API contact/help page and request appname approval for
-   `civid-dataset-research` (or your own chosen name) — explain it's for a
-   non-commercial humanitarian research dataset.
-2. Once approved, confirm the exact approved string matches `APPNAME` in
-   `scripts/daily_update.py`.
-3. Until approval comes through, the script will print a `403` warning and
+ReliefWeb now requires a **pre-approved appname** before the API will respond
+with real data (unapproved requests get odd status codes like 202/400/empty
+responses instead of a clean error — this is expected, not a bug in the script).
+
+1. Go to **https://apidoc.reliefweb.int/** and look for the appname request
+   form/link near the top of the page (worded as "Request an appname").
+2. Fill it in with: your name/organization, the purpose ("non-commercial
+   humanitarian research dataset — CIVID"), and a proposed appname such as
+   `civid-research-<yourname>`.
+3. Submit and wait for ReliefWeb's approval email — timing isn't guaranteed.
+4. Once approved, update `APPNAME` in `scripts/daily_update.py` to match
+   **exactly** the approved string.
+5. Until approval comes through, the script will print a clear warning and
    simply find no new reports — it won't crash or corrupt anything.
 
 ### Step 1: test manually
