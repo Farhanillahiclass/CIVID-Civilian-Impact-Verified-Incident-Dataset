@@ -60,6 +60,23 @@ def ask(prompt: str, default: str = "") -> str:
     return val if val else default
 
 
+def get_title(row: dict) -> str:
+    """Support both current ('title') and older ('report_title'/'dataset_title') staging formats."""
+    return row.get("title") or row.get("report_title") or row.get("dataset_title") or "(no title)"
+
+
+def get_source(row: dict) -> str:
+    return row.get("org_or_source") or row.get("source_name") or row.get("organization") or "(unknown source)"
+
+
+def get_url(row: dict) -> str:
+    return row.get("url") or row.get("source_url") or row.get("dataset_url") or ""
+
+
+def get_date(row: dict) -> str:
+    return row.get("date_or_modified") or row.get("report_date") or row.get("dataset_modified") or ""
+
+
 def next_event_id(events_csv: Path) -> str:
     if not events_csv.exists():
         return "EVT-001"
@@ -108,7 +125,7 @@ def main():
             print("No pending entries in staging.")
             return
         for r in rows:
-            print(f"  {r['staging_id']}  |  phase {r['phase']}  |  {r['title'][:60]}")
+            print(f"  {r['staging_id']}  |  phase {r.get('phase','?')}  |  {get_title(r)[:60]}")
         return
 
     staging_id = sys.argv[1]
@@ -125,9 +142,9 @@ def main():
         print(f"[error] Unknown phase {phase} — this script only supports Palestine (1) and Sudan (2).")
         sys.exit(1)
 
-    print(f"\n--- Reviewing: {match['title']} ---")
-    print(f"Source: {match['org_or_source']}")
-    print(f"URL: {match['url']}")
+    print(f"\n--- Reviewing: {get_title(match)} ---")
+    print(f"Source: {get_source(match)}")
+    print(f"URL: {get_url(match)}")
     print("\nOpen that URL now and confirm the facts before continuing.")
     confirm = ask("Have you read and verified the source? (yes/no)", "no")
     if confirm.lower() != "yes":
@@ -137,7 +154,7 @@ def main():
     print("\nEnter event details (leave blank if unknown — never guess):")
     country = ask("Country", "Palestine" if phase == 1 else "Sudan")
     conflict_name = ask("Conflict name", "Israel-Palestine conflict" if phase == 1 else "Sudan civil conflict")
-    event_date = ask("Event date (YYYY-MM-DD)", match.get("date_or_modified", ""))
+    event_date = ask("Event date (YYYY-MM-DD)", get_date(match))
     location = ask("Location")
     location_type = ask("Location type (e.g. city, camp, hospital)")
     fatalities = ask("Fatalities (number, blank if unknown)")
@@ -158,10 +175,10 @@ def main():
 
     append_row(sources_csv, SOURCES_FIELDS, {
         "source_id": source_id,
-        "source_name": match["org_or_source"],
-        "source_url": match["url"],
-        "source_type": match["source_system"],
-        "source_date": match.get("date_or_modified", ""),
+        "source_name": get_source(match),
+        "source_url": get_url(match),
+        "source_type": match.get("source_system", "unknown"),
+        "source_date": get_date(match),
         "citation_text": citation_text,
         "reliability_score": reliability_score,
     })

@@ -135,6 +135,17 @@ def load_existing_staging_ids() -> set:
 
 def append_to_staging(rows: list[dict]):
     STAGING_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Detect a stale/mismatched header from an older script version and
+    # safely archive it instead of silently corrupting the column layout.
+    if STAGING_FILE.exists():
+        with open(STAGING_FILE, newline="", encoding="utf-8") as f:
+            existing_header = next(csv.reader(f), [])
+        if existing_header and existing_header != STAGING_FIELDS:
+            backup = STAGING_DIR / f"pending_review_old_{datetime.now().strftime('%Y%m%d%H%M%S')}.csv"
+            STAGING_FILE.rename(backup)
+            print(f"[info] Old staging file had a different format — archived to {backup.name}, starting fresh.")
+
     file_exists = STAGING_FILE.exists()
     with open(STAGING_FILE, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=STAGING_FIELDS)
