@@ -1,29 +1,32 @@
 # CIVID Data Dictionary
 
-Full column reference for `events.csv`, `persons.csv`, and `sources.csv` across both phases.
-Source of truth: `schema/civid_schema.json`, `schema/persons_schema.json`, `schema/sources_schema.json`,
-`schema/media_schema.json`, `schema/entities_schema.json`, `schema/roles_schema.json`,
-`schema/famous_victims_schema.json`.
+Full column reference for all dataset tables across all phases.
+Source of truth: the JSON Schemas in `schema/` (`civid_schema.json`, `persons_schema.json`,
+`sources_schema.json`, `media_schema.json`, `entities_schema.json`, `roles_schema.json`,
+`famous_victims_schema.json`, `news_intelligence_schema.json`, `dashboard_metadata_schema.json`).
 
 ## events.csv
 
 | Column | Description | Allowed values / format |
 |---|---|---|
-| `record_id` | Unique row identifier | string |
-| `phase` | Project phase number | `1`, `2`, `3`, `4` |
+| `record_id` | Unique row identifier (sequential per phase) | integer string |
+| `legacy_record_id` | Original id before renumbering (provenance) | string |
+| `phase` | Project phase folder | `phase1_palestine`, `phase2_sudan`, ... |
 | `country` | Country of the event | string |
 | `conflict_name` | Named conflict this event belongs to | string |
-| `event_id` | Unique event identifier (e.g. `EVT-001`) | string |
+| `event_id` | Unique event identifier (e.g. `EVT-001`); unique per phase | string |
 | `event_date` | Date the event occurred | `YYYY-MM-DD` |
 | `location` | Specific place name | string |
 | `location_type` | Type of location | e.g. `city`, `camp`, `hospital`, `corridor` |
 | `source_id` | Foreign key to `sources.csv` | string |
-| `fatalities` | Number of deaths reported | integer, blank if unknown |
-| `injuries` | Number of injuries reported | integer, blank if unknown |
-| `missing` | Number reported missing | integer, blank if unknown |
-| `verification_status` | How well-supported this record is | `verified`, `estimated`, `unverified`, `disputed` |
-| `confidence_level` | Overall confidence in the record | `high`, `medium`, `low` |
-| `notes` | Free-text context, disagreements between sources, caveats | string |
+| `fatalities` | Deaths reported | integer, blank if unknown |
+| `injuries` | Injuries reported | integer, blank if unknown |
+| `missing` | Reported missing | integer, blank if unknown |
+| `arrests` | Arrests reported | integer, blank if unknown |
+| `detention` | Detentions reported | integer, blank if unknown |
+| `verification_status` | How well-supported | `verified`, `estimated`, `unverified`, `disputed` |
+| `confidence_level` | Overall confidence | `high`, `medium`, `low` |
+| `notes` | Free-text context, caveats | string |
 
 ## persons.csv
 
@@ -40,6 +43,8 @@ Source of truth: `schema/civid_schema.json`, `schema/persons_schema.json`, `sche
 | `occupation` | Stated occupation, if any | string or blank |
 | `doctor_flag` … `commander_flag` | Boolean role flags | `true` / `false` |
 | `organization_affiliation` | Named organization, if stated | string or blank |
+| `arrests` | Arrests reported for this person | integer, blank if unknown |
+| `detention` | Detentions reported for this person | integer, blank if unknown |
 | `image_available` | Whether a licensed image exists for this record | `true` / `false` |
 | `image_url` | URL of the licensed image | string or blank |
 | `image_source` | Where the image came from | string or blank |
@@ -48,6 +53,11 @@ Source of truth: `schema/civid_schema.json`, `schema/persons_schema.json`, `sche
 | `media_warning` | Content warning if applicable | string or blank |
 | `verification_status` | Same scale as events.csv | see above |
 | `notes` | Free-text context | string |
+| `news_headline` | Optional news headline linked to this person | string or blank |
+| `news_summary` | Optional news summary | string or blank |
+| `news_source_url` | URL of the linked news/source item | string or blank |
+| `news_date` | Date of the linked news item | `YYYY-MM-DD` or blank |
+| `news_category` | News category | `casualties`, `child impact`, `medical workers`, `leaders`, `arrests`, `humanitarian update` |
 
 ## sources.csv
 
@@ -190,3 +200,40 @@ sequence `1..N` per table per phase:
 - `event_id` is the **stable** cross-table business key and is **never** renumbered.
 - `famous_victims.person_record_id` is remapped when persons are renumbered (FK-safe).
 - A change log is written to `CHANGELOG_renumber.md`.
+
+## news_intelligence.csv (8th table — news intelligence layer)
+
+Authentic, source-linked summary layer. Schema: `schema/news_intelligence_schema.json`.
+See `docs/news_intelligence.md`.
+
+| Column | Description |
+|---|---|
+| `news_id` | Sequential row id (per phase) |
+| `legacy_record_id` | Original id before renumbering |
+| `phase` / `country` / `conflict_name` | Context |
+| `metric` | `total_killed`, `children_killed`, `women_killed`, `doctors_killed`, `journalists_killed`, `commanders_killed`, `arrests`, `detentions`, `other` |
+| `value` | Numeric value |
+| `unit` | e.g. `persons` |
+| `event_or_person_scope` | Optional link to an `EVT-` or person `record_id` |
+| `news_headline` / `news_summary` | Optional curated story text |
+| `news_source_url` / `news_date` / `news_category` | Story provenance + category |
+| `source_id` / `citation_text` / `verified_by` | Provenance (required; `verified_by` >=1 source) |
+| `verification_status` / `confidence_level` | Per-row certainty (required) |
+| `notes` | Context |
+
+`scripts/generate_news_intelligence.py` computes the aggregate `metric` rows from verified
+data; curated story rows are human-added. The HTML dashboard renders this as aggregate
+intelligence + a news section.
+
+## dashboard_metadata.csv (9th table — dashboard config)
+
+Key-value metadata that drives dashboard rendering (filters, titles, enabled sections).
+Schema: `schema/dashboard_metadata_schema.json`. One row per setting; phase-scoped.
+
+| Column | Description |
+|---|---|
+| `meta_key` | Setting name (e.g. `default_date_range`, `enable_map`) |
+| `meta_value` | Setting value |
+| `phase` | Phase scope (blank = global) |
+| `description` | What the setting controls |
+

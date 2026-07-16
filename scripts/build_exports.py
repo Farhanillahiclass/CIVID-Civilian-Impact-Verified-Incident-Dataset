@@ -61,6 +61,8 @@ def truthy(*vals):
 def main():
     all_events, all_persons, all_media = [], [], []
     all_famous = []
+    all_news = []
+    all_dmeta = []
     summary = {"phases": {}, "totals": {}}
 
     for phase in PHASES:
@@ -72,6 +74,8 @@ def main():
         sources = load(os.path.join(pdir, "sources.csv"))
         media = load(os.path.join(pdir, "media.csv"))
         famous = load(os.path.join(pdir, "famous_victims.csv"))
+        news = load(os.path.join(pdir, "news_intelligence.csv"))
+        dmeta = load(os.path.join(pdir, "dashboard_metadata.csv"))
 
         src_by_id = {s.get("source_id"): s for s in sources}
 
@@ -108,6 +112,12 @@ def main():
         for f in famous:
             f["phase_dir"] = phase
             all_famous.append(f)
+        for n in news:
+            n["phase_dir"] = phase
+            all_news.append(n)
+        for d in dmeta:
+            d["phase_dir"] = phase
+            all_dmeta.append(d)
 
         summary["phases"][phase] = {
             "events": len(events),
@@ -117,6 +127,7 @@ def main():
             "sources": len(sources),
             "media": len(media),
             "famous_victims": len(famous),
+            "news_intelligence": len(news),
         }
 
     # timeline ordering across the whole dataset (blank dates sort last)
@@ -159,6 +170,39 @@ def main():
     write_csv(os.path.join(EXPORTS, "civid_famous_victims_all.csv"), all_famous, famous_fields)
     write_json(os.path.join(EXPORTS, "civid_famous_victims_all.json"), all_famous)
 
+    # news intelligence export + dashboard metadata
+    news_fields = list(all_news[0].keys()) if all_news else [
+        "news_id", "legacy_record_id", "phase", "country", "conflict_name", "metric", "value",
+        "unit", "event_or_person_scope", "news_headline", "news_summary", "news_source_url",
+        "news_date", "news_category", "source_id", "citation_text", "verified_by",
+        "verification_status", "confidence_level", "notes"]
+    write_csv(os.path.join(EXPORTS, "civid_news_intelligence_all.csv"), all_news, news_fields)
+    write_json(os.path.join(EXPORTS, "civid_news_intelligence_all.json"), all_news)
+
+    dmeta_fields = list(all_dmeta[0].keys()) if all_dmeta else ["meta_key", "meta_value", "phase", "description"]
+    write_csv(os.path.join(EXPORTS, "civid_dashboard_metadata_all.csv"), all_dmeta, dmeta_fields)
+    write_json(os.path.join(EXPORTS, "civid_dashboard_metadata_all.json"), all_dmeta)
+
+    # computed aggregate news metrics (citable rollups from verified rows; never invented)
+    def to_int(x):
+        try:
+            return int(float(x))
+        except (TypeError, ValueError):
+            return 0
+
+    agg = {
+        "total_killed": sum(to_int(e.get("fatalities")) for e in all_events),
+        "children_killed": sum(1 for p in all_persons if p.get("child_flag") in (True, "true")),
+        "women_killed": 0,
+        "doctors_killed": sum(1 for p in all_persons if p.get("doctor_flag") in (True, "true")),
+        "journalists_killed": sum(1 for p in all_persons if p.get("journalist_flag") in (True, "true")),
+        "commanders_killed": sum(1 for p in all_persons if p.get("commander_flag") in (True, "true")),
+        "arrests": sum(to_int(e.get("arrests")) for e in all_events) + sum(to_int(p.get("arrests")) for p in all_persons),
+        "detentions": sum(to_int(e.get("detention")) for e in all_events) + sum(to_int(p.get("detention")) for p in all_persons),
+        "note": "Counts derived from flag columns / fatalities across all phases. Person-level counts reflect rows present, not a verified death total.",
+    }
+    write_json(os.path.join(EXPORTS, "news_aggregates.json"), agg)
+
     # image index: media rows that are images with a URL
     images = [m for m in all_media if (m.get("media_type") == "image" and (m.get("image_url") or "").strip())]
     write_csv(os.path.join(EXPORTS, "image_index.csv"), images, media_fields)
@@ -180,6 +224,7 @@ def main():
         "persons": len(all_persons),
         "media": len(all_media),
         "famous_victims": len(all_famous),
+        "news_intelligence": len(all_news),
         "images_indexed": len(images),
         "needs_review": sum(1 for e in all_events if e.get("derived_needs_review") == "true"),
     }

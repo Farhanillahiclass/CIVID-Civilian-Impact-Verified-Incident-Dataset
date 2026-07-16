@@ -33,6 +33,8 @@
     "leader_flag": { "type": "boolean" },
     "commander_flag": { "type": "boolean" },
     "organization_affiliation": { "type": ["string", "null"] },
+    "arrests": { "type": ["integer", "null"], "minimum": 0 },
+    "detention": { "type": ["integer", "null"], "minimum": 0 },
     "image_available": { "type": "boolean" },
     "image_url": { "type": ["string", "null"], "format": "uri" },
     "image_source": { "type": ["string", "null"] },
@@ -46,7 +48,15 @@
     "summary_brief": { "type": ["string", "null"] },
     "death_context": { "type": ["string", "null"] },
     "verified_by": { "type": ["string", "null"] },
-    "legacy_record_id": { "type": ["string", "null"] }
+    "legacy_record_id": { "type": ["string", "null"] },
+    "news_headline": { "type": ["string", "null"] },
+    "news_summary": { "type": ["string", "null"] },
+    "news_source_url": { "type": ["string", "null"], "format": "uri" },
+    "news_date": { "type": ["string", "null"], "format": "date" },
+    "news_category": {
+      "type": ["string", "null"],
+      "enum": ["casualties", "child impact", "medical workers", "leaders", "arrests", "humanitarian update", null]
+    }
   },
   "required": ["record_id", "event_id", "victim_role", "verification_status"],
   "additionalProperties": false

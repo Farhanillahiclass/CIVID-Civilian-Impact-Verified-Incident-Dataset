@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIVID News Intelligence Record",
+  "description": "Generated summary intelligence table: citable aggregate metrics (killed, children killed, women killed, doctors, journalists, commanders, arrests/detentions) plus authentic source-linked news stories. Every row links to a cited source; no fabricated figures.",
+  "type": "object",
+  "properties": {
+    "news_id": { "type": "string" },
+    "legacy_record_id": { "type": ["string", "null"] },
+    "phase": { "type": "string" },
+    "country": { "type": ["string", "null"] },
+    "conflict_name": { "type": ["string", "null"] },
+    "metric": {
+      "type": "string",
+      "enum": [
+        "total_killed", "children_killed", "women_killed", "doctors_killed",
+        "journalists_killed", "commanders_killed", "arrests", "detentions", "other"
+      ]
+    },
+    "value": { "type": ["integer", "null"], "minimum": 0 },
+    "unit": { "type": ["string", "null"] },
+    "event_or_person_scope": { "type": ["string", "null"] },
+    "news_headline": { "type": ["string", "null"] },
+    "news_summary": { "type": ["string", "null"] },
+    "news_source_url": { "type": ["string", "null"], "format": "uri" },
+    "news_date": { "type": ["string", "null"], "format": "date" },
+    "news_category": {
+      "type": ["string", "null"],
+      "enum": ["casualties", "child impact", "medical workers", "leaders", "arrests", "humanitarian update", null]
+    },
+    "source_id": { "type": ["string", "null"] },
+    "citation_text": { "type": "string" },
+    "verified_by": { "type": "string" },
+    "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
+    "confidence_level": { "type": "string", "enum": ["high", "medium", "low"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "required": ["news_id", "phase", "metric", "citation_text", "verified_by", "verification_status", "confidence_level"],
+  "additionalProperties": false
+}

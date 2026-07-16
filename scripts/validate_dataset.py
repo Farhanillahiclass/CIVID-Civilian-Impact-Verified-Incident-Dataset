@@ -89,6 +89,8 @@ def main() -> int:
         sources = load(os.path.join(pdir, "sources.csv"))
         media = load(os.path.join(pdir, "media.csv"))
         famous = load(os.path.join(pdir, "famous_victims.csv"))
+        news = load(os.path.join(pdir, "news_intelligence.csv"))
+        dmeta = load(os.path.join(pdir, "dashboard_metadata.csv"))
 
         # header checks (required columns present; order-tolerant)
         if events and not set(EVENTS_HEADER).issubset(events[0].keys()):
@@ -103,6 +105,8 @@ def main() -> int:
         check_dupes(persons, "record_id", f"{phase}/persons")
         check_dupes(media, "media_id", f"{phase}/media")
         check_dupes(famous, "famous_id", f"{phase}/famous_victims")
+        check_dupes(news, "news_id", f"{phase}/news_intelligence")
+        check_dupes(dmeta, "meta_key", f"{phase}/dashboard_metadata")
 
         src_ids = {(s.get("source_id") or "").strip() for s in sources}
         evt_ids = {(e.get("event_id") or "").strip() for e in events}
@@ -167,6 +171,24 @@ def main() -> int:
             role = (f.get("victim_role") or "").strip()
             if roles and role and role not in roles:
                 errors.append(f"{lbl}: victim_role '{role}' not in controlled vocabulary.")
+
+        # news_intelligence FK + required provenance (only enforced when rows exist)
+        for i, n in enumerate(news, start=2):
+            lbl = f"{phase}/news_intelligence row {i}"
+            nsrc = (n.get("source_id") or "").strip()
+            if nsrc and nsrc not in src_ids:
+                errors.append(f"{lbl}: source_id '{nsrc}' not found in {phase}/sources.csv.")
+            scope = (n.get("event_or_person_scope") or "").strip()
+            if scope:
+                if scope.startswith("EVT-") and scope not in evt_ids:
+                    errors.append(f"{lbl}: event_or_person_scope '{scope}' not found in {phase}/events.csv.")
+                elif scope.isdigit() and scope not in person_rec_ids:
+                    errors.append(f"{lbl}: event_or_person_scope '{scope}' not found in {phase}/persons.csv.")
+            if not (n.get("citation_text") or "").strip() or not (n.get("verified_by") or "").strip():
+                errors.append(f"{lbl}: news row missing required citation_text and/or verified_by.")
+            cat = (n.get("news_category") or "").strip()
+            if cat and cat not in {"casualties", "child impact", "medical workers", "leaders", "arrests", "humanitarian update"}:
+                errors.append(f"{lbl}: news_category '{cat}' not in allowed set.")
 
         check_whitespace(events, EVENTS_HEADER, f"{phase}/events")
 

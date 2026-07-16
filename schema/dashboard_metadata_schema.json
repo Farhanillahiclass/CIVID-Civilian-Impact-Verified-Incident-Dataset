@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIVID Dashboard Metadata",
+  "description": "Key-value metadata that drives dashboard rendering (filters, titles, default date range, enabled sections). One row per setting; phase-scoped.",
+  "type": "object",
+  "properties": {
+    "meta_key": { "type": "string" },
+    "meta_value": { "type": "string" },
+    "phase": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] }
+  },
+  "required": ["meta_key", "meta_value"],
+  "additionalProperties": false
+}

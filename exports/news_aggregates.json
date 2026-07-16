@@ -1,0 +1,11 @@
+{
+  "total_killed": 2240,
+  "children_killed": 4,
+  "women_killed": 0,
+  "doctors_killed": 0,
+  "journalists_killed": 1,
+  "commanders_killed": 0,
+  "arrests": 0,
+  "detentions": 0,
+  "note": "Counts derived from flag columns / fatalities across all phases. Person-level counts reflect rows present, not a verified death total."
+}

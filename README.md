@@ -85,6 +85,8 @@ CIVID/
 | `media.csv` | Licensed media index (no victim imagery; ethics-gated) | `media_id` |
 | `entities.csv` | Organizations, conflict actors, facilities, named leaders | `entity_id` |
 | `famous_victims.csv` | Special section: notable publicly-reported individuals (ethics-gated, human-reviewed, empty by design) | `famous_id` |
+| `news_intelligence.csv` | News intelligence layer: citable aggregate metrics + source-linked stories | `news_id` |
+| `dashboard_metadata.csv` | Key-value dashboard config (filters, enabled sections) | `meta_key` |
 | `data/reference/roles.csv` | Global role taxonomy + hierarchy | `role_id` |
 
 Row primary keys (`record_id`/`famous_id`) are renumbered to a gap-free `1..N` sequence per
@@ -94,17 +96,25 @@ and `event_id` stays stable as the cross-table link.
 ## Quality tooling
 
 ```bash
-python scripts/validate_dataset.py   # integrity, FK, controlled-vocab, dupes -> exit 0 if clean
-python scripts/renumber_records.py   # sequential record_id/famous_id (legacy preserved) + change log
-python scripts/build_exports.py      # regenerate exports/ (combined CSV/JSON + derived fields)
-python scripts/daily_update.py       # pull new report leads into the staging review queue (unverified)
-python scripts/infographic.py        # regenerate aggregate, non-graphic summary charts
+python scripts/validate_dataset.py             # integrity, FK, controlled-vocab, dupes -> exit 0 if clean
+python scripts/renumber_records.py             # sequential record_id/famous_id (legacy preserved) + change log
+python scripts/build_exports.py                # regenerate exports/ (combined CSV/JSON + derived fields)
+python scripts/generate_news_intelligence.py  # build the news_intelligence table from verified aggregates
+python scripts/generate_html_dashboard.py      # write exports/civid_dashboard.html (filters, charts, map, sections)
+python scripts/daily_update.py                 # pull new report leads into the staging review queue (unverified)
+python scripts/infographic.py                  # regenerate aggregate, non-graphic summary charts
+python scripts/github_autopush.py              # guarded auto-push (dry-run by default; --push after approval)
 ```
 
-`build_exports.py` adds clearly-prefixed **derived** fields (never hand-entered):
-`derived_year`, `derived_month`, `derived_timeline_order`, `derived_is_aggregate`,
-`derived_missing_data_flag`, `derived_ambiguity_flag`, `derived_needs_review`,
-`derived_global_event_key`. See `docs/ambiguity_and_missing_data.md`.
+Full pipeline (validate → renumber → export → news → html → push):
+
+```bash
+python scripts/github_autopush.py --push
+```
+
+Approval workflow: `daily_update.py` → review in `data/staging/pending_review.csv` →
+`promote_entry.py` → validate → `github_autopush.py --push`. See
+`docs/approval_autopush_workflow.md`, `docs/news_intelligence.md`, `docs/html_dashboard.md`.
 
 ### Quality policies (`docs/`)
 

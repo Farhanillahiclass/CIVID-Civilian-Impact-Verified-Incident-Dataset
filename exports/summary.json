@@ -7,7 +7,8 @@
       "persons": 6,
       "sources": 16,
       "media": 0,
-      "famous_victims": 0
+      "famous_victims": 0,
+      "news_intelligence": 8
     },
     "phase2_sudan": {
       "events": 12,
@@ -16,7 +17,8 @@
       "persons": 3,
       "sources": 6,
       "media": 0,
-      "famous_victims": 0
+      "famous_victims": 0,
+      "news_intelligence": 8
     },
     "phase3_iran": {
       "events": 0,
@@ -25,7 +27,8 @@
       "persons": 0,
       "sources": 0,
       "media": 0,
-      "famous_victims": 0
+      "famous_victims": 0,
+      "news_intelligence": 8
     },
     "phase4_additional": {
       "events": 0,
@@ -34,7 +37,8 @@
       "persons": 0,
       "sources": 0,
       "media": 0,
-      "famous_victims": 0
+      "famous_victims": 0,
+      "news_intelligence": 8
     }
   },
   "totals": {
@@ -44,6 +48,7 @@
     "persons": 9,
     "media": 0,
     "famous_victims": 0,
+    "news_intelligence": 32,
     "images_indexed": 0,
     "needs_review": 8
   }

@@ -177,11 +177,25 @@
             "minimum": 0
         },
         "missing": {
-            "type": [
-                "integer",
-                "null"
-            ],
-            "minimum": 0
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "arrests": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "detention": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
         },
         "image_available": {
             "type": "boolean"
