@@ -44,6 +44,12 @@ def main():
     persons = load_csv("civid_persons_all.csv")
     famous = load_csv("civid_famous_victims_all.csv")
     news = load_csv("civid_news_intelligence_all.csv")
+    dmeta = load_csv("civid_dashboard_metadata_all.csv")
+    # index metadata by phase for quick lookup
+    meta_by_phase = {}
+    for d in dmeta:
+        ph = d.get("phase") or "_global"
+        meta_by_phase.setdefault(ph, {})[d.get("meta_key")] = d.get("meta_value")
     agg = {}
     apath = os.path.join(EXPORTS, "news_aggregates.json")
     if os.path.exists(apath):
@@ -96,7 +102,7 @@ def main():
         "news": news_stories, "metrics": metrics_rows,
         "by_phase": by_phase, "by_verif": by_verif, "by_role": by_role,
         "months": months, "month_counts": month_counts,
-        "agg": agg, "summary": summary,
+        "agg": agg, "summary": summary, "meta_by_phase": meta_by_phase,
     })
 
     html = """<!DOCTYPE html>
@@ -144,6 +150,7 @@ def main():
 <header>
   <h1>CIVID — Civilian Impact Verified Incident Dataset</h1>
   <div class="sub">Research & education only. Every figure links to a cited source. Verify against the primary source before publication.</div>
+  <div class="sub" id="lastUpdated" style="margin-top:4px"></div>
 </header>
 <div class="wrap">
   <div class="filters">
@@ -172,9 +179,9 @@ def main():
 
   <div class="panel"><h3>News & updates (source-linked)</h3><div id="newsList"></div></div>
 
-  <div class="panel"><h3>Famous personalities / victims</h3><div class="famous" id="famousList"></div></div>
+  <div class="panel" id="famousPanel"><h3>Famous personalities / victims</h3><div class="famous" id="famousList"></div></div>
 
-  <div class="panel"><h3>Map (where coordinates are available)</h3><div id="map"></div>
+  <div class="panel" id="mapPanel" style="display:none"><h3>Map (where coordinates are available)</h3><div id="map"></div>
     <div class="sub" style="margin-top:8px">Location names are stored as text; add lat/lon to events to enable precise plotting.</div>
   </div>
 </div>
@@ -256,15 +263,28 @@ function famousList(){
     : '<div class="empty">Famous-persons section is intentionally empty. Named individuals are added only via the verified, multi-source pipeline (docs/famous_victims_policy.md).</div>';
 }
 
+function applyMeta(){
+  const m = DATA.meta_by_phase || {};
+  // global last_updated = latest across phases
+  let latest = '';
+  for (const ph in m){ const v = m[ph].last_updated; if (v && v > latest) latest = v; }
+  if (latest) document.getElementById('lastUpdated').textContent = 'Data last updated: ' + latest + ' (UTC). Regenerate exports to refresh.';
+  // map panel only when any phase enables it
+  const showMap = Object.values(m).some(x => (x.show_map||'').toLowerCase() === 'true');
+  document.getElementById('mapPanel').style.display = showMap ? '' : 'none';
+  // famous panel always shown (renders empty-state if none)
+}
+
 function initMap(){
   const map=document.getElementById('map');
+  if(!map) return;
   try{ const Lmap=L.map(map).setView([31.5,34.5],5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap'}).addTo(Lmap);
   }catch(e){ map.innerHTML='<div class="empty">Map library unavailable offline.</div>'; }
 }
 
 ['f-phase','f-country','f-verify','f-role','f-age','f-date'].forEach(id=>document.getElementById(id).addEventListener('change',drawCharts));
-summaryCards(); drawCharts(); newsList(); famousList(); initMap();
+summaryCards(); applyMeta(); drawCharts(); newsList(); famousList(); initMap();
 </script>
 </body>
 </html>

@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "meta_key": "dashboard_title",
+    "meta_value": "CIVID — Palestine / Gaza Phase 1",
+    "phase": "phase1_palestine",
+    "description": "Title shown on the dashboard for this phase.",
+    "phase_dir": "phase1_palestine"
+  },
+  {
+    "meta_key": "default_date_range",
+    "meta_value": "2023-10-07..2026-12-31",
+    "phase": "phase1_palestine",
+    "description": "Default visible event date range on load.",
+    "phase_dir": "phase1_palestine"
+  },
+  {
+    "meta_key": "show_famous_section",
+    "meta_value": "false",
+    "phase": "phase1_palestine",
+    "description": "Famous-personalities section is disabled until verified famous-victim rows exist.",
+    "phase_dir": "phase1_palestine"
+  },
+  {
+    "meta_key": "show_map",
+    "meta_value": "false",
+    "phase": "phase1_palestine",
+    "description": "Map disabled until lat/lon coordinates are added to events.",
+    "phase_dir": "phase1_palestine"
+  },
+  {
+    "meta_key": "show_news_section",
+    "meta_value": "true",
+    "phase": "phase1_palestine",
+    "description": "News intelligence section with source-linked stories.",
+    "phase_dir": "phase1_palestine"
+  },
+  {
+    "meta_key": "last_updated",
+    "meta_value": "2026-07-18",
+    "phase": "phase1_palestine",
+    "description": "Date this phase's curated data was last refreshed.",
+    "phase_dir": "phase1_palestine"
+  },
+  {
+    "meta_key": "dashboard_title",
+    "meta_value": "CIVID — Sudan Phase 2",
+    "phase": "phase2_sudan",
+    "description": "Title shown on the dashboard for this phase.",
+    "phase_dir": "phase2_sudan"
+  },
+  {
+    "meta_key": "default_date_range",
+    "meta_value": "2025-01-01..2026-12-31",
+    "phase": "phase2_sudan",
+    "description": "Default visible event date range on load.",
+    "phase_dir": "phase2_sudan"
+  },
+  {
+    "meta_key": "show_famous_section",
+    "meta_value": "false",
+    "phase": "phase2_sudan",
+    "description": "Famous-personalities section is disabled until verified famous-victim rows exist.",
+    "phase_dir": "phase2_sudan"
+  },
+  {
+    "meta_key": "show_map",
+    "meta_value": "false",
+    "phase": "phase2_sudan",
+    "description": "Map disabled until lat/lon coordinates are added to events.",
+    "phase_dir": "phase2_sudan"
+  },
+  {
+    "meta_key": "show_news_section",
+    "meta_value": "true",
+    "phase": "phase2_sudan",
+    "description": "News intelligence section with source-linked stories.",
+    "phase_dir": "phase2_sudan"
+  },
+  {
+    "meta_key": "last_updated",
+    "meta_value": "2026-07-18",
+    "phase": "phase2_sudan",
+    "description": "Date this phase's curated data was last refreshed.",
+    "phase_dir": "phase2_sudan"
+  },
+  {
+    "meta_key": "dashboard_title",
+    "meta_value": "CIVID — Iran Phase 3",
+    "phase": "phase3_iran",
+    "description": "Title for this phase.",
+    "phase_dir": "phase3_iran"
+  },
+  {
+    "meta_key": "default_date_range",
+    "meta_value": "2025-06-01..2026-12-31",
+    "phase": "phase3_iran",
+    "description": "Default visible date range.",
+    "phase_dir": "phase3_iran"
+  },
+  {
+    "meta_key": "show_famous_section",
+    "meta_value": "true",
+    "phase": "phase3_iran",
+    "description": "Named commanders present in persons table.",
+    "phase_dir": "phase3_iran"
+  },
+  {
+    "meta_key": "show_map",
+    "meta_value": "false",
+    "phase": "phase3_iran",
+    "description": "Map disabled until lat/lon added.",
+    "phase_dir": "phase3_iran"
+  },
+  {
+    "meta_key": "show_news_section",
+    "meta_value": "true",
+    "phase": "phase3_iran",
+    "description": "News intelligence enabled.",
+    "phase_dir": "phase3_iran"
+  },
+  {
+    "meta_key": "last_updated",
+    "meta_value": "2026-07-18",
+    "phase": "phase3_iran",
+    "description": "Last refresh date.",
+    "phase_dir": "phase3_iran"
+  }
+]

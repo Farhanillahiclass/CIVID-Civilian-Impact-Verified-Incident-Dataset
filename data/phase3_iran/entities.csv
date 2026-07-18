@@ -1,1 +1,4 @@
 entity_id,phase,entity_name,entity_type,aka,role_category,country,organization_type,related_event_id,source_id,verification_status,confidence_level,notes
+ENT-P3-01,3,Islamic Revolutionary Guard Corps,organization,IRGC,conflict_actor,Iran,armed forces,EVT-003,acled_ir,verified,high,Iranian armed force; senior leadership killed in 13 Jun 2025 strikes.
+ENT-P3-02,3,Iranian Armed Forces,organization,,conflict_actor,Iran,armed forces,EVT-003,hrana_ir,verified,high,National armed forces; Chief of Staff Mohammad Bagheri killed.
+ENT-P3-03,3,Israel Defense Forces,organization,IDF,armed_actor,Israel,state armed forces,EVT-004,acled_ir,verified,high,Conducted the strikes on Iran during the Twelve-Day War.

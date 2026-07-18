@@ -1,1 +1,19 @@
-meta_key,meta_value,phase,description
+meta_key,meta_value,phase,description,phase_dir
+dashboard_title,CIVID — Palestine / Gaza Phase 1,phase1_palestine,Title shown on the dashboard for this phase.,phase1_palestine
+default_date_range,2023-10-07..2026-12-31,phase1_palestine,Default visible event date range on load.,phase1_palestine
+show_famous_section,false,phase1_palestine,Famous-personalities section is disabled until verified famous-victim rows exist.,phase1_palestine
+show_map,false,phase1_palestine,Map disabled until lat/lon coordinates are added to events.,phase1_palestine
+show_news_section,true,phase1_palestine,News intelligence section with source-linked stories.,phase1_palestine
+last_updated,2026-07-18,phase1_palestine,Date this phase's curated data was last refreshed.,phase1_palestine
+dashboard_title,CIVID — Sudan Phase 2,phase2_sudan,Title shown on the dashboard for this phase.,phase2_sudan
+default_date_range,2025-01-01..2026-12-31,phase2_sudan,Default visible event date range on load.,phase2_sudan
+show_famous_section,false,phase2_sudan,Famous-personalities section is disabled until verified famous-victim rows exist.,phase2_sudan
+show_map,false,phase2_sudan,Map disabled until lat/lon coordinates are added to events.,phase2_sudan
+show_news_section,true,phase2_sudan,News intelligence section with source-linked stories.,phase2_sudan
+last_updated,2026-07-18,phase2_sudan,Date this phase's curated data was last refreshed.,phase2_sudan
+dashboard_title,CIVID — Iran Phase 3,phase3_iran,Title for this phase.,phase3_iran
+default_date_range,2025-06-01..2026-12-31,phase3_iran,Default visible date range.,phase3_iran
+show_famous_section,true,phase3_iran,Named commanders present in persons table.,phase3_iran
+show_map,false,phase3_iran,Map disabled until lat/lon added.,phase3_iran
+show_news_section,true,phase3_iran,News intelligence enabled.,phase3_iran
+last_updated,2026-07-18,phase3_iran,Last refresh date.,phase3_iran

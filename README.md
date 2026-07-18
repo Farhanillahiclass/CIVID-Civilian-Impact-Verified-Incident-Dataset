@@ -19,15 +19,38 @@ certain than the source allows.
 
 | Phase | Country | Status | Events | Sources |
 |---|---|---|---|---|
-| 1 | Palestine / Gaza | Active | 35 (27 verified, 8 unverified/pending review) | 16 (OCHA, UNRWA, OHCHR, ACLED, HDX, SCR) |
-| 2 | Sudan | First two batches complete | 12 verified/estimated | ICRC, ACLED (diversification flagged, see notes below) |
-| 3 | Iran-related events | Scaffolding only — empty by design | 0 | see `docs/` phase notes |
+| 1 | Palestine / Gaza | Active | 42 (34 verified, 8 unverified/pending review) | 19 (OCHA, UNRWA, OHCHR, ACLED, HDX, SCR, MoH Gaza) |
+| 2 | Sudan | Expanded | 16 verified/estimated | ICRC, ACLED, UN OCHA Sudan, WHO Sudan (diversification flagged, see notes below) |
+| 3 | Iran (Israel–Iran Twelve-Day War) | Built from cited sources | 5 (3 aggregate + 2 verified incidents) | HRANA, Iran MoH, AP, ACLED |
 | 4 | Additional countries | Scaffolding only — empty by design | 0 | see `docs/` phase notes |
 
-> **Combined snapshot (from `exports/summary.json`):** 47 events (34 verified, 8 unverified),
-> 9 person records, 0 media, 0 famous-victim rows (the famous-victims special section is
+> **Combined snapshot (from `exports/summary.json`):** 63 events (48 verified, 8 unverified),
+> 14 person records, 0 media, 0 famous-victim rows (the famous-victims special section is
 > present but empty by design — populated only via the human-reviewed pipeline in
 > `docs/famous_victims_policy.md`). Regenerate with `python scripts/build_exports.py`.
+
+**Phase 3 update (18 July 2026):** Phase 3 (Iran–Israel Twelve-Day War, June 2025) is now
+populated with **cited, verified data** — no fabrication. It includes two aggregate casualty
+figures (Iran MoH: 1,060 killed / 5,800 injured; HRANA: 1,190 killed / 4,475 injured with a
+civilian/military/unconfirmed breakdown), two verified incident rows (the 13 June 2025 Tehran
+command-center strike; ACLED's ~360 strikes across 27 provinces), and four named, confirmed
+military commanders killed (Bagheri, Salami, Hajizadeh, Rashid) recorded in `persons.csv` with
+`is_famous=true`. All aggregate rows are explicitly labeled `AGGREGATE` in `notes` and marked
+`confidence_level=medium` (reported-by-source, not independently re-verified). Sources: HRANA,
+Iran Ministry of Health, Associated Press, ACLED.
+
+**Phase 1 update (18 July 2026):** Added Gaza cumulative aggregates (MoH: 67,075 killed as of
+3 Oct 2025; 73,231 killed as of 13 Jul 2026), OCHA ceasefire-period aggregates (618 killed /
+1,663 injured by 25 Feb 2026; 31 storm-related deaths including 7 children), and verified
+incident rows (PRCS paramedic killed in Mawasi; 82 killed / 162 injured reporting week). A
+verified PRCS medic person row was added. All aggregates are labeled and medium-confidence.
+
+**Note on "full per-person Gaza data":** A complete named list of every Gaza casualty cannot be
+verified or ethically sourced (MoH publishes aggregates, not a verified per-person register;
+major outlets report aggregates + named cases only). CIVID therefore records **cited
+aggregates** plus **verified individual incidents** where sources name them — never inferred or
+fabricated victim rows. This is consistent with the no-fabrication principle in
+`docs/usage_disclaimer.md`.
 
 **Phases 3 & 4 are intentionally empty.** Per the core no-fabrication principle, their full
 table structure and plan files exist, but **no event/victim data is added until backed by an

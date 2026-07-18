@@ -1,5 +1,215 @@
 [
   {
+    "record_id": "3",
+    "legacy_record_id": "3",
+    "phase": "phase3_iran",
+    "country": "Iran",
+    "conflict_name": "Iran-Israel Twelve-Day War",
+    "event_id": "EVT-003",
+    "event_date": "2025-06-13",
+    "location": "Tehran (command center strike)",
+    "location_type": "facility",
+    "source_id": "acled_ir",
+    "fatalities": "",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "Israeli strike on an underground command center killed most of the IRGC Aerospace Force leadership convened for a meeting, including commander Amir Ali Hajizadeh (IDF; corroborated by ACLED/HRANA).",
+    "source_name": "ACLED Iran Crisis",
+    "source_url": "https://acleddata.com/iran-crisis-live",
+    "source_type": "conflict event database",
+    "source_date": "2026-07-16",
+    "citation_text": "Israeli strike on an underground command center killed most of the IRGC Aerospace Force leadership convened for a meeting, including commander Amir Ali Hajizadeh (IDF; corroborated by ACLED/HRANA).",
+    "reliability_score": "0.89",
+    "derived_year": "2025",
+    "derived_month": "2025-06",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "true",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase3_iran",
+    "derived_global_event_key": "phase3_iran/EVT-003",
+    "derived_timeline_order": 1
+  },
+  {
+    "record_id": "4",
+    "legacy_record_id": "4",
+    "phase": "phase3_iran",
+    "country": "Iran",
+    "conflict_name": "Iran-Israel Twelve-Day War",
+    "event_id": "EVT-004",
+    "event_date": "2025-06-13",
+    "location": "Tehran / multiple provinces",
+    "location_type": "territory",
+    "source_id": "acled_ir",
+    "fatalities": "",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "ACLED: Israel carried out nearly 360 attacks across 27 Iranian provinces over 12 days; over 150 strikes on military targets. Intensity concentrated in Tehran province.",
+    "source_name": "ACLED Iran Crisis",
+    "source_url": "https://acleddata.com/iran-crisis-live",
+    "source_type": "conflict event database",
+    "source_date": "2026-07-16",
+    "citation_text": "ACLED: Israel carried out nearly 360 attacks across 27 Iranian provinces over 12 days; over 150 strikes on military targets. Intensity concentrated in Tehran province.",
+    "reliability_score": "0.89",
+    "derived_year": "2025",
+    "derived_month": "2025-06",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "true",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase3_iran",
+    "derived_global_event_key": "phase3_iran/EVT-004",
+    "derived_timeline_order": 2
+  },
+  {
+    "record_id": "5",
+    "legacy_record_id": "5",
+    "phase": "phase3_iran",
+    "country": "Iran",
+    "conflict_name": "Iran-Israel Twelve-Day War",
+    "event_id": "EVT-005",
+    "event_date": "2025-06-13",
+    "location": "Tehran (fuel/logistics sites)",
+    "location_type": "infrastructure",
+    "source_id": "hrana_ir",
+    "fatalities": "9",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "medium",
+    "notes": "HRANA verified reports: deaths of 4 fuel depot workers, 2 tanker drivers, and 3 factory guards in strikes on peripheral Tehran infrastructure; dozens more injured.",
+    "source_name": "Human Rights Activists in Iran (HRANA)",
+    "source_url": "https://www.en-hrana.org/twelve-days-under-fire-a-comprehensive-report-on-the-iran-israel-war/",
+    "source_type": "human rights monitor",
+    "source_date": "2025-06-28",
+    "citation_text": "HRANA verified reports: deaths of 4 fuel depot workers, 2 tanker drivers, and 3 factory guards in strikes on peripheral Tehran infrastructure; dozens more injured.",
+    "reliability_score": "0.85",
+    "derived_year": "2025",
+    "derived_month": "2025-06",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase3_iran",
+    "derived_global_event_key": "phase3_iran/EVT-005",
+    "derived_timeline_order": 3
+  },
+  {
+    "record_id": "1",
+    "legacy_record_id": "1",
+    "phase": "phase3_iran",
+    "country": "Iran",
+    "conflict_name": "Iran-Israel Twelve-Day War",
+    "event_id": "EVT-001",
+    "event_date": "2025-06-24",
+    "location": "Iran (nationwide)",
+    "location_type": "territory",
+    "source_id": "iran_moh_ir",
+    "fatalities": "1060",
+    "injuries": "4000",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "medium",
+    "notes": "AGGREGATE (reported-by-Iran Ministry of Health, 24 Jun 2025): 1,060 killed, 5,800 injuries in the Twelve-Day War. Recorded as aggregate.",
+    "source_name": "Iran Ministry of Health",
+    "source_url": "https://www.iranintl.com/",
+    "source_type": "government health authority",
+    "source_date": "2025-06-24",
+    "citation_text": "AGGREGATE (reported-by-Iran Ministry of Health, 24 Jun 2025): 1,060 killed, 5,800 injuries in the Twelve-Day War. Recorded as aggregate.",
+    "reliability_score": "0.88",
+    "derived_year": "2025",
+    "derived_month": "2025-06",
+    "derived_is_aggregate": "true",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase3_iran",
+    "derived_global_event_key": "phase3_iran/EVT-001",
+    "derived_timeline_order": 4
+  },
+  {
+    "record_id": "2",
+    "legacy_record_id": "2",
+    "phase": "phase3_iran",
+    "country": "Iran",
+    "conflict_name": "Iran-Israel Twelve-Day War",
+    "event_id": "EVT-002",
+    "event_date": "2025-06-28",
+    "location": "Iran (nationwide)",
+    "location_type": "territory",
+    "source_id": "hrana_ir",
+    "fatalities": "1190",
+    "injuries": "4475",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "medium",
+    "notes": "AGGREGATE (HRANA, 28 Jun 2025): 1,190 killed (436 civilians, 435 military, 319 unconfirmed), 4,475 injured in the Twelve-Day War.",
+    "source_name": "Human Rights Activists in Iran (HRANA)",
+    "source_url": "https://www.en-hrana.org/twelve-days-under-fire-a-comprehensive-report-on-the-iran-israel-war/",
+    "source_type": "human rights monitor",
+    "source_date": "2025-06-28",
+    "citation_text": "AGGREGATE (HRANA, 28 Jun 2025): 1,190 killed (436 civilians, 435 military, 319 unconfirmed), 4,475 injured in the Twelve-Day War.",
+    "reliability_score": "0.85",
+    "derived_year": "2025",
+    "derived_month": "2025-06",
+    "derived_is_aggregate": "true",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase3_iran",
+    "derived_global_event_key": "phase3_iran/EVT-002",
+    "derived_timeline_order": 5
+  },
+  {
+    "record_id": "36",
+    "legacy_record_id": "REC-P100",
+    "phase": "phase1_palestine",
+    "country": "Palestine",
+    "conflict_name": "Israeli-Palestinian conflict",
+    "event_id": "EVT-036",
+    "event_date": "2025-10-03",
+    "location": "Gaza Strip",
+    "location_type": "territory",
+    "source_id": "SRC-P009",
+    "fatalities": "67075",
+    "injuries": "169430",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "medium",
+    "notes": "AGGREGATE (cumulative, reported-by-MoH as of 3 Oct 2025 per Costs of War synthesis): 67,075 killed and 169,430 injured in Gaza since 7 Oct 2023. Recorded as aggregate; not a per-victim count. MoH figures face reporting obstacles and may be an undercount.",
+    "source_name": "Gaza Ministry of Health (MoH)",
+    "source_url": "https://www.ochaopt.org/",
+    "source_type": "government health authority",
+    "source_date": "2026-07-13",
+    "citation_text": "AGGREGATE (cumulative, reported-by-MoH as of 3 Oct 2025 per Costs of War synthesis): 67,075 killed and 169,430 injured in Gaza since 7 Oct 2023. Recorded as aggregate; not a per-victim count. MoH figures face reporting obstacles and may be an undercount.",
+    "reliability_score": "0.90",
+    "derived_year": "2025",
+    "derived_month": "2025-10",
+    "derived_is_aggregate": "true",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase1_palestine",
+    "derived_global_event_key": "phase1_palestine/EVT-036",
+    "derived_timeline_order": 6
+  },
+  {
     "record_id": "11",
     "legacy_record_id": "evt_030",
     "phase": "phase2_sudan",
@@ -32,7 +242,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-030",
-    "derived_timeline_order": 1
+    "derived_timeline_order": 7
   },
   {
     "record_id": "10",
@@ -67,7 +277,182 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-010",
-    "derived_timeline_order": 2
+    "derived_timeline_order": 8
+  },
+  {
+    "record_id": "39",
+    "legacy_record_id": "REC-P103",
+    "phase": "phase1_palestine",
+    "country": "Palestine",
+    "conflict_name": "Israeli-Palestinian conflict",
+    "event_id": "EVT-039",
+    "event_date": "2026-01-15",
+    "location": "Gaza Strip (winter storm)",
+    "location_type": "Gaza-wide",
+    "source_id": "SRC-P011",
+    "fatalities": "31",
+    "injuries": "34",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "OCHA SR #62 (15 Jan 2026): MoH reported 31 storm-related deaths since onset of winter, including 7 children who died from hypothermia, and 34 injuries from widespread shelter/WASH damage.",
+    "source_name": "OCHA oPt Gaza Humanitarian Response SitRep #62",
+    "source_url": "https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-62",
+    "source_type": "situation report",
+    "source_date": "2026-01-15",
+    "citation_text": "OCHA SR #62 (15 Jan 2026): MoH reported 31 storm-related deaths since onset of winter, including 7 children who died from hypothermia, and 34 injuries from widespread shelter/WASH damage.",
+    "reliability_score": "0.95",
+    "derived_year": "2026",
+    "derived_month": "2026-01",
+    "derived_is_aggregate": "true",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase1_palestine",
+    "derived_global_event_key": "phase1_palestine/EVT-039",
+    "derived_timeline_order": 9
+  },
+  {
+    "record_id": "42",
+    "legacy_record_id": "REC-P106",
+    "phase": "phase1_palestine",
+    "country": "Palestine",
+    "conflict_name": "Israeli-Palestinian conflict",
+    "event_id": "EVT-042",
+    "event_date": "2026-01-31",
+    "location": "Khan Younis",
+    "location_type": "area",
+    "source_id": "SRC-P011",
+    "fatalities": "",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "OCHA SR #62: military escalation on 31 January 2026 affected 22 families in Khan Younis; multisectoral assistance provided. No specific fatality figure stated for this sub-event.",
+    "source_name": "OCHA oPt Gaza Humanitarian Response SitRep #62",
+    "source_url": "https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-62",
+    "source_type": "situation report",
+    "source_date": "2026-01-15",
+    "citation_text": "OCHA SR #62: military escalation on 31 January 2026 affected 22 families in Khan Younis; multisectoral assistance provided. No specific fatality figure stated for this sub-event.",
+    "reliability_score": "0.95",
+    "derived_year": "2026",
+    "derived_month": "2026-01",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "true",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase1_palestine",
+    "derived_global_event_key": "phase1_palestine/EVT-042",
+    "derived_timeline_order": 10
+  },
+  {
+    "record_id": "40",
+    "legacy_record_id": "REC-P104",
+    "phase": "phase1_palestine",
+    "country": "Palestine",
+    "conflict_name": "Israeli-Palestinian conflict",
+    "event_id": "EVT-040",
+    "event_date": "2026-02-04",
+    "location": "Mawasi area of Khan Younis",
+    "location_type": "area",
+    "source_id": "SRC-P010",
+    "fatalities": "1",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "IFRC reported a Palestine Red Crescent Society paramedic was killed while carrying out humanitarian duties during an attack in the Mawasi area (OCHA SR #66, 4 Feb 2026).",
+    "source_name": "OCHA oPt Gaza Humanitarian Response SitRep #69",
+    "source_url": "https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-69",
+    "source_type": "situation report",
+    "source_date": "2026-02-25",
+    "citation_text": "IFRC reported a Palestine Red Crescent Society paramedic was killed while carrying out humanitarian duties during an attack in the Mawasi area (OCHA SR #66, 4 Feb 2026).",
+    "reliability_score": "0.95",
+    "derived_year": "2026",
+    "derived_month": "2026-02",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase1_palestine",
+    "derived_global_event_key": "phase1_palestine/EVT-040",
+    "derived_timeline_order": 11
+  },
+  {
+    "record_id": "41",
+    "legacy_record_id": "REC-P105",
+    "phase": "phase1_palestine",
+    "country": "Palestine",
+    "conflict_name": "Israeli-Palestinian conflict",
+    "event_id": "EVT-041",
+    "event_date": "2026-02-05",
+    "location": "Gaza Strip",
+    "location_type": "Gaza-wide",
+    "source_id": "SRC-P010",
+    "fatalities": "82",
+    "injuries": "162",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "OCHA SR #66 (5 Feb 2026): MoH reported 82 Palestinians killed and 162 injured between 30 Jan and 5 Feb 2026, including children and one health worker; cumulative since ceasefire 574 killed / 1,518 injured.",
+    "source_name": "OCHA oPt Gaza Humanitarian Response SitRep #69",
+    "source_url": "https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-69",
+    "source_type": "situation report",
+    "source_date": "2026-02-25",
+    "citation_text": "OCHA SR #66 (5 Feb 2026): MoH reported 82 Palestinians killed and 162 injured between 30 Jan and 5 Feb 2026, including children and one health worker; cumulative since ceasefire 574 killed / 1,518 injured.",
+    "reliability_score": "0.95",
+    "derived_year": "2026",
+    "derived_month": "2026-02",
+    "derived_is_aggregate": "true",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase1_palestine",
+    "derived_global_event_key": "phase1_palestine/EVT-041",
+    "derived_timeline_order": 12
+  },
+  {
+    "record_id": "38",
+    "legacy_record_id": "REC-P102",
+    "phase": "phase1_palestine",
+    "country": "Palestine",
+    "conflict_name": "Israeli-Palestinian conflict",
+    "event_id": "EVT-038",
+    "event_date": "2026-02-25",
+    "location": "Gaza Strip (ceasefire period cumulative)",
+    "location_type": "Gaza-wide",
+    "source_id": "SRC-P010",
+    "fatalities": "618",
+    "injuries": "1663",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "AGGREGATE: OCHA SR #69 (25 Feb 2026) reports MoH figure of 618 killed and 1,663 injured in Gaza since the 10 Oct 2025 ceasefire took effect.",
+    "source_name": "OCHA oPt Gaza Humanitarian Response SitRep #69",
+    "source_url": "https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-69",
+    "source_type": "situation report",
+    "source_date": "2026-02-25",
+    "citation_text": "AGGREGATE: OCHA SR #69 (25 Feb 2026) reports MoH figure of 618 killed and 1,663 injured in Gaza since the 10 Oct 2025 ceasefire took effect.",
+    "reliability_score": "0.95",
+    "derived_year": "2026",
+    "derived_month": "2026-02",
+    "derived_is_aggregate": "true",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase1_palestine",
+    "derived_global_event_key": "phase1_palestine/EVT-038",
+    "derived_timeline_order": 13
   },
   {
     "record_id": "5",
@@ -102,7 +487,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-024",
-    "derived_timeline_order": 3
+    "derived_timeline_order": 14
   },
   {
     "record_id": "1",
@@ -137,7 +522,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-020",
-    "derived_timeline_order": 4
+    "derived_timeline_order": 15
   },
   {
     "record_id": "6",
@@ -172,7 +557,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-025",
-    "derived_timeline_order": 5
+    "derived_timeline_order": 16
   },
   {
     "record_id": "28",
@@ -207,7 +592,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-028",
-    "derived_timeline_order": 6
+    "derived_timeline_order": 17
   },
   {
     "record_id": "8",
@@ -242,7 +627,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-027",
-    "derived_timeline_order": 7
+    "derived_timeline_order": 18
   },
   {
     "record_id": "9",
@@ -277,7 +662,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-028",
-    "derived_timeline_order": 8
+    "derived_timeline_order": 19
   },
   {
     "record_id": "34",
@@ -312,7 +697,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-034",
-    "derived_timeline_order": 9
+    "derived_timeline_order": 20
   },
   {
     "record_id": "17",
@@ -347,7 +732,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-017",
-    "derived_timeline_order": 10
+    "derived_timeline_order": 21
   },
   {
     "record_id": "11",
@@ -382,7 +767,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-011",
-    "derived_timeline_order": 11
+    "derived_timeline_order": 22
   },
   {
     "record_id": "3",
@@ -417,7 +802,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-022",
-    "derived_timeline_order": 12
+    "derived_timeline_order": 23
   },
   {
     "record_id": "7",
@@ -452,7 +837,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-026",
-    "derived_timeline_order": 13
+    "derived_timeline_order": 24
   },
   {
     "record_id": "10",
@@ -487,7 +872,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-029",
-    "derived_timeline_order": 14
+    "derived_timeline_order": 25
   },
   {
     "record_id": "8",
@@ -522,7 +907,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-008",
-    "derived_timeline_order": 15
+    "derived_timeline_order": 26
   },
   {
     "record_id": "4",
@@ -557,7 +942,42 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-023",
-    "derived_timeline_order": 16
+    "derived_timeline_order": 27
+  },
+  {
+    "record_id": "14",
+    "legacy_record_id": "REC-S101",
+    "phase": "phase2_sudan",
+    "country": "Sudan",
+    "conflict_name": "Sudanese Civil Conflict",
+    "event_id": "EVT-033",
+    "event_date": "2026-06-20",
+    "location": "North Darfur (Al Fasher)",
+    "location_type": "territory",
+    "source_id": "icrc_sudan",
+    "fatalities": "",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "ICRC reported continued displacement from Al Fasher and worsening humanitarian access in North Darfur; hundreds of families sheltering in Tawila.",
+    "source_name": "ICRC Sudan Operations and Humanitarian Response",
+    "source_url": "https://www.icrc.org/en/where-we-work/sudan",
+    "source_type": "humanitarian agency",
+    "source_date": "2026-07-02",
+    "citation_text": "ICRC reported continued displacement from Al Fasher and worsening humanitarian access in North Darfur; hundreds of families sheltering in Tawila.",
+    "reliability_score": "0.94",
+    "derived_year": "2026",
+    "derived_month": "2026-06",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "true",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase2_sudan",
+    "derived_global_event_key": "phase2_sudan/EVT-033",
+    "derived_timeline_order": 28
   },
   {
     "record_id": "7",
@@ -592,7 +1012,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-007",
-    "derived_timeline_order": 17
+    "derived_timeline_order": 29
   },
   {
     "record_id": "9",
@@ -627,7 +1047,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-009",
-    "derived_timeline_order": 18
+    "derived_timeline_order": 30
   },
   {
     "record_id": "12",
@@ -662,7 +1082,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-012",
-    "derived_timeline_order": 19
+    "derived_timeline_order": 31
   },
   {
     "record_id": "13",
@@ -697,7 +1117,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-013",
-    "derived_timeline_order": 20
+    "derived_timeline_order": 32
   },
   {
     "record_id": "3",
@@ -732,7 +1152,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-003",
-    "derived_timeline_order": 21
+    "derived_timeline_order": 33
   },
   {
     "record_id": "6",
@@ -767,7 +1187,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-006",
-    "derived_timeline_order": 22
+    "derived_timeline_order": 34
   },
   {
     "record_id": "5",
@@ -802,7 +1222,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-005",
-    "derived_timeline_order": 23
+    "derived_timeline_order": 35
   },
   {
     "record_id": "15",
@@ -837,7 +1257,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-015",
-    "derived_timeline_order": 24
+    "derived_timeline_order": 36
   },
   {
     "record_id": "18",
@@ -872,7 +1292,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-018",
-    "derived_timeline_order": 25
+    "derived_timeline_order": 37
   },
   {
     "record_id": "14",
@@ -907,7 +1327,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-014",
-    "derived_timeline_order": 26
+    "derived_timeline_order": 38
   },
   {
     "record_id": "2",
@@ -942,7 +1362,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-002",
-    "derived_timeline_order": 27
+    "derived_timeline_order": 39
   },
   {
     "record_id": "4",
@@ -977,7 +1397,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-004",
-    "derived_timeline_order": 28
+    "derived_timeline_order": 40
   },
   {
     "record_id": "16",
@@ -1012,7 +1432,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-016",
-    "derived_timeline_order": 29
+    "derived_timeline_order": 41
   },
   {
     "record_id": "1",
@@ -1047,7 +1467,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-001",
-    "derived_timeline_order": 30
+    "derived_timeline_order": 42
   },
   {
     "record_id": "19",
@@ -1082,7 +1502,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-019",
-    "derived_timeline_order": 31
+    "derived_timeline_order": 43
   },
   {
     "record_id": "31",
@@ -1117,7 +1537,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-031",
-    "derived_timeline_order": 32
+    "derived_timeline_order": 44
   },
   {
     "record_id": "32",
@@ -1152,7 +1572,42 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-032",
-    "derived_timeline_order": 33
+    "derived_timeline_order": 45
+  },
+  {
+    "record_id": "13",
+    "legacy_record_id": "REC-S100",
+    "phase": "phase2_sudan",
+    "country": "Sudan",
+    "conflict_name": "Sudanese Civil Conflict",
+    "event_id": "EVT-032",
+    "event_date": "2026-07-01",
+    "location": "Khartoum State",
+    "location_type": "territory",
+    "source_id": "unocha_sudan_hum2",
+    "fatalities": "",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "estimated",
+    "confidence_level": "medium",
+    "notes": "UN OCHA Sudan reported continued displacement and reports of civilian casualties in Khartoum amid renewed clashes; exact figures vary across sources.",
+    "source_name": "UN OCHA Sudan Situation Report",
+    "source_url": "https://www.unocha.org/sudan",
+    "source_type": "humanitarian coordinator",
+    "source_date": "2026-07-12",
+    "citation_text": "UN OCHA Sudan reported continued displacement and reports of civilian casualties in Khartoum amid renewed clashes; exact figures vary across sources.",
+    "reliability_score": "0.91",
+    "derived_year": "2026",
+    "derived_month": "2026-07",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "true",
+    "derived_ambiguity_flag": "true",
+    "derived_needs_review": "false",
+    "phase_dir": "phase2_sudan",
+    "derived_global_event_key": "phase2_sudan/EVT-032",
+    "derived_timeline_order": 46
   },
   {
     "record_id": "2",
@@ -1187,7 +1642,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-021",
-    "derived_timeline_order": 34
+    "derived_timeline_order": 47
   },
   {
     "record_id": "35",
@@ -1222,7 +1677,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-035",
-    "derived_timeline_order": 35
+    "derived_timeline_order": 48
   },
   {
     "record_id": "30",
@@ -1257,7 +1712,42 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-030",
-    "derived_timeline_order": 36
+    "derived_timeline_order": 49
+  },
+  {
+    "record_id": "15",
+    "legacy_record_id": "REC-S102",
+    "phase": "phase2_sudan",
+    "country": "Sudan",
+    "conflict_name": "Sudanese Civil Conflict",
+    "event_id": "EVT-034",
+    "event_date": "2026-07-05",
+    "location": "Sudan (cholera outbreak)",
+    "location_type": "territory",
+    "source_id": "who_sudan_health2",
+    "fatalities": "",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "WHO Sudan Health Cluster reported ongoing cholera transmission and strained health facilities across multiple states; surveillance and response activities continuing.",
+    "source_name": "WHO Sudan Health Cluster",
+    "source_url": "https://www.emro.who.int/sudan/",
+    "source_type": "health agency",
+    "source_date": "2026-07-12",
+    "citation_text": "WHO Sudan Health Cluster reported ongoing cholera transmission and strained health facilities across multiple states; surveillance and response activities continuing.",
+    "reliability_score": "0.93",
+    "derived_year": "2026",
+    "derived_month": "2026-07",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "true",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase2_sudan",
+    "derived_global_event_key": "phase2_sudan/EVT-034",
+    "derived_timeline_order": 50
   },
   {
     "record_id": "29",
@@ -1292,7 +1782,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-029",
-    "derived_timeline_order": 37
+    "derived_timeline_order": 51
   },
   {
     "record_id": "12",
@@ -1327,7 +1817,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-031",
-    "derived_timeline_order": 38
+    "derived_timeline_order": 52
   },
   {
     "record_id": "33",
@@ -1362,7 +1852,42 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-033",
-    "derived_timeline_order": 39
+    "derived_timeline_order": 53
+  },
+  {
+    "record_id": "16",
+    "legacy_record_id": "REC-S103",
+    "phase": "phase2_sudan",
+    "country": "Sudan",
+    "conflict_name": "Sudanese Civil Conflict",
+    "event_id": "EVT-035",
+    "event_date": "2026-07-10",
+    "location": "White Nile State",
+    "location_type": "territory",
+    "source_id": "unocha_sudan_hum2",
+    "fatalities": "",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "estimated",
+    "confidence_level": "medium",
+    "notes": "UN OCHA Sudan reported new displacement and access constraints in White Nile State affecting humanitarian response.",
+    "source_name": "UN OCHA Sudan Situation Report",
+    "source_url": "https://www.unocha.org/sudan",
+    "source_type": "humanitarian coordinator",
+    "source_date": "2026-07-12",
+    "citation_text": "UN OCHA Sudan reported new displacement and access constraints in White Nile State affecting humanitarian response.",
+    "reliability_score": "0.91",
+    "derived_year": "2026",
+    "derived_month": "2026-07",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "true",
+    "derived_ambiguity_flag": "true",
+    "derived_needs_review": "false",
+    "phase_dir": "phase2_sudan",
+    "derived_global_event_key": "phase2_sudan/EVT-035",
+    "derived_timeline_order": 54
   },
   {
     "record_id": "24",
@@ -1397,7 +1922,7 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-024",
-    "derived_timeline_order": 40
+    "derived_timeline_order": 55
   },
   {
     "record_id": "25",
@@ -1432,7 +1957,7 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-025",
-    "derived_timeline_order": 41
+    "derived_timeline_order": 56
   },
   {
     "record_id": "26",
@@ -1467,7 +1992,7 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-026",
-    "derived_timeline_order": 42
+    "derived_timeline_order": 57
   },
   {
     "record_id": "27",
@@ -1502,7 +2027,42 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-027",
-    "derived_timeline_order": 43
+    "derived_timeline_order": 58
+  },
+  {
+    "record_id": "37",
+    "legacy_record_id": "REC-P101",
+    "phase": "phase1_palestine",
+    "country": "Palestine",
+    "conflict_name": "Israeli-Palestinian conflict",
+    "event_id": "EVT-037",
+    "event_date": "2026-07-13",
+    "location": "Gaza Strip",
+    "location_type": "territory",
+    "source_id": "SRC-P009",
+    "fatalities": "73231",
+    "injuries": "",
+    "missing": "",
+    "arrests": "",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "medium",
+    "notes": "AGGREGATE (cumulative, reported-by-MoH as of 13 Jul 2026): 73,231 Palestinians killed in Gaza since 7 Oct 2023. Recorded as aggregate; not a per-victim count.",
+    "source_name": "Gaza Ministry of Health (MoH)",
+    "source_url": "https://www.ochaopt.org/",
+    "source_type": "government health authority",
+    "source_date": "2026-07-13",
+    "citation_text": "AGGREGATE (cumulative, reported-by-MoH as of 13 Jul 2026): 73,231 Palestinians killed in Gaza since 7 Oct 2023. Recorded as aggregate; not a per-victim count.",
+    "reliability_score": "0.90",
+    "derived_year": "2026",
+    "derived_month": "2026-07",
+    "derived_is_aggregate": "true",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase1_palestine",
+    "derived_global_event_key": "phase1_palestine/EVT-037",
+    "derived_timeline_order": 59
   },
   {
     "record_id": "20",
@@ -1537,7 +2097,7 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-020",
-    "derived_timeline_order": 44
+    "derived_timeline_order": 60
   },
   {
     "record_id": "21",
@@ -1572,7 +2132,7 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-021",
-    "derived_timeline_order": 45
+    "derived_timeline_order": 61
   },
   {
     "record_id": "22",
@@ -1607,7 +2167,7 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-022",
-    "derived_timeline_order": 46
+    "derived_timeline_order": 62
   },
   {
     "record_id": "23",
@@ -1642,6 +2202,6 @@
     "derived_needs_review": "true",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-023",
-    "derived_timeline_order": 47
+    "derived_timeline_order": 63
   }
 ]

@@ -1,1 +1,7 @@
 meta_key,meta_value,phase,description
+dashboard_title,CIVID — Iran Phase 3,phase3_iran,Title for this phase.
+default_date_range,2025-06-01..2026-12-31,phase3_iran,Default visible date range.
+show_famous_section,true,phase3_iran,Named commanders present in persons table.
+show_map,false,phase3_iran,Map disabled until lat/lon added.
+show_news_section,true,phase3_iran,News intelligence enabled.
+last_updated,2026-07-18,phase3_iran,Last refresh date.

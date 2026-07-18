@@ -1,1 +1,5 @@
 source_id,source_name,source_url,source_type,source_date,citation_text,reliability_score
+hrana_ir,Human Rights Activists in Iran (HRANA),https://www.en-hrana.org/twelve-days-under-fire-a-comprehensive-report-on-the-iran-israel-war/,human rights monitor,2025-06-28,"HRANA comprehensive report on the Iran-Israel Twelve-Day War (13-24 June 2025): 1,190 killed, 4,475 injured; breakdown 436 civilians, 435 military, 319 unconfirmed.",0.85
+iran_moh_ir,Iran Ministry of Health,https://www.iranintl.com/,government health authority,2025-06-24,"Iranian Ministry of Health official toll: 935-1,060 killed, 4,000+ wounded (June 2025 war).",0.88
+ap_ir,Associated Press (AP),https://apnews.com/article/iran-israel-war-death-toll-569128effa8aafd9d9bd04efe5c0de75,news agency,2025-07-08,"AP reported Iran raised official death toll from war with Israel to 1,060 (8 July 2025).",0.90
+acled_ir,ACLED Iran Crisis,https://acleddata.com/iran-crisis-live,conflict event database,2026-07-16,ACLED Iran war updates: US-Israeli and Iranian strike events tracked; ~360 Israeli attacks across 27 provinces in the June 2025 war.,0.89
