@@ -183,17 +183,21 @@ def main():
     write_csv(os.path.join(EXPORTS, "civid_dashboard_metadata_all.csv"), all_dmeta, dmeta_fields)
     write_json(os.path.join(EXPORTS, "civid_dashboard_metadata_all.json"), all_dmeta)
 
-    # verified leaders (cross-phase, confirmed deaths only)
+    # verified leaders (cross-phase, confirmed/reported deaths)
     leaders = load(os.path.join(DATA, "leaders.csv"))
     leader_fields = list(leaders[0].keys()) if leaders else [
         "leader_id", "legacy_record_id", "phase", "country", "conflict_name", "leader_name",
-        "aka", "role", "organization", "death_date", "death_location", "death_cause", "bio",
-        "image_available", "image_url", "image_source", "image_license", "source_id",
-        "source_url", "citation_text", "verified_by", "verification_status", "confidence_level",
-        "event_id", "notes"]
+        "aka", "role", "organization", "leadership_level", "death_status", "death_date",
+        "death_location", "death_cause", "bio", "image_available", "image_url", "image_source",
+        "image_license", "image_local_path", "source_id", "source_url", "citation_text",
+        "verified_by", "verification_status", "confidence_level", "needs_review", "event_id", "notes"]
     write_csv(os.path.join(EXPORTS, "civid_leaders_all.csv"), leaders, leader_fields)
     write_json(os.path.join(EXPORTS, "civid_leaders_all.json"), leaders)
     summary["totals"]["leaders"] = len(leaders)
+    summary["totals"]["leaders_unverified"] = sum(
+        1 for r in leaders if (r.get("verification_status") or "").strip() != "verified")
+    summary["totals"]["leaders_needs_review"] = sum(
+        1 for r in leaders if (r.get("needs_review") or "").strip().lower() in ("true", "1", "yes"))
 
     # computed aggregate news metrics (citable rollups from verified rows; never invented)
     def to_int(x):

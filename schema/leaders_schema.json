@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CIVID Verified Leaders (Confirmed Deaths)",
-  "description": "Separate table of conflict-related organization leaders whose DEATH is confirmed by reliable, corroborating sources. Includes role, organization, death date, location, short bio, and public image metadata when available. Named-person data is NEVER fabricated; only deaths independently confirmed by at least one authoritative/reliable source are included. Leaders reported killed but later confirmed alive (e.g. sentenced in absentia) are excluded.",
+  "title": "CIVID Verified Leaders (Confirmed / Reported Deaths)",
+  "description": "Separate leaders table for Hamas and other conflict organizations. Stores all verified leaders/senior figures reported as killed, confirmed dead, or officially acknowledged by reliable sources. Must NOT be merged into general casualty tables. Leaders reported by one source but not yet confirmed by another are included with verification_status='unverified' and needs_review=true (review queue). Politically sensitive records are NOT excluded. Only deaths supported by a reliable source are included; named-person data is never fabricated.",
   "type": "object",
   "properties": {
     "leader_id": { "type": "string", "description": "Stable primary key, e.g. LDR-001." },
@@ -9,10 +9,12 @@
     "phase": { "type": "string", "description": "phase1_palestine, phase2_sudan, phase3_iran, etc." },
     "country": { "type": "string" },
     "conflict_name": { "type": ["string", "null"] },
-    "leader_name": { "type": "string" },
-    "aka": { "type": ["string", "null"] },
+    "leader_name": { "type": "string", "description": "Full name." },
+    "aka": { "type": ["string", "null"], "description": "Aliases / alternate spellings, pipe-separated." },
     "role": { "type": "string", "enum": ["political leader", "military commander", "local commander", "government official", "armed group leader", "other"] },
     "organization": { "type": "string", "description": "Hamas, IRGC, RSF, Iranian Armed Forces, etc." },
+    "leadership_level": { "type": "string", "enum": ["top", "senior", "mid", "local"], "description": "Leadership level within the organization." },
+    "death_status": { "type": "string", "enum": ["confirmed dead", "reported killed", "officially acknowledged"], "description": "How the death is characterized by sources." },
     "death_date": { "type": ["string", "null"], "format": "date" },
     "death_location": { "type": ["string", "null"] },
     "death_cause": { "type": ["string", "null"] },
@@ -27,9 +29,10 @@
     "verified_by": { "type": "string", "description": "Pipe-separated list of authoritative sources independently corroborating the death." },
     "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
     "confidence_level": { "type": "string", "enum": ["high", "medium", "low"] },
+    "needs_review": { "type": ["boolean", "string"], "description": "true when reported by a single source / unconfirmed -> review queue." },
     "event_id": { "type": ["string", "null"], "description": "Link to the corresponding event row if one exists." },
     "notes": { "type": ["string", "null"] }
   },
-  "required": ["leader_id", "phase", "country", "leader_name", "role", "organization", "citation_text", "verified_by", "verification_status", "confidence_level"],
+  "required": ["leader_id", "phase", "country", "leader_name", "role", "organization", "leadership_level", "death_status", "citation_text", "verified_by", "verification_status", "confidence_level"],
   "additionalProperties": false
 }
