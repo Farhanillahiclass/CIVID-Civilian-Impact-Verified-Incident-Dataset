@@ -1,16 +1,17 @@
 """
 CIVID Daily Update Script (HDX + ReliefWeb multi-source)
 ===========================================================
-Scope is fixed to Palestine/Gaza (Phase 1) and Sudan (Phase 2) ONLY —
-do not add other countries here without updating the main project scope
-in .internal/copilot-instructions.md first.
+PHASE-AWARE: extracts candidates for the CURRENT frontier phase (read from
+data/staging/current_phase.txt). Defaults to phase1_palestine if the state
+file is absent. To add a new country/phase, add it to the PHASES map below
+AND to data/staging/current_phase.txt via scripts/phase_orchestrator.py.
 
 Sources used:
 1. HDX (Humanitarian Data Exchange) CKAN API — NO registration required,
    run directly by OCHA. Primary source.
 2. ReliefWeb API — used as a secondary attempt; requires a pre-approved
-   appname (see .internal/README_AUTOMATION.md). If not yet approved, this source
-   is skipped automatically without breaking the run.
+   appname. If not yet approved, this source is skipped automatically
+   without breaking the run.
 
 This script NEVER writes to the verified events.csv/persons.csv files.
 It only appends candidate rows to data/staging/pending_review.csv, marked
@@ -18,7 +19,6 @@ unverified/low-confidence. Use scripts/promote_entry.py after you've
 manually reviewed a row and confirmed it against the real source.
 
 Run manually:
-    conda activate civid
     python scripts/daily_update.py
 """
 
@@ -28,12 +28,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib import request, error, parse
 
-# ---- Configuration (Palestine + Sudan ONLY) ----------------------------
+# ---- Configuration (all supported phases) ----------------------------
 
 HDX_API = "https://data.humdata.org/api/3/action/package_search"
 RELIEFWEB_API = "https://api.reliefweb.int/v2/reports"
 RELIEFWEB_APPNAME = "civid-dataset-research"  # update once approved
 
+# Phase-aware query map. Add new phases here as the project scope grows.
 PHASES = {
     "phase1_palestine": {
         "hdx_query": "Palestine OR Gaza OR oPt",
@@ -45,7 +46,32 @@ PHASES = {
         "reliefweb_country": "Sudan",
         "phase": 2,
     },
+    "phase3_iran": {
+        "hdx_query": "Iran OR Israel",
+        "reliefweb_country": "Iran",
+        "phase": 3,
+    },
+    "phase4_additional": {
+        "hdx_query": "Yemen OR Red Sea",
+        "reliefweb_country": "Yemen",
+        "phase": 4,
+    },
 }
+
+CURRENT_PHASE_FILE = Path(__file__).resolve().parent.parent / "data" / "staging" / "current_phase.txt"
+
+
+def current_phase_key() -> str:
+    """Return the phase key for the active frontier (from state file)."""
+    if CURRENT_PHASE_FILE.exists():
+        try:
+            idx = int(CURRENT_PHASE_FILE.read_text(encoding="utf-8").strip())
+            for key, cfg in PHASES.items():
+                if cfg["phase"] == idx:
+                    return key
+        except Exception:
+            pass
+    return "phase1_palestine"
 
 ROOT = Path(__file__).resolve().parent.parent
 STAGING_DIR = ROOT / "data" / "staging"
@@ -161,39 +187,41 @@ def main():
     existing_ids = load_existing_staging_ids()
     new_rows = []
 
-    for phase_dir, cfg in PHASES.items():
-        print(f"\n=== Phase {cfg['phase']} ({phase_dir}) ===")
+    # Extract only for the CURRENT frontier phase (phase-aware).
+    phase_dir = current_phase_key()
+    cfg = PHASES[phase_dir]
+    print(f"\n=== Phase {cfg['phase']} ({phase_dir}) [active frontier] ===")
 
-        print(f"[HDX] query: {cfg['hdx_query']}")
-        for d in fetch_hdx_datasets(cfg["hdx_query"]):
-            sid = f"{phase_dir}-hdx-{d['date']}-{abs(hash(d['title'])) % 100000}"
-            if sid in existing_ids:
-                continue
-            new_rows.append({
-                "staging_id": sid, "fetched_at": now, "phase": cfg["phase"],
-                "source_system": "HDX", "query_used": cfg["hdx_query"],
-                "title": d["title"], "date_or_modified": d["date"],
-                "org_or_source": d["org"], "url": d["url"],
-                "citation_text": "", "verification_status": "unverified",
-                "confidence_level": "low",
-                "notes": "Dataset-level metadata from HDX — open the URL and extract "
-                         "a specific citable fact before promoting.",
-            })
+    print(f"[HDX] query: {cfg['hdx_query']}")
+    for d in fetch_hdx_datasets(cfg["hdx_query"]):
+        sid = f"{phase_dir}-hdx-{d['date']}-{abs(hash(d['title'])) % 100000}"
+        if sid in existing_ids:
+            continue
+        new_rows.append({
+            "staging_id": sid, "fetched_at": now, "phase": cfg["phase"],
+            "source_system": "HDX", "query_used": cfg["hdx_query"],
+            "title": d["title"], "date_or_modified": d["date"],
+            "org_or_source": d["org"], "url": d["url"],
+            "citation_text": "", "verification_status": "unverified",
+            "confidence_level": "low",
+            "notes": "Dataset-level metadata from HDX — open the URL and extract "
+                     "a specific citable fact before promoting.",
+        })
 
-        print(f"[ReliefWeb] country: {cfg['reliefweb_country']}")
-        for r in fetch_reliefweb_reports(cfg["reliefweb_country"]):
-            sid = f"{phase_dir}-rw-{r['date']}-{abs(hash(r['title'])) % 100000}"
-            if sid in existing_ids:
-                continue
-            new_rows.append({
-                "staging_id": sid, "fetched_at": now, "phase": cfg["phase"],
-                "source_system": "ReliefWeb", "query_used": cfg["reliefweb_country"],
-                "title": r["title"], "date_or_modified": r["date"],
-                "org_or_source": r["org"], "url": r["url"],
-                "citation_text": "", "verification_status": "unverified",
-                "confidence_level": "low",
-                "notes": "Report from ReliefWeb — review before promoting.",
-            })
+    print(f"[ReliefWeb] country: {cfg['reliefweb_country']}")
+    for r in fetch_reliefweb_reports(cfg["reliefweb_country"]):
+        sid = f"{phase_dir}-rw-{r['date']}-{abs(hash(r['title'])) % 100000}"
+        if sid in existing_ids:
+            continue
+        new_rows.append({
+            "staging_id": sid, "fetched_at": now, "phase": cfg["phase"],
+            "source_system": "ReliefWeb", "query_used": cfg["reliefweb_country"],
+            "title": r["title"], "date_or_modified": r["date"],
+            "org_or_source": r["org"], "url": r["url"],
+            "citation_text": "", "verification_status": "unverified",
+            "confidence_level": "low",
+            "notes": "Report from ReliefWeb — review before promoting.",
+        })
 
     if new_rows:
         append_to_staging(new_rows)

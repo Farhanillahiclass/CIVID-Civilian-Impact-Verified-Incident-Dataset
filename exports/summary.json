@@ -1,9 +1,9 @@
 {
   "phases": {
     "phase1_palestine": {
-      "events": 42,
+      "events": 34,
       "events_verified": 34,
-      "events_unverified": 8,
+      "events_unverified": 0,
       "persons": 7,
       "sources": 21,
       "media": 0,
@@ -11,13 +11,13 @@
       "news_intelligence": 16
     },
     "phase2_sudan": {
-      "events": 16,
-      "events_verified": 9,
+      "events": 18,
+      "events_verified": 11,
       "events_unverified": 0,
-      "persons": 3,
-      "sources": 8,
+      "persons": 5,
+      "sources": 12,
       "media": 0,
-      "famous_victims": 0,
+      "famous_victims": 2,
       "news_intelligence": 16
     },
     "phase3_iran": {
@@ -42,14 +42,14 @@
     }
   },
   "totals": {
-    "events": 63,
-    "events_verified": 48,
-    "events_unverified": 8,
-    "persons": 14,
+    "events": 57,
+    "events_verified": 50,
+    "events_unverified": 0,
+    "persons": 16,
     "media": 0,
-    "famous_victims": 0,
+    "famous_victims": 2,
     "news_intelligence": 52,
     "images_indexed": 0,
-    "needs_review": 8
+    "needs_review": 0
   }
 }

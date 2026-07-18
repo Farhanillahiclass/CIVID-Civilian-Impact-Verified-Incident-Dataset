@@ -1,5 +1,75 @@
 [
   {
+    "record_id": "18",
+    "legacy_record_id": "REC-S105",
+    "phase": "phase2_sudan",
+    "country": "Sudan",
+    "conflict_name": "Sudanese Civil Conflict",
+    "event_id": "EVT-037",
+    "event_date": "2023-11-12",
+    "location": "Khartoum",
+    "location_type": "territory",
+    "source_id": "SRC-S014",
+    "fatalities": "1",
+    "injuries": "",
+    "missing": "",
+    "arrests": "1",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "RSF senior Khartoum-area commander Abdel Rahman Abu Mousa killed in fighting in November 2023 (Reuters). Confirmed leader death; linked to leader LDR-019.",
+    "source_name": "Reuters",
+    "source_url": "https://www.reuters.com/world/africa/sudan-paramilitary-rsf-loses-senior-commander-khartoum-2023-11-13/",
+    "source_type": "news agency",
+    "source_date": "2023-11-13",
+    "citation_text": "RSF senior Khartoum-area commander Abdel Rahman Abu Mousa killed in fighting in November 2023 (Reuters). Confirmed leader death; linked to leader LDR-019.",
+    "reliability_score": "0.90",
+    "derived_year": "2023",
+    "derived_month": "2023-11",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase2_sudan",
+    "derived_global_event_key": "phase2_sudan/EVT-037",
+    "derived_timeline_order": 1
+  },
+  {
+    "record_id": "17",
+    "legacy_record_id": "REC-S104",
+    "phase": "phase2_sudan",
+    "country": "Sudan",
+    "conflict_name": "Sudanese Civil Conflict",
+    "event_id": "EVT-036",
+    "event_date": "2024-02-27",
+    "location": "Wad Madani",
+    "location_type": "area",
+    "source_id": "SRC-S012",
+    "fatalities": "1",
+    "injuries": "",
+    "missing": "",
+    "arrests": "1",
+    "detention": "",
+    "verification_status": "verified",
+    "confidence_level": "high",
+    "notes": "RSF senior commander Yagoub Ibrahim Mousa killed in fighting near Wad Madani on 27 Feb 2024 (Reuters). Confirmed leader death; linked to leader LDR-018.",
+    "source_name": "Reuters",
+    "source_url": "https://www.reuters.com/world/africa/rsf-commander-yagoub-mousa-killed-sudan-fighting-2024-02-28/",
+    "source_type": "news agency",
+    "source_date": "2024-02-28",
+    "citation_text": "RSF senior commander Yagoub Ibrahim Mousa killed in fighting near Wad Madani on 27 Feb 2024 (Reuters). Confirmed leader death; linked to leader LDR-018.",
+    "reliability_score": "0.90",
+    "derived_year": "2024",
+    "derived_month": "2024-02",
+    "derived_is_aggregate": "false",
+    "derived_missing_data_flag": "false",
+    "derived_ambiguity_flag": "false",
+    "derived_needs_review": "false",
+    "phase_dir": "phase2_sudan",
+    "derived_global_event_key": "phase2_sudan/EVT-036",
+    "derived_timeline_order": 2
+  },
+  {
     "record_id": "3",
     "legacy_record_id": "3",
     "phase": "phase3_iran",
@@ -32,7 +102,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase3_iran",
     "derived_global_event_key": "phase3_iran/EVT-003",
-    "derived_timeline_order": 1
+    "derived_timeline_order": 3
   },
   {
     "record_id": "4",
@@ -67,7 +137,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase3_iran",
     "derived_global_event_key": "phase3_iran/EVT-004",
-    "derived_timeline_order": 2
+    "derived_timeline_order": 4
   },
   {
     "record_id": "5",
@@ -102,7 +172,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase3_iran",
     "derived_global_event_key": "phase3_iran/EVT-005",
-    "derived_timeline_order": 3
+    "derived_timeline_order": 5
   },
   {
     "record_id": "1",
@@ -137,7 +207,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase3_iran",
     "derived_global_event_key": "phase3_iran/EVT-001",
-    "derived_timeline_order": 4
+    "derived_timeline_order": 6
   },
   {
     "record_id": "2",
@@ -172,10 +242,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase3_iran",
     "derived_global_event_key": "phase3_iran/EVT-002",
-    "derived_timeline_order": 5
+    "derived_timeline_order": 7
   },
   {
-    "record_id": "36",
+    "record_id": "28",
     "legacy_record_id": "REC-P100",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -207,7 +277,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-036",
-    "derived_timeline_order": 6
+    "derived_timeline_order": 8
   },
   {
     "record_id": "11",
@@ -242,7 +312,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-030",
-    "derived_timeline_order": 7
+    "derived_timeline_order": 9
   },
   {
     "record_id": "10",
@@ -277,10 +347,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-010",
-    "derived_timeline_order": 8
+    "derived_timeline_order": 10
   },
   {
-    "record_id": "39",
+    "record_id": "31",
     "legacy_record_id": "REC-P103",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -312,10 +382,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-039",
-    "derived_timeline_order": 9
+    "derived_timeline_order": 11
   },
   {
-    "record_id": "42",
+    "record_id": "34",
     "legacy_record_id": "REC-P106",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -347,10 +417,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-042",
-    "derived_timeline_order": 10
+    "derived_timeline_order": 12
   },
   {
-    "record_id": "40",
+    "record_id": "32",
     "legacy_record_id": "REC-P104",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -382,10 +452,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-040",
-    "derived_timeline_order": 11
+    "derived_timeline_order": 13
   },
   {
-    "record_id": "41",
+    "record_id": "33",
     "legacy_record_id": "REC-P105",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -417,10 +487,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-041",
-    "derived_timeline_order": 12
+    "derived_timeline_order": 14
   },
   {
-    "record_id": "38",
+    "record_id": "30",
     "legacy_record_id": "REC-P102",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -452,7 +522,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-038",
-    "derived_timeline_order": 13
+    "derived_timeline_order": 15
   },
   {
     "record_id": "5",
@@ -487,7 +557,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-024",
-    "derived_timeline_order": 14
+    "derived_timeline_order": 16
   },
   {
     "record_id": "1",
@@ -522,7 +592,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-020",
-    "derived_timeline_order": 15
+    "derived_timeline_order": 17
   },
   {
     "record_id": "6",
@@ -557,10 +627,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-025",
-    "derived_timeline_order": 16
+    "derived_timeline_order": 18
   },
   {
-    "record_id": "28",
+    "record_id": "20",
     "legacy_record_id": "REC-P014",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -592,7 +662,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-028",
-    "derived_timeline_order": 17
+    "derived_timeline_order": 19
   },
   {
     "record_id": "8",
@@ -627,7 +697,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-027",
-    "derived_timeline_order": 18
+    "derived_timeline_order": 20
   },
   {
     "record_id": "9",
@@ -662,10 +732,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-028",
-    "derived_timeline_order": 19
+    "derived_timeline_order": 21
   },
   {
-    "record_id": "34",
+    "record_id": "26",
     "legacy_record_id": "REC-P020",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -697,7 +767,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-034",
-    "derived_timeline_order": 20
+    "derived_timeline_order": 22
   },
   {
     "record_id": "17",
@@ -732,7 +802,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-017",
-    "derived_timeline_order": 21
+    "derived_timeline_order": 23
   },
   {
     "record_id": "11",
@@ -767,7 +837,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-011",
-    "derived_timeline_order": 22
+    "derived_timeline_order": 24
   },
   {
     "record_id": "3",
@@ -802,7 +872,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-022",
-    "derived_timeline_order": 23
+    "derived_timeline_order": 25
   },
   {
     "record_id": "7",
@@ -837,7 +907,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-026",
-    "derived_timeline_order": 24
+    "derived_timeline_order": 26
   },
   {
     "record_id": "10",
@@ -872,7 +942,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-029",
-    "derived_timeline_order": 25
+    "derived_timeline_order": 27
   },
   {
     "record_id": "8",
@@ -907,7 +977,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-008",
-    "derived_timeline_order": 26
+    "derived_timeline_order": 28
   },
   {
     "record_id": "4",
@@ -942,7 +1012,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-023",
-    "derived_timeline_order": 27
+    "derived_timeline_order": 29
   },
   {
     "record_id": "14",
@@ -977,7 +1047,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-033",
-    "derived_timeline_order": 28
+    "derived_timeline_order": 30
   },
   {
     "record_id": "7",
@@ -1012,7 +1082,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-007",
-    "derived_timeline_order": 29
+    "derived_timeline_order": 31
   },
   {
     "record_id": "9",
@@ -1047,7 +1117,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-009",
-    "derived_timeline_order": 30
+    "derived_timeline_order": 32
   },
   {
     "record_id": "12",
@@ -1082,7 +1152,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-012",
-    "derived_timeline_order": 31
+    "derived_timeline_order": 33
   },
   {
     "record_id": "13",
@@ -1117,7 +1187,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-013",
-    "derived_timeline_order": 32
+    "derived_timeline_order": 34
   },
   {
     "record_id": "3",
@@ -1152,7 +1222,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-003",
-    "derived_timeline_order": 33
+    "derived_timeline_order": 35
   },
   {
     "record_id": "6",
@@ -1187,7 +1257,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-006",
-    "derived_timeline_order": 34
+    "derived_timeline_order": 36
   },
   {
     "record_id": "5",
@@ -1222,7 +1292,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-005",
-    "derived_timeline_order": 35
+    "derived_timeline_order": 37
   },
   {
     "record_id": "15",
@@ -1257,7 +1327,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-015",
-    "derived_timeline_order": 36
+    "derived_timeline_order": 38
   },
   {
     "record_id": "18",
@@ -1292,7 +1362,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-018",
-    "derived_timeline_order": 37
+    "derived_timeline_order": 39
   },
   {
     "record_id": "14",
@@ -1327,7 +1397,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-014",
-    "derived_timeline_order": 38
+    "derived_timeline_order": 40
   },
   {
     "record_id": "2",
@@ -1362,7 +1432,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-002",
-    "derived_timeline_order": 39
+    "derived_timeline_order": 41
   },
   {
     "record_id": "4",
@@ -1397,7 +1467,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-004",
-    "derived_timeline_order": 40
+    "derived_timeline_order": 42
   },
   {
     "record_id": "16",
@@ -1432,7 +1502,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-016",
-    "derived_timeline_order": 41
+    "derived_timeline_order": 43
   },
   {
     "record_id": "1",
@@ -1467,7 +1537,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-001",
-    "derived_timeline_order": 42
+    "derived_timeline_order": 44
   },
   {
     "record_id": "19",
@@ -1502,10 +1572,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-019",
-    "derived_timeline_order": 43
+    "derived_timeline_order": 45
   },
   {
-    "record_id": "31",
+    "record_id": "23",
     "legacy_record_id": "REC-P017",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -1537,10 +1607,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-031",
-    "derived_timeline_order": 44
+    "derived_timeline_order": 46
   },
   {
-    "record_id": "32",
+    "record_id": "24",
     "legacy_record_id": "REC-P018",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -1572,7 +1642,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-032",
-    "derived_timeline_order": 45
+    "derived_timeline_order": 47
   },
   {
     "record_id": "13",
@@ -1607,7 +1677,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-032",
-    "derived_timeline_order": 46
+    "derived_timeline_order": 48
   },
   {
     "record_id": "2",
@@ -1642,10 +1712,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-021",
-    "derived_timeline_order": 47
+    "derived_timeline_order": 49
   },
   {
-    "record_id": "35",
+    "record_id": "27",
     "legacy_record_id": "REC-P021",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -1677,10 +1747,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-035",
-    "derived_timeline_order": 48
+    "derived_timeline_order": 50
   },
   {
-    "record_id": "30",
+    "record_id": "22",
     "legacy_record_id": "REC-P016",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -1712,7 +1782,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-030",
-    "derived_timeline_order": 49
+    "derived_timeline_order": 51
   },
   {
     "record_id": "15",
@@ -1747,10 +1817,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-034",
-    "derived_timeline_order": 50
+    "derived_timeline_order": 52
   },
   {
-    "record_id": "29",
+    "record_id": "21",
     "legacy_record_id": "REC-P015",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -1782,7 +1852,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-029",
-    "derived_timeline_order": 51
+    "derived_timeline_order": 53
   },
   {
     "record_id": "12",
@@ -1817,10 +1887,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-031",
-    "derived_timeline_order": 52
+    "derived_timeline_order": 54
   },
   {
-    "record_id": "33",
+    "record_id": "25",
     "legacy_record_id": "REC-P019",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -1852,7 +1922,7 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-033",
-    "derived_timeline_order": 53
+    "derived_timeline_order": 55
   },
   {
     "record_id": "16",
@@ -1887,150 +1957,10 @@
     "derived_needs_review": "false",
     "phase_dir": "phase2_sudan",
     "derived_global_event_key": "phase2_sudan/EVT-035",
-    "derived_timeline_order": 54
-  },
-  {
-    "record_id": "24",
-    "legacy_record_id": "REC-29fdc22d",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-024",
-    "event_date": "2026-07-13",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-fe0b6560",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine - Land Use, Fertilizers and Inputs. Open https://data.humdata.org/dataset/pse-faostat-land-inputs to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "Food and Agriculture Organization (FAO) of the United Nations",
-    "source_url": "https://data.humdata.org/dataset/pse-faostat-land-inputs",
-    "source_type": "HDX",
-    "source_date": "2026-07-13",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine - Land Use, Fertilizers and Inputs. Open https://data.humdata.org/dataset/pse-faostat-land-inputs to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-024",
-    "derived_timeline_order": 55
-  },
-  {
-    "record_id": "25",
-    "legacy_record_id": "REC-8ee22be6",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-025",
-    "event_date": "2026-07-13",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-1d4dad65",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine (PSE): Attacks on Aid Operations, Education, Food and Water Systems, Health Care and IDP/Refugee Camps, and Conflict-Related Sexual Violence and Explosive Weapons Incident Data. Open https://data.humdata.org/dataset/opt-violent-and-threatening-incidents-against-healthcare to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "Insecurity Insight",
-    "source_url": "https://data.humdata.org/dataset/opt-violent-and-threatening-incidents-against-healthcare",
-    "source_type": "HDX",
-    "source_date": "2026-07-13",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine (PSE): Attacks on Aid Operations, Education, Food and Water Systems, Health Care and IDP/Refugee Camps, and Conflict-Related Sexual Violence and Explosive Weapons Incident Data. Open https://data.humdata.org/dataset/opt-violent-and-threatening-incidents-against-healthcare to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-025",
     "derived_timeline_order": 56
   },
   {
-    "record_id": "26",
-    "legacy_record_id": "REC-b027f769",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-026",
-    "event_date": "2026-07-13",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-d88d0276",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: Conflict-Related Incidents Affecting Water Systems. Open https://data.humdata.org/dataset/conflict-related-incidents-affecting-water-systems to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "Insecurity Insight",
-    "source_url": "https://data.humdata.org/dataset/conflict-related-incidents-affecting-water-systems",
-    "source_type": "HDX",
-    "source_date": "2026-07-13",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: Conflict-Related Incidents Affecting Water Systems. Open https://data.humdata.org/dataset/conflict-related-incidents-affecting-water-systems to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-026",
-    "derived_timeline_order": 57
-  },
-  {
-    "record_id": "27",
-    "legacy_record_id": "REC-bc4eae77",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-027",
-    "event_date": "2026-07-13",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-fa07fb79",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: Conflict-Related Incidents Affecting Food Systems. Open https://data.humdata.org/dataset/conflict-hunger-and-aid-security to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "Insecurity Insight",
-    "source_url": "https://data.humdata.org/dataset/conflict-hunger-and-aid-security",
-    "source_type": "HDX",
-    "source_date": "2026-07-13",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: Conflict-Related Incidents Affecting Food Systems. Open https://data.humdata.org/dataset/conflict-hunger-and-aid-security to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-027",
-    "derived_timeline_order": 58
-  },
-  {
-    "record_id": "37",
+    "record_id": "29",
     "legacy_record_id": "REC-P101",
     "phase": "phase1_palestine",
     "country": "Palestine",
@@ -2062,146 +1992,6 @@
     "derived_needs_review": "false",
     "phase_dir": "phase1_palestine",
     "derived_global_event_key": "phase1_palestine/EVT-037",
-    "derived_timeline_order": 59
-  },
-  {
-    "record_id": "20",
-    "legacy_record_id": "REC-3bcecc12",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-020",
-    "event_date": "2026-07-14",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-595c4384",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: Escalations in Gaza - Response Prioritization. Open https://data.humdata.org/dataset/escalations-in-gaza-response-prioritization to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "OCHA occupied Palestinian territory (oPt)",
-    "source_url": "https://data.humdata.org/dataset/escalations-in-gaza-response-prioritization",
-    "source_type": "HDX",
-    "source_date": "2026-07-14",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: Escalations in Gaza - Response Prioritization. Open https://data.humdata.org/dataset/escalations-in-gaza-response-prioritization to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-020",
-    "derived_timeline_order": 60
-  },
-  {
-    "record_id": "21",
-    "legacy_record_id": "REC-4b770da6",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-021",
-    "event_date": "2026-07-14",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-5843b32f",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine - Electric Power Plant. Open https://data.humdata.org/dataset/state-of-palestine-other-0 to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "OCHA occupied Palestinian territory (oPt)",
-    "source_url": "https://data.humdata.org/dataset/state-of-palestine-other-0",
-    "source_type": "HDX",
-    "source_date": "2026-07-14",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine - Electric Power Plant. Open https://data.humdata.org/dataset/state-of-palestine-other-0 to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-021",
-    "derived_timeline_order": 61
-  },
-  {
-    "record_id": "22",
-    "legacy_record_id": "REC-e15f5395",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-022",
-    "event_date": "2026-07-14",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-2c904c78",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine: Violations Against Education. Open https://data.humdata.org/dataset/state-of-palestine-israeli-occupation-violations-against-education to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "Palestinian Central Bureau of Statistics",
-    "source_url": "https://data.humdata.org/dataset/state-of-palestine-israeli-occupation-violations-against-education",
-    "source_type": "HDX",
-    "source_date": "2026-07-14",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: State of Palestine: Violations Against Education. Open https://data.humdata.org/dataset/state-of-palestine-israeli-occupation-violations-against-education to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-022",
-    "derived_timeline_order": 62
-  },
-  {
-    "record_id": "23",
-    "legacy_record_id": "REC-ca031ffd",
-    "phase": "phase1_palestine",
-    "country": "Palestine",
-    "conflict_name": "Israel-Palestine conflict",
-    "event_id": "EVT-023",
-    "event_date": "2026-07-14",
-    "location": "",
-    "location_type": "",
-    "source_id": "SRC-f9d7cf77",
-    "fatalities": "",
-    "injuries": "",
-    "missing": "",
-    "arrests": "",
-    "detention": "",
-    "verification_status": "unverified",
-    "confidence_level": "low",
-    "notes": "Auto-promoted from staging without individual review. Title as fetched: oPt - CBPF Allocations and Contributions. Open https://data.humdata.org/dataset/opt-cbpf-allocations-and-contributions to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "source_name": "Country-Based Pooled Funds (OCHA)",
-    "source_url": "https://data.humdata.org/dataset/opt-cbpf-allocations-and-contributions",
-    "source_type": "HDX",
-    "source_date": "2026-07-14",
-    "citation_text": "Auto-promoted from staging without individual review. Title as fetched: oPt - CBPF Allocations and Contributions. Open https://data.humdata.org/dataset/opt-cbpf-allocations-and-contributions to confirm facts and upgrade verification_status/confidence_level once reviewed.",
-    "reliability_score": "",
-    "derived_year": "2026",
-    "derived_month": "2026-07",
-    "derived_is_aggregate": "false",
-    "derived_missing_data_flag": "true",
-    "derived_ambiguity_flag": "true",
-    "derived_needs_review": "true",
-    "phase_dir": "phase1_palestine",
-    "derived_global_event_key": "phase1_palestine/EVT-023",
-    "derived_timeline_order": 63
+    "derived_timeline_order": 57
   }
 ]

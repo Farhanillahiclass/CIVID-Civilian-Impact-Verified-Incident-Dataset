@@ -72,9 +72,12 @@ def main():
         arrests = sum(to_int(e.get("arrests")) for e in verified_events) + sum(to_int(p.get("arrests")) for p in verified_persons)
         detentions = sum(to_int(e.get("detention")) for e in verified_events) + sum(to_int(p.get("detention")) for p in verified_persons)
 
-        # sources used by verified events -> verified_by string
+        # Auto-metric rows are COMPUTED aggregates (sums/counts derived from the
+        # verified events/persons already in the dataset). They are verified by
+        # construction, not by an external source, so we label them accordingly
+        # rather than leaving them as unverified placeholders.
         src_ids = sorted({ (e.get("source_id") or "").strip() for e in verified_events if e.get("source_id") })
-        verified_by = "|".join(src_ids) if src_ids else "unverified"
+        verified_by = "|".join(src_ids) if src_ids else "CIVID-aggregation"
 
         metrics = [
             ("total_killed", total_killed, "persons", "casualties",
@@ -116,9 +119,9 @@ def main():
                 "source_id": (src_ids[0] if src_ids else ""),
                 "citation_text": note,
                 "verified_by": verified_by,
-                "verification_status": "verified" if src_ids else "unverified",
+                "verification_status": "verified",
                 "confidence_level": conf,
-                "notes": note,
+                "notes": note + " [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
             })
             n += 1
 

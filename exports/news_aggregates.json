@@ -1,11 +1,11 @@
 {
-  "total_killed": 145537,
+  "total_killed": 145539,
   "children_killed": 4,
   "women_killed": 0,
   "doctors_killed": 0,
   "journalists_killed": 0,
-  "commanders_killed": 4,
-  "arrests": 0,
+  "commanders_killed": 6,
+  "arrests": 2,
   "detentions": 0,
   "note": "Counts derived from flag columns / fatalities across all phases. Person-level counts reflect rows present, not a verified death total."
 }

@@ -33,6 +33,15 @@ STAGING_FILE = ROOT / "data" / "staging" / "pending_review.csv"
 PHASE_DIRS = {
     1: ROOT / "data" / "phase1_palestine",
     2: ROOT / "data" / "phase2_sudan",
+    3: ROOT / "data" / "phase3_iran",
+    4: ROOT / "data" / "phase4_additional",
+}
+
+PHASE_DEFAULTS = {
+    1: ("Palestine", "Israel-Palestine conflict"),
+    2: ("Sudan", "Sudan civil conflict"),
+    3: ("Iran", "Iran-Israel conflict"),
+    4: ("Yemen", "Yemen conflict (Red Sea crisis)"),
 }
 
 EVENTS_FIELDS = [
@@ -152,8 +161,9 @@ def main():
         sys.exit(0)
 
     print("\nEnter event details (leave blank if unknown — never guess):")
-    country = ask("Country", "Palestine" if phase == 1 else "Sudan")
-    conflict_name = ask("Conflict name", "Israel-Palestine conflict" if phase == 1 else "Sudan civil conflict")
+    def_country, def_conflict = PHASE_DEFAULTS.get(phase, ("", ""))
+    country = ask("Country", def_country)
+    conflict_name = ask("Conflict name", def_conflict)
     event_date = ask("Event date (YYYY-MM-DD)", get_date(match))
     location = ask("Location")
     location_type = ask("Location type (e.g. city, camp, hospital)")

@@ -77,11 +77,11 @@
     "death_location": "Tehran, Iran",
     "death_cause": "Killed in Israeli strike",
     "bio": "Commander of the Islamic Revolutionary Guard Corps (IRGC). Killed in Israeli strikes on Tehran on 13 June 2025.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salami.jpg",
     "image_source": "Wikimedia Commons (File:Hossein Salami)",
     "image_license": "CC BY-SA 4.0",
-    "image_local_path": "data/leaders_photos/LDR-003/LDR-003.jpg",
+    "image_local_path": "",
     "source_id": "acled_ir",
     "source_url": "https://acleddata.com/qa/qa-twelve-days-shook-region-inside-iran-israel-war",
     "citation_text": "ACLED/HRANA: IRGC commander Salami killed in Israeli strikes 13 June 2025.",
@@ -90,7 +90,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "EVT-003",
-    "notes": "Confirmed by IDF and corroborated by Iranian state media and HRANA."
+    "notes": "Confirmed by IDF and corroborated by Iranian state media and HRANA. [image download pending: marked unavailable until verified fetch] [portrait download pending: network-restricted; fetch via scripts/fetch_leader_photos.py]"
   },
   {
     "leader_id": "LDR-004",
@@ -139,7 +139,7 @@
     "death_location": "Tehran, Iran",
     "death_cause": "Killed in Israeli strike",
     "bio": "IRGC senior commander and head of the Khatam al-Anbiya Central Headquarters. Killed in Israeli strikes on Tehran on 13 June 2025.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gholam_Ali_Rashid.jpg",
     "image_source": "Wikimedia Commons (File:Gholam Ali Rashid)",
     "image_license": "CC BY-SA 4.0",
@@ -152,7 +152,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "EVT-003",
-    "notes": "Confirmed by IDF and corroborated by HRANA."
+    "notes": "Confirmed by IDF and corroborated by HRANA. [image download pending: marked unavailable until verified fetch] [portrait download pending: network-restricted; fetch via scripts/fetch_leader_photos.py]"
   },
   {
     "leader_id": "LDR-006",
@@ -294,7 +294,7 @@
     "death_location": "Al-Mawasi, Gaza Strip",
     "death_cause": "Killed in Israeli airstrike",
     "bio": "Member of the Hamas political bureau and a senior Hamas figure in Gaza handling financial affairs. Killed in an Israeli airstrike on a tent in the Al-Mawasi area in March 2024.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ismail_Barhoum.jpg",
     "image_source": "Wikimedia Commons (File:Ismail Barhoum)",
     "image_license": "CC BY-SA 4.0",
@@ -307,7 +307,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "",
-    "notes": "Confirmed by Reuters and Israeli officials."
+    "notes": "Confirmed by Reuters and Israeli officials. [image download pending: marked unavailable until verified fetch]"
   },
   {
     "leader_id": "LDR-011",
@@ -325,7 +325,7 @@
     "death_location": "Al-Mawasi, Gaza Strip",
     "death_cause": "Killed in Israeli airstrike",
     "bio": "Member of the Hamas political bureau. Killed alongside Ismail Barhoum in an Israeli airstrike on a tent in the Al-Mawasi area on 19 March 2024.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fursan_Khalifa.jpg",
     "image_source": "Wikimedia Commons (File:Fursan Khalifa)",
     "image_license": "CC BY-SA 4.0",
@@ -338,7 +338,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "",
-    "notes": "Confirmed by Reuters and Israeli officials."
+    "notes": "Confirmed by Reuters and Israeli officials. [image download pending: marked unavailable until verified fetch]"
   },
   {
     "leader_id": "LDR-012",
@@ -387,7 +387,7 @@
     "death_location": "Gaza Strip",
     "death_cause": "Killed in Israeli strike",
     "bio": "Longtime Arabic-language spokesman for the Al-Qassam Brigades, Hamas's military wing, known publicly only by the kunya 'Abu Obaida'. Killed in an Israeli strike in Gaza in August 2025; Hamas announced his death and revealed his real name.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Obeida_2025.png",
     "image_source": "Wikimedia Commons (File:Abu Obeida 2025)",
     "image_license": "CC BY-SA 4.0",
@@ -400,7 +400,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "",
-    "notes": "Confirmed by Hamas statement and Reuters/AP reporting."
+    "notes": "Confirmed by Hamas statement and Reuters/AP reporting. [image download pending: marked unavailable until verified fetch]"
   },
   {
     "leader_id": "LDR-014",
@@ -542,7 +542,7 @@
     "death_location": "Wad Madani, Sudan",
     "death_cause": "Killed in combat",
     "bio": "Senior commander in the Rapid Support Forces (RSF), a paramilitary force central to the Sudanese civil war. Reported killed in clashes near Wad Madani in February 2024.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yagoub_Ibrahim_Mousa.jpg",
     "image_source": "Wikimedia Commons (File:Yagoub Ibrahim Mousa)",
     "image_license": "CC BY-SA 4.0",
@@ -555,7 +555,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "",
-    "notes": "Confirmed by Reuters and Sudan War Monitor reporting."
+    "notes": "Confirmed by Reuters and Sudan War Monitor reporting. [image download pending: marked unavailable until verified fetch]"
   },
   {
     "leader_id": "LDR-019",
@@ -573,7 +573,7 @@
     "death_location": "Khartoum, Sudan",
     "death_cause": "Killed in combat",
     "bio": "Senior RSF field commander in the Khartoum area during the Sudanese civil war. Reported killed in combat in Khartoum in November 2023.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abdel_Rahman_Abu_Mousa.jpg",
     "image_source": "Wikimedia Commons (File:Abdel Rahman Abu Mousa)",
     "image_license": "CC BY-SA 4.0",
@@ -586,7 +586,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "",
-    "notes": "Confirmed by Reuters and Sudanese sources."
+    "notes": "Confirmed by Reuters and Sudanese sources. [image download pending: marked unavailable until verified fetch]"
   },
   {
     "leader_id": "LDR-020",
@@ -635,7 +635,7 @@
     "death_location": "Khan Yunis, Gaza Strip",
     "death_cause": "Killed in Israeli airstrike",
     "bio": "Senior Al-Qassam Brigades commander and a member of Hamas's Khan Yunis Brigade leadership. Killed in the same 13 July 2024 Israeli airstrike on a Khan Yunis compound that targeted Mohammed Deif.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Salama.jpg",
     "image_source": "Wikimedia Commons (File:Abu Salama)",
     "image_license": "CC BY-SA 4.0",
@@ -648,7 +648,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "",
-    "notes": "Confirmed by Israel (IDF) alongside the Deif strike; reported by Reuters/AP."
+    "notes": "Confirmed by Israel (IDF) alongside the Deif strike; reported by Reuters/AP. [image download pending: marked unavailable until verified fetch]"
   },
   {
     "leader_id": "LDR-022",
@@ -697,7 +697,7 @@
     "death_location": "Gaza City, Gaza Strip",
     "death_cause": "Killed in Israeli strike",
     "bio": "Senior Al-Qassam Brigades commander in charge of Hamas's anti-tank and special forces in the northern Gaza Strip. Killed in an Israeli strike in Gaza City in November 2023; Israel announced his death in January 2024.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jihad_Shehadeh.jpg",
     "image_source": "Wikimedia Commons (File:Jihad Shehadeh)",
     "image_license": "CC BY-SA 4.0",
@@ -710,7 +710,7 @@
     "confidence_level": "high",
     "needs_review": "false",
     "event_id": "",
-    "notes": "Confirmed by Israel (IDF) and Reuters."
+    "notes": "Confirmed by Israel (IDF) and Reuters. [image download pending: marked unavailable until verified fetch]"
   },
   {
     "leader_id": "LDR-024",
@@ -728,7 +728,7 @@
     "death_location": "Sanaa, Yemen",
     "death_cause": "Reported killed in airstrike (unconfirmed)",
     "bio": "Leader of Yemen's Houthi movement (Ansar Allah) since 2004. Some reports (single-source, unconfirmed) claimed he was killed in airstrikes on Sanaa in September 2025; Houthi media has not independently confirmed, and the claim remains disputed.",
-    "image_available": "true",
+    "image_available": "false",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abdul_Malik_al-Houthi.jpg",
     "image_source": "Wikimedia Commons (File:Abdul Malik al-Houthi)",
     "image_license": "CC BY-SA 4.0",
@@ -741,6 +741,37 @@
     "confidence_level": "low",
     "needs_review": "true",
     "event_id": "",
-    "notes": "UNVERIFIED - reported by one source only; held in review queue pending independent confirmation. Houthi media denies the claim."
+    "notes": "UNVERIFIED - reported by one source only; held in review queue pending independent confirmation. Houthi media denies the claim. [image download pending: marked unavailable until verified fetch]"
+  },
+  {
+    "leader_id": "LDR-025",
+    "legacy_record_id": "",
+    "phase": "phase3_iran",
+    "country": "Iran",
+    "conflict_name": "Iran-Israel Twelve-Day War",
+    "leader_name": "Ali Khamenei",
+    "aka": "Ali Hoseyni Khamenei; Ayatollah Khamenei",
+    "role": "political leader",
+    "organization": "Islamic Republic of Iran (Supreme Leadership)",
+    "leadership_level": "top",
+    "death_status": "reported killed",
+    "death_date": "",
+    "death_location": "",
+    "death_cause": "",
+    "bio": "Supreme Leader of Iran since 1989. Head of state and highest political and religious authority in the Islamic Republic. Death reported by user; unverified pending reliable-source confirmation.",
+    "image_available": "false",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ali_Khamenei.jpg",
+    "image_source": "Wikimedia Commons (File:Ali Khamenei, CC BY-SA 4.0)",
+    "image_license": "CC BY-SA 4.0",
+    "image_local_path": "",
+    "source_id": "acled_ir",
+    "source_url": "https://acleddata.com/iran-crisis-live",
+    "citation_text": "User-reported death of Ali Khamenei (Supreme Leader of Iran). NOT yet confirmed by an independent reliable source in this network-restricted environment. Held in review queue (needs_review=true) pending citation from Reuters/AP/IRNA/ACLED/HRANA.",
+    "verified_by": "user-reported",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "needs_review": "true",
+    "event_id": "",
+    "notes": "DEATH CLAIM (user-reported, unverified). Was previously recorded alive. Requires a cited reliable source before promotion to verified. Portrait URL set to real Wikimedia Commons file; image_available=false until downloaded in a networked environment."
   }
 ]

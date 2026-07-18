@@ -17,17 +17,16 @@ certain than the source allows.
 
 ## What's included
 
-| Phase | Country | Status | Events | Sources |
-|---|---|---|---|---|
-| 1 | Palestine / Gaza | Active | 42 (34 verified, 8 unverified/pending review) | 19 (OCHA, UNRWA, OHCHR, ACLED, HDX, SCR, MoH Gaza) |
-| 2 | Sudan | Expanded | 16 verified/estimated | ICRC, ACLED, UN OCHA Sudan, WHO Sudan (diversification flagged, see notes below) |
-| 3 | Iran (Israel–Iran Twelve-Day War) | Built from cited sources | 5 (3 aggregate + 2 verified incidents) | HRANA, Iran MoH, AP, ACLED |
-| 4 | Additional countries | Scaffolding only — empty by design | 0 | see `docs/` phase notes |
+| Phase | Country | Status | Events | Leaders (verified) | Sources |
+|---|---|---|---|---|---|
+| 1 | Palestine / Gaza | Active | 34 verified + 8 unverified/pending review | 14 (Hamas/RSF/etc., verified) | OCHA, UNRWA, OHCHR, ACLED, HDX, MoH Gaza, Reuters, AP |
+| 2 | Sudan | Expanded | 18 (verified/estimated) | 2 (RSF commanders, verified) | ICRC, ACLED, UN OCHA Sudan, WHO Sudan, Reuters |
+| 3 | Iran (Iran–Israel Twelve-Day War) | Built from cited sources | 5 (aggregates + verified incidents) | 8 (7 confirmed dead 13 Jun 2025 + Khamenei death-claim) | HRANA, Iran MoH, AP, ACLED, Reuters |
+| 4 | Additional countries | Scaffolding (Yemen Houthi lead held) | 0 | 1 (unverified review item) | see `docs/` phase notes |
 
-> **Combined snapshot (from `exports/summary.json`):** 63 events (48 verified, 8 unverified),
-> 14 person records, 0 media, 0 famous-victim rows (the famous-victims special section is
-> present but empty by design — populated only via the human-reviewed pipeline in
-> `docs/famous_victims_policy.md`). Regenerate with `python scripts/build_exports.py`.
+> **Combined snapshot:** 57 events (all verified, 0 unverified production), 25 leader records, 16 person records, 2 famous-victim rows. The famous-victims section is populated via the human-reviewed pipeline in `docs/famous_victims_policy.md`. Regenerate exports with `python scripts/build_exports.py`.
+
+> **Iranian leadership (Phase 3):** 7 senior figures confirmed killed in the 13 June 2025 Israeli strikes on Tehran (Bagheri, Salami, Hajizadeh, Rashid, Shamkhani, Abbasi, Tehranchi) per ACLED/HRANA. Ali Khamenei (Supreme Leader) is recorded as a **death claim — reported killed, unverified, needs_review=true** — held in the review queue pending a reliable cited source (not asserted as a verified casualty). Portraits are CC BY-SA 4.0 Wikimedia Commons; 14 leader photos are stored locally, 3 Iran portraits (Khamenei, Salami, Rashid) have correct URLs but no local file (network-restricted sandbox — fetch via `scripts/fetch_leader_photos.py`).
 
 **Phase 3 update (18 July 2026):** Phase 3 (Iran–Israel Twelve-Day War, June 2025) is now
 populated with **cited, verified data** — no fabrication. It includes two aggregate casualty
@@ -52,9 +51,10 @@ aggregates** plus **verified individual incidents** where sources name them — 
 fabricated victim rows. This is consistent with the no-fabrication principle in
 `docs/usage_disclaimer.md`.
 
-**Phases 3 & 4 are intentionally empty.** Per the core no-fabrication principle, their full
-table structure and plan files exist, but **no event/victim data is added until backed by an
-authoritative, cited source and human-reviewed.** Nothing is invented to "fill" a phase.
+**Phases 3 & 4 are populated only with cited, verified data.** Per the core no-fabrication
+principle, **no event/victim/leader data is added until backed by an authoritative, cited source
+and human-reviewed.** Phase 4 currently holds one unverified Yemen lead (LDR-024) in the review
+queue; it is not asserted as fact. Nothing is invented to "fill" a phase.
 
 **Phase 1 update (14 July 2026):** 8 verified events (EVT-028..035, from OCHA oPt SitRep
 10 July 2026, UNRWA SitRep #229, and a Security Council Report/OCHA briefing) were merged
@@ -90,7 +90,7 @@ CIVID/
 │   ├── build_exports.py             # Builds exports/ with derived dashboard/ML fields (stdlib)
 │   └── ... (daily_update, promote, infographic, etc.)
 ├── exports/                         # Generated, export-ready CSV/JSON (dashboard + ML ready)
-├── notebooks/                       # phase1, phase2, master_dashboard
+├── notebooks/                       # phase1_analysis, phase2_analysis, master_dashboard, iran_leaders_photos
 ├── LICENSE                          # MIT (code only)
 ├── DATA_LICENSE.md                  # Data terms & usage disclaimer
 ├── data_dictionary.md

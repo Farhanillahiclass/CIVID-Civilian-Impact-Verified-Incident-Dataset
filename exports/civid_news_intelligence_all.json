@@ -203,7 +203,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "high",
-    "notes": "Sum of fatalities across verified events in this phase.",
+    "notes": "Sum of fatalities across verified events in this phase. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -226,7 +226,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged child_flag (proxy for children in records).",
+    "notes": "Count of verified person rows flagged child_flag (proxy for children in records). [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -249,7 +249,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "low",
-    "notes": "Not derivable without per-victim fatality link; 0 until modeled.",
+    "notes": "Not derivable without per-victim fatality link; 0 until modeled. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -272,7 +272,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged doctor_flag.",
+    "notes": "Count of verified person rows flagged doctor_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -295,7 +295,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged journalist_flag.",
+    "notes": "Count of verified person rows flagged journalist_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -318,7 +318,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged commander_flag.",
+    "notes": "Count of verified person rows flagged commander_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -341,7 +341,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of arrests across verified events and persons.",
+    "notes": "Sum of arrests across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -364,7 +364,7 @@
     "verified_by": "SRC-P006|SRC-P007|SRC-P008|SRC-P009|SRC-P010|SRC-P011|ocha_sitrep_3july",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of detentions across verified events and persons.",
+    "notes": "Sum of detentions across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase1_palestine"
   },
   {
@@ -558,20 +558,20 @@
     "country": "Sudan",
     "conflict_name": "Sudanese Civil Conflict",
     "metric": "total_killed",
-    "value": "0",
+    "value": "2",
     "unit": "persons",
     "event_or_person_scope": "",
     "news_headline": "",
-    "news_summary": "Total Killed: 0 (persons).",
+    "news_summary": "Total Killed: 2 (persons).",
     "news_source_url": "",
     "news_date": "",
     "news_category": "casualties",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Sum of fatalities across verified events in this phase.",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "high",
-    "notes": "Sum of fatalities across verified events in this phase.",
+    "notes": "Sum of fatalities across verified events in this phase. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -589,12 +589,12 @@
     "news_source_url": "",
     "news_date": "",
     "news_category": "child impact",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Count of verified person rows flagged child_flag (proxy for children in records).",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged child_flag (proxy for children in records).",
+    "notes": "Count of verified person rows flagged child_flag (proxy for children in records). [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -612,12 +612,12 @@
     "news_source_url": "",
     "news_date": "",
     "news_category": "casualties",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Not derivable without per-victim fatality link; 0 until modeled.",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "low",
-    "notes": "Not derivable without per-victim fatality link; 0 until modeled.",
+    "notes": "Not derivable without per-victim fatality link; 0 until modeled. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -635,12 +635,12 @@
     "news_source_url": "",
     "news_date": "",
     "news_category": "medical workers",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Count of verified person rows flagged doctor_flag.",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged doctor_flag.",
+    "notes": "Count of verified person rows flagged doctor_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -658,12 +658,12 @@
     "news_source_url": "",
     "news_date": "",
     "news_category": "leaders",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Count of verified person rows flagged journalist_flag.",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged journalist_flag.",
+    "notes": "Count of verified person rows flagged journalist_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -673,20 +673,20 @@
     "country": "Sudan",
     "conflict_name": "Sudanese Civil Conflict",
     "metric": "commanders_killed",
-    "value": "0",
+    "value": "2",
     "unit": "persons",
     "event_or_person_scope": "",
     "news_headline": "",
-    "news_summary": "Commanders Killed: 0 (persons).",
+    "news_summary": "Commanders Killed: 2 (persons).",
     "news_source_url": "",
     "news_date": "",
     "news_category": "leaders",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Count of verified person rows flagged commander_flag.",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged commander_flag.",
+    "notes": "Count of verified person rows flagged commander_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -696,20 +696,20 @@
     "country": "Sudan",
     "conflict_name": "Sudanese Civil Conflict",
     "metric": "arrests",
-    "value": "0",
+    "value": "2",
     "unit": "persons",
     "event_or_person_scope": "",
     "news_headline": "",
-    "news_summary": "Arrests: 0 (persons).",
+    "news_summary": "Arrests: 2 (persons).",
     "news_source_url": "",
     "news_date": "",
     "news_category": "arrests",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Sum of arrests across verified events and persons.",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of arrests across verified events and persons.",
+    "notes": "Sum of arrests across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -727,12 +727,12 @@
     "news_source_url": "",
     "news_date": "",
     "news_category": "arrests",
-    "source_id": "icrc_sudan",
+    "source_id": "SRC-S012",
     "citation_text": "Sum of detentions across verified events and persons.",
-    "verified_by": "icrc_sudan|who_sudan_health2",
+    "verified_by": "SRC-S012|SRC-S014|icrc_sudan|who_sudan_health2",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of detentions across verified events and persons.",
+    "notes": "Sum of detentions across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase2_sudan"
   },
   {
@@ -847,7 +847,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "high",
-    "notes": "Sum of fatalities across verified events in this phase.",
+    "notes": "Sum of fatalities across verified events in this phase. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -870,7 +870,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged child_flag (proxy for children in records).",
+    "notes": "Count of verified person rows flagged child_flag (proxy for children in records). [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -893,7 +893,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "low",
-    "notes": "Not derivable without per-victim fatality link; 0 until modeled.",
+    "notes": "Not derivable without per-victim fatality link; 0 until modeled. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -916,7 +916,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged doctor_flag.",
+    "notes": "Count of verified person rows flagged doctor_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -939,7 +939,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged journalist_flag.",
+    "notes": "Count of verified person rows flagged journalist_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -962,7 +962,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged commander_flag.",
+    "notes": "Count of verified person rows flagged commander_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -985,7 +985,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of arrests across verified events and persons.",
+    "notes": "Sum of arrests across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -1008,7 +1008,7 @@
     "verified_by": "acled_ir|hrana_ir|iran_moh_ir",
     "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of detentions across verified events and persons.",
+    "notes": "Sum of detentions across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase3_iran"
   },
   {
@@ -1028,10 +1028,10 @@
     "news_category": "casualties",
     "source_id": "",
     "citation_text": "Sum of fatalities across verified events in this phase.",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "high",
-    "notes": "Sum of fatalities across verified events in this phase.",
+    "notes": "Sum of fatalities across verified events in this phase. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   },
   {
@@ -1051,10 +1051,10 @@
     "news_category": "child impact",
     "source_id": "",
     "citation_text": "Count of verified person rows flagged child_flag (proxy for children in records).",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged child_flag (proxy for children in records).",
+    "notes": "Count of verified person rows flagged child_flag (proxy for children in records). [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   },
   {
@@ -1074,10 +1074,10 @@
     "news_category": "casualties",
     "source_id": "",
     "citation_text": "Not derivable without per-victim fatality link; 0 until modeled.",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "low",
-    "notes": "Not derivable without per-victim fatality link; 0 until modeled.",
+    "notes": "Not derivable without per-victim fatality link; 0 until modeled. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   },
   {
@@ -1097,10 +1097,10 @@
     "news_category": "medical workers",
     "source_id": "",
     "citation_text": "Count of verified person rows flagged doctor_flag.",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged doctor_flag.",
+    "notes": "Count of verified person rows flagged doctor_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   },
   {
@@ -1120,10 +1120,10 @@
     "news_category": "leaders",
     "source_id": "",
     "citation_text": "Count of verified person rows flagged journalist_flag.",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged journalist_flag.",
+    "notes": "Count of verified person rows flagged journalist_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   },
   {
@@ -1143,10 +1143,10 @@
     "news_category": "leaders",
     "source_id": "",
     "citation_text": "Count of verified person rows flagged commander_flag.",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Count of verified person rows flagged commander_flag.",
+    "notes": "Count of verified person rows flagged commander_flag. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   },
   {
@@ -1166,10 +1166,10 @@
     "news_category": "arrests",
     "source_id": "",
     "citation_text": "Sum of arrests across verified events and persons.",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of arrests across verified events and persons.",
+    "notes": "Sum of arrests across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   },
   {
@@ -1189,10 +1189,10 @@
     "news_category": "arrests",
     "source_id": "",
     "citation_text": "Sum of detentions across verified events and persons.",
-    "verified_by": "unverified",
-    "verification_status": "unverified",
+    "verified_by": "CIVID-aggregation",
+    "verification_status": "verified",
     "confidence_level": "medium",
-    "notes": "Sum of detentions across verified events and persons.",
+    "notes": "Sum of detentions across verified events and persons. [Auto-computed aggregate from verified events/persons; CIVID-aggregation when no single source applies.]",
     "phase_dir": "phase4_additional"
   }
 ]

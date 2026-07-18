@@ -14,7 +14,7 @@
     "role": { "type": "string", "enum": ["political leader", "military commander", "local commander", "government official", "armed group leader", "other"] },
     "organization": { "type": "string", "description": "Hamas, IRGC, RSF, Iranian Armed Forces, etc." },
     "leadership_level": { "type": "string", "enum": ["top", "senior", "mid", "local"], "description": "Leadership level within the organization." },
-    "death_status": { "type": "string", "enum": ["confirmed dead", "reported killed", "officially acknowledged"], "description": "How the death is characterized by sources." },
+    "death_status": { "type": "string", "enum": ["confirmed dead", "reported killed", "officially acknowledged", "alive"], "description": "How the death is characterized by sources. 'alive' is used for verified living senior leaders (e.g. a sitting head of state) who are included for completeness but are NOT death records." },
     "death_date": { "type": ["string", "null"], "format": "date" },
     "death_location": { "type": ["string", "null"] },
     "death_cause": { "type": ["string", "null"] },
