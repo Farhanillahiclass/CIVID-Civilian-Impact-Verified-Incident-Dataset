@@ -24,3 +24,6 @@
 
 ## 2026-07-18 15:46 UTC
 - auto-push run; files: CHANGELOG_autopush.md, CHANGELOG_renumber.md, data/phase1_palestine/sources.csv, data/staging/pending_review.csv, exports/civid_dashboard.html, exports/summary.json, notebooks/master_dashboard.ipynb, scripts/build_exports.py, scripts/generate_html_dashboard.py, scripts/validate_dataset.py, data/leaders.csv, exports/civid_leaders_all.csv, exports/civid_leaders_all.json, schema/leaders_schema.json
+
+## 2026-07-18 15:56 UTC
+- auto-push run; files: CHANGELOG_renumber.md, data/leaders.csv, exports/civid_dashboard.html, exports/civid_leaders_all.csv, exports/civid_leaders_all.json, scripts/generate_html_dashboard.py

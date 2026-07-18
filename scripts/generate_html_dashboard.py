@@ -182,7 +182,7 @@ def main():
 
   <div class="panel" id="famousPanel"><h3>Famous personalities / victims</h3><div class="famous" id="famousList"></div></div>
 
-  <div class="panel"><h3>Verified leaders — confirmed deaths</h3><div id="leaderList"></div></div>
+  <div class="panel"><h3>Verified leaders — confirmed deaths</h3><div class="sub" id="leaderRefresh" style="margin-bottom:8px"></div><div class="famous" id="leaderList"></div></div>
 
   <div class="panel" id="mapPanel" style="display:none"><h3>Map (where coordinates are available)</h3><div id="map"></div>
     <div class="sub" style="margin-top:8px">Location names are stored as text; add lat/lon to events to enable precise plotting.</div>
@@ -270,7 +270,12 @@ function famousList(){
 function leadersList(){
   const L=DATA.leaders||[];
   if(!L.length){ document.getElementById('leaderList').innerHTML='<div class="empty">No verified leader-death records yet.</div>'; return; }
-  document.getElementById('leaderList').innerHTML = L.map(x=>`<div class="news-item"><b>${x.leader_name||''}</b> <span class="tag">${x.organization||''}</span> <span class="tag">${x.role||''}</span><br>${x.bio||''}<br>Death: ${x.death_date||'?'}${x.death_location?` — ${x.death_location}`:''} (${x.verification_status||''}, ${x.confidence_level||''})<br>${x.source_url?`<a href="${x.source_url}" target="_blank" rel="noopener">source</a>`:''}</div>`).join('');
+  document.getElementById('leaderList').innerHTML = L.map(x=>{
+    const img = (x.image_available==='true' && x.image_url)
+      ? `<img src="${x.image_url}" alt="${x.leader_name}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;background:#222" onerror="this.style.display='none'"/>`
+      : '';
+    return `<div class="fam" style="width:280px"><div>${img}</div><div class="nm">${x.leader_name||'Unknown'}</div><div class="rl">${x.organization||''} &middot; ${x.role||''}</div><div class="sub">${x.bio||''}</div><div class="sub" style="margin-top:6px">Died: ${x.death_date||'?'}${x.death_location?` — ${x.death_location}`:''} (${x.death_cause||''})<br>Verification: ${x.verification_status||''} / ${x.confidence_level||''}<br>${x.image_license?`Image: ${x.image_license} (${x.image_source||'Wikimedia Commons'})`:''}</div>${x.source_url?`<a href="${x.source_url}" target="_blank" rel="noopener">source</a>`:''}</div>`;
+  }).join('');
 }
 
 function applyMeta(){
@@ -283,6 +288,17 @@ function applyMeta(){
   const showMap = Object.values(m).some(x => (x.show_map||'').toLowerCase() === 'true');
   document.getElementById('mapPanel').style.display = showMap ? '' : 'none';
   // famous panel always shown (renders empty-state if none)
+  // auto-refresh: when served over http, re-fetch latest leaders JSON every 60s
+  if (window.location.protocol.startsWith('http')) {
+    const el = document.getElementById('leaderRefresh');
+    if (el) el.textContent = 'Auto-refresh: on (updates every 60s when served).';
+    setInterval(async () => {
+      try {
+        const r = await fetch('civid_leaders_all.json?t=' + Date.now(), {cache:'no-store'});
+        if (r.ok) { DATA.leaders = await r.json(); leadersList(); }
+      } catch(e) { /* offline / file:// — ignore */ }
+    }, 60000);
+  }
 }
 
 function initMap(){
