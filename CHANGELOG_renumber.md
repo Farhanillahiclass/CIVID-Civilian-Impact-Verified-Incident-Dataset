@@ -1,6 +1,6 @@
 # CIVID Record Renumbering Change Log
 
-Run: 2026-07-18T15:31:32+00:00 
+Run: 2026-07-18T15:46:06+00:00 
 
 event_id is the stable cross-table key and is never renumbered. Row primary keys are renumbered 1..N per table; the original id is kept in `legacy_record_id`.
 

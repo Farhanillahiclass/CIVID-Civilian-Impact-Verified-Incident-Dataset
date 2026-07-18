@@ -44,6 +44,7 @@ def main():
     persons = load_csv("civid_persons_all.csv")
     famous = load_csv("civid_famous_victims_all.csv")
     news = load_csv("civid_news_intelligence_all.csv")
+    leaders = load_csv("civid_leaders_all.csv")
     dmeta = load_csv("civid_dashboard_metadata_all.csv")
     # index metadata by phase for quick lookup
     meta_by_phase = {}
@@ -99,7 +100,7 @@ def main():
 
     data_js = j({
         "events": events, "persons": persons, "famous": famous,
-        "news": news_stories, "metrics": metrics_rows,
+        "news": news_stories, "metrics": metrics_rows, "leaders": leaders,
         "by_phase": by_phase, "by_verif": by_verif, "by_role": by_role,
         "months": months, "month_counts": month_counts,
         "agg": agg, "summary": summary, "meta_by_phase": meta_by_phase,
@@ -181,6 +182,8 @@ def main():
 
   <div class="panel" id="famousPanel"><h3>Famous personalities / victims</h3><div class="famous" id="famousList"></div></div>
 
+  <div class="panel"><h3>Verified leaders — confirmed deaths</h3><div id="leaderList"></div></div>
+
   <div class="panel" id="mapPanel" style="display:none"><h3>Map (where coordinates are available)</h3><div id="map"></div>
     <div class="sub" style="margin-top:8px">Location names are stored as text; add lat/lon to events to enable precise plotting.</div>
   </div>
@@ -210,6 +213,7 @@ function summaryCards(){
     ['Arrests', fmt(a.arrests)],
     ['Detentions', fmt(a.detentions)],
     ['Persons', fmt(s.persons)],
+    ['Verified leaders (deaths)', fmt(s.leaders)],
   ];
   document.getElementById('cards').innerHTML = cards.map(c=>`<div class="card"><div class="n">${c[1]}</div><div class="l">${c[0]}</div></div>`).join('');
 }
@@ -263,6 +267,12 @@ function famousList(){
     : '<div class="empty">Famous-persons section is intentionally empty. Named individuals are added only via the verified, multi-source pipeline (docs/famous_victims_policy.md).</div>';
 }
 
+function leadersList(){
+  const L=DATA.leaders||[];
+  if(!L.length){ document.getElementById('leaderList').innerHTML='<div class="empty">No verified leader-death records yet.</div>'; return; }
+  document.getElementById('leaderList').innerHTML = L.map(x=>`<div class="news-item"><b>${x.leader_name||''}</b> <span class="tag">${x.organization||''}</span> <span class="tag">${x.role||''}</span><br>${x.bio||''}<br>Death: ${x.death_date||'?'}${x.death_location?` — ${x.death_location}`:''} (${x.verification_status||''}, ${x.confidence_level||''})<br>${x.source_url?`<a href="${x.source_url}" target="_blank" rel="noopener">source</a>`:''}</div>`).join('');
+}
+
 function applyMeta(){
   const m = DATA.meta_by_phase || {};
   // global last_updated = latest across phases
@@ -284,7 +294,7 @@ function initMap(){
 }
 
 ['f-phase','f-country','f-verify','f-role','f-age','f-date'].forEach(id=>document.getElementById(id).addEventListener('change',drawCharts));
-summaryCards(); applyMeta(); drawCharts(); newsList(); famousList(); initMap();
+summaryCards(); applyMeta(); drawCharts(); newsList(); famousList(); leadersList(); initMap();
 </script>
 </body>
 </html>

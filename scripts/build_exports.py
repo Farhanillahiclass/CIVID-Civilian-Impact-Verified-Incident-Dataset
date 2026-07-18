@@ -183,6 +183,18 @@ def main():
     write_csv(os.path.join(EXPORTS, "civid_dashboard_metadata_all.csv"), all_dmeta, dmeta_fields)
     write_json(os.path.join(EXPORTS, "civid_dashboard_metadata_all.json"), all_dmeta)
 
+    # verified leaders (cross-phase, confirmed deaths only)
+    leaders = load(os.path.join(DATA, "leaders.csv"))
+    leader_fields = list(leaders[0].keys()) if leaders else [
+        "leader_id", "legacy_record_id", "phase", "country", "conflict_name", "leader_name",
+        "aka", "role", "organization", "death_date", "death_location", "death_cause", "bio",
+        "image_available", "image_url", "image_source", "image_license", "source_id",
+        "source_url", "citation_text", "verified_by", "verification_status", "confidence_level",
+        "event_id", "notes"]
+    write_csv(os.path.join(EXPORTS, "civid_leaders_all.csv"), leaders, leader_fields)
+    write_json(os.path.join(EXPORTS, "civid_leaders_all.json"), leaders)
+    summary["totals"]["leaders"] = len(leaders)
+
     # computed aggregate news metrics (citable rollups from verified rows; never invented)
     def to_int(x):
         try:

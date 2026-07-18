@@ -12,5 +12,15 @@
   - Phase 3 (Iran): built from real sources — 5 events, 4 named commanders (persons, is_famous), 4 curated news rows, 3 entities, sources (HRANA, Iran MoH, AP, ACLED).
   - Validation: 0 errors / 0 warnings. Totals: 63 events, 14 persons, 52 news rows.
 
+## 2026-07-18 20:36 UTC
+- NEW cross-phase verified leaders table (`data/leaders.csv` + `schema/leaders_schema.json`): confirmed leader deaths only.
+  - LDR-001 Ismail Haniyeh (Hamas, political leader) killed 31 Jul 2024, Tehran — Reuters/AP corroborated.
+  - LDR-002..005 four Iran IRGC/armed-forces commanders killed 13 Jun 2025, Tehran (Bagheri, Salami, Hajizadeh, Rashid) — ACLED/HRANA corroborated.
+  - Sudan deliberately EXCLUDED: Hemedti was sentenced to death in absentia (Jul 2026) but is alive (whereabouts unknown) — not a confirmed death, so omitted per no-fabrication rule.
+  - Wired into validate_dataset.py, build_exports.py (civid_leaders_all.*), and dashboard (new 'Verified leaders' card + section). Validation: 0 errors.
+
 ## 2026-07-18 15:31 UTC
 - auto-push run; files: CHANGELOG_autopush.md, CHANGELOG_renumber.md, README.md, data/phase1_palestine/dashboard_metadata.csv, data/phase1_palestine/events.csv, data/phase1_palestine/news_intelligence.csv, data/phase1_palestine/persons.csv, data/phase1_palestine/sources.csv, data/phase2_sudan/dashboard_metadata.csv, data/phase2_sudan/events.csv, data/phase2_sudan/news_intelligence.csv, data/phase2_sudan/sources.csv, data/phase3_iran/dashboard_metadata.csv, data/phase3_iran/entities.csv, data/phase3_iran/events.csv, data/phase3_iran/famous_victims.csv, data/phase3_iran/media.csv, data/phase3_iran/news_intelligence.csv, data/phase3_iran/persons.csv, data/phase3_iran/sources.csv, exports/civid_dashboard.csv, exports/civid_dashboard.html, exports/civid_dashboard_metadata_all.csv, exports/civid_dashboard_metadata_all.json, exports/civid_events_all.csv, exports/civid_events_all.json, exports/civid_news_intelligence_all.csv, exports/civid_news_intelligence_all.json, exports/civid_persons_all.csv, exports/civid_persons_all.json, exports/news_aggregates.json, exports/summary.json, scripts/generate_html_dashboard.py, .vscode/launch.json, scripts/add_curated_news.py, scripts/refresh.py, scripts/serve_dashboard.py
+
+## 2026-07-18 15:46 UTC
+- auto-push run; files: CHANGELOG_autopush.md, CHANGELOG_renumber.md, data/phase1_palestine/sources.csv, data/staging/pending_review.csv, exports/civid_dashboard.html, exports/summary.json, notebooks/master_dashboard.ipynb, scripts/build_exports.py, scripts/generate_html_dashboard.py, scripts/validate_dataset.py, data/leaders.csv, exports/civid_leaders_all.csv, exports/civid_leaders_all.json, schema/leaders_schema.json

@@ -192,6 +192,35 @@ def main() -> int:
 
         check_whitespace(events, EVENTS_HEADER, f"{phase}/events")
 
+    # ---- cross-phase leaders table (data/leaders.csv) ----
+    leaders_path = os.path.join(DATA, "leaders.csv")
+    if os.path.exists(leaders_path):
+        leaders = load(leaders_path)
+        LEADER_REQUIRED = ["leader_id", "phase", "country", "leader_name", "role",
+                           "organization", "citation_text", "verified_by",
+                           "verification_status", "confidence_level"]
+        if leaders and not set(LEADER_REQUIRED).issubset(leaders[0].keys()):
+            errors.append(f"leaders.csv missing columns: {set(LEADER_REQUIRED) - set(leaders[0].keys())}")
+        check_dupes(leaders, "leader_id", "leaders")
+        valid_roles = {"political leader", "military commander", "local commander",
+                       "government official", "armed group leader", "other"}
+        for i, r in enumerate(leaders, start=2):
+            lbl = f"leaders row {i}"
+            if (r.get("role") or "").strip() not in valid_roles:
+                errors.append(f"{lbl}: role '{r.get('role')}' not in allowed set.")
+            if (r.get("verification_status") or "").strip() not in VS_ENUM:
+                errors.append(f"{lbl}: invalid verification_status '{r.get('verification_status')}'.")
+            if (r.get("confidence_level") or "").strip() not in CONF_ENUM:
+                errors.append(f"{lbl}: invalid confidence_level '{r.get('confidence_level')}'.")
+            if not (r.get("citation_text") or "").strip() or not (r.get("verified_by") or "").strip():
+                errors.append(f"{lbl}: missing required citation_text and/or verified_by.")
+            d = (r.get("death_date") or "").strip()
+            if d and not DATE_RE.match(d):
+                errors.append(f"{lbl}: death_date '{d}' not YYYY-MM-DD.")
+            ph = (r.get("phase") or "").strip()
+            if ph and ph not in PHASES:
+                warnings.append(f"{lbl}: phase '{ph}' is not a known phase; review linkage.")
+
     print("=" * 60)
     print("CIVID dataset validation")
     print("=" * 60)
