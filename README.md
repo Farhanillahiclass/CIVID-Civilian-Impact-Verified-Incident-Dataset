@@ -302,14 +302,19 @@ A professional multi-page HTML dashboard is generated into `output/`:
 
 ### Screenshots
 
+#### Home Overview
 ![Dashboard Home](output/images/dashboard_home.png)
 
+#### Infographic Summary
 ![Infographic Summary](output/images/infographic_summary.png)
 
+#### Leaders Page
 ![Leaders Page](output/images/leaders_page.png)
 
+#### Famous Persons
 ![Famous Persons](output/images/famous_persons_page.png)
 
+#### News Summary
 ![News Summary](output/images/news_summary.png)
 
 ### How to run
@@ -317,16 +322,16 @@ A professional multi-page HTML dashboard is generated into `output/`:
 **Option 1 — One-click launcher (recommended):**
 ```bash
 python scripts/open_dashboard.py
-# Browser opens automatically at http://localhost:8080/
+# Browser opens automatically at http://localhost:8000/civid_dashboard.html
 ```
 
 **Option 2 — Manual:**
 ```bash
 # Terminal 1: start server
-python scripts/dashboard_server.py
+python scripts/dashboard_server.py 8000
 
 # Terminal 2: open browser
-# Navigate to http://localhost:8080/
+# Navigate to http://localhost:8000/civid_dashboard.html
 ```
 
 **Option 3 — Jupyter Notebook:**
@@ -338,13 +343,18 @@ jupyter notebook notebooks/master_dashboard.ipynb
 
 | Page | URL | Description |
 |---|---|---|
-| Home | `/` | Summary cards, charts, pipeline status, Run Now button |
-| Review Queue | `/pages/review_queue.html` | Unverified/disputed events and persons |
+| Home | `/` or `/civid_dashboard.html` | Summary cards, charts, pipeline status, Run Now button |
+| Gaza | `/pages/gaza.html` | Gaza / Palestine specific data |
+| Sudan | `/pages/sudan.html` | Sudan specific data |
+| Iran | `/pages/iran.html` | Iran specific data |
 | Leaders | `/pages/leaders.html` | Leaders with images, bios, source links |
 | Famous Persons | `/pages/famous_persons.html` | Notable individuals gallery |
+| Children | `/pages/children.html` | Child records (privacy-safe) |
+| Medical Workers | `/pages/medical_workers.html` | Doctors, nurses, medics, aid workers |
+| Journalists | `/pages/journalists.html` | Journalists and media workers |
 | News Intelligence | `/pages/news_intelligence.html` | Curated source-linked stories |
-| Logs | `/pages/logs.html` | Pipeline run history |
-| Data Explorer | `/pages/data_explorer.html` | Full data table with CSV/JSON downloads |
+| Review Queue | `/pages/review_queue.html` | Unverified / disputed items |
+| Data Dictionary | `/pages/data_dictionary.html` | Schema help, field definitions, source policy |
 
 ## Disclaimer
 

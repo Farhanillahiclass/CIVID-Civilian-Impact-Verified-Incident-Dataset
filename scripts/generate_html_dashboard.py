@@ -156,6 +156,21 @@ NAV_HOME = """<nav>
   <a href="pages/data_explorer.html">Data Explorer</a>
 </nav>"""
 
+NAV_SUB = """<nav>
+  <a href="index.html">Home</a>
+  <a href="pages/gaza.html">Gaza</a>
+  <a href="pages/sudan.html">Sudan</a>
+  <a href="pages/iran.html">Iran</a>
+  <a href="pages/leaders.html">Leaders</a>
+  <a href="pages/famous_persons.html">Famous</a>
+  <a href="pages/children.html">Children</a>
+  <a href="pages/medical_workers.html">Medical</a>
+  <a href="pages/journalists.html">Journalists</a>
+  <a href="pages/news_intelligence.html">News</a>
+  <a href="pages/review_queue.html">Review</a>
+  <a href="pages/data_dictionary.html">Dictionary</a>
+</nav>"""
+
 FOOTER = """<footer>CIVID — code MIT (c) Muhammad Farhan; underlying data per each publisher. No victim imagery. No identifiable images of minors unless public, relevant, and ethically safe.</footer>"""
 
 BASE_HTML = lambda nav, body, data_js="": f"""<!DOCTYPE html>
@@ -531,6 +546,334 @@ function filterExplorer(){
 
 
 # ---------------------------------------------------------------------------
+# Phase-specific pages
+# ---------------------------------------------------------------------------
+def render_phase_page(phase_key, phase_name, events, persons):
+    phase_events = [e for e in events if e.get("phase") == phase_key]
+    phase_persons = [p for p in persons if p.get("event_id", "").startswith(phase_key.replace("phase", "EVT-")) or any(e.get("event_id", "").startswith(phase_key.replace("phase", "EVT-")) for e in phase_events)]
+    
+    # Count by role
+    roles = {}
+    for p in phase_persons:
+        r = p.get("victim_role") or "unknown"
+        roles[r] = roles.get(r, 0) + 1
+    
+    total_fatalities = sum(int(e.get("fatalities") or 0) for e in phase_events)
+    total_injuries = sum(int(e.get("injuries") or 0) for e in phase_events)
+    verified = sum(1 for e in phase_events if e.get("verification_status") == "verified")
+    
+    body = f"""
+<div class="page-header">
+  <h2>{phase_name}</h2>
+  <p>Verified conflict impact data for {phase_name}</p>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="n">{len(phase_events)}</div><div class="l">Total Events</div></div>
+  <div class="card"><div class="n">{verified}</div><div class="l">Verified</div></div>
+  <div class="card"><div class="n">{total_fatalities}</div><div class="l">Fatalities</div></div>
+  <div class="card"><div class="n">{total_injuries}</div><div class="l">Injuries</div></div>
+  <div class="card"><div class="n">{len(phase_persons)}</div><div class="l">Persons</div></div>
+  <div class="card"><div class="n">{len(set(e.get('location','') for e in phase_events))}</div><div class="l">Locations</div></div>
+</div>
+
+<div class="section-title">Role Breakdown</div>
+<div class="panel">
+  <canvas id="cRoles" height="200"></canvas>
+</div>
+
+<div class="section-title">Events Timeline</div>
+<div class="panel">
+  <canvas id="cTimeline" height="200"></canvas>
+</div>
+
+<div class="section-title">Event Records</div>
+<div class="panel">
+  <div style="overflow-x:auto"><table><thead><tr>
+    <th>Event ID</th><th>Date</th><th>Location</th><th>Fatalities</th><th>Injuries</th><th>Status</th><th>Source</th>
+  </tr></thead><tbody>
+"""
+    for e in phase_events:
+        body += f"""<tr>
+    <td><code>{e.get('event_id','')}</code></td>
+    <td>{e.get('event_date','')}</td>
+    <td>{e.get('location','')}</td>
+    <td><b>{e.get('fatalities','') or '0'}</b></td>
+    <td>{e.get('injuries','') or '0'}</td>
+    <td><span class="tag tag-{e.get('verification_status','unverified')}">{e.get('verification_status','')}</span></td>
+    <td><a href="{e.get('source_url','')}" target="_blank" class="source-link">{e.get('source_name','')}</a></td>
+  </tr>"""
+    body += """</tbody></table></div>
+</div>
+
+<script>
+const phaseEvents=""" + j(phase_events) + """;
+const phasePersons=""" + j(phase_persons) + """;
+
+// Role chart
+const roles={};
+phasePersons.forEach(p=>{{
+  const r=p.victim_role||'unknown';
+  roles[r]=(roles[r]||0)+1;
+}});
+const rk=Object.keys(roles);
+new Chart(document.getElementById('cRoles'),{{
+  type:'doughnut',
+  data:{{
+    labels:rk,
+    datasets:[{{
+      data:rk.map(r=>roles[r]),
+      backgroundColor:['#58a6ff','#56d4dd','#a371f7','#f85149','#d29922','#3fb950','#f0883e','#bc8cff'],
+      borderColor:'#151b23',
+      borderWidth:2
+    }}]
+  }},
+  options:{{responsive:true,plugins:{{legend:{{position:'bottom',labels:{{color:'#e6edf3',padding:10}}}}}}}}
+}});
+
+// Timeline
+const byMonth={{}};
+phaseEvents.forEach(e=>{{
+  const m=e.derived_month||(e.event_date||'').slice(0,7);
+  if(m)byMonth[m]=(byMonth[m]||0)+1;
+}});
+const ms=Object.keys(byMonth).sort();
+new Chart(document.getElementById('cTimeline'),{{
+  type:'bar',
+  data:{{
+    labels:ms,
+    datasets:[{{
+      label:'Events',
+      data:ms.map(m=>byMonth[m]),
+      backgroundColor:'#58a6ff',
+      borderRadius:4,
+      borderSkipped:false
+    }}]
+  }},
+  options:{{responsive:true,plugins:{{legend:{{display:false}}}},scales:{{y:{{beginAtZero:true,grid:{{color:'rgba(255,255,255,0.05)'}},ticks:{{color:'#8b949e'}}}},x:{{grid:{{display:false}},ticks:{{color:'#8b949e'}}}}}}}}
+}});
+</script>
+"""
+    return BASE_HTML(NAV_SUB, body)
+
+
+def render_gaza(events, persons):
+    return render_phase_page("phase1_palestine", "Gaza / Palestine", events, persons)
+
+
+def render_sudan(events, persons):
+    return render_phase_page("phase2_sudan", "Sudan", events, persons)
+
+
+def render_iran(events, persons):
+    return render_phase_page("phase3_iran", "Iran (Iran–Israel Twelve-Day War)", events, persons)
+
+
+# ---------------------------------------------------------------------------
+# Children page
+# ---------------------------------------------------------------------------
+def render_children(persons, events):
+    children = [p for p in persons if (p.get("victim_role") or "").lower() == "child"]
+    child_events = {}
+    for p in children:
+        eid = p.get("event_id", "")
+        if eid not in child_events:
+            child_events[eid] = []
+        child_events[eid].append(p)
+    
+    body = f"""
+<div class="page-header">
+  <h2>Children</h2>
+  <p>Child records — privacy-safe, no identifiable imagery</p>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="n">{len(children)}</div><div class="l">Child Records</div></div>
+  <div class="card"><div class="n">{len(child_events)}</div><div class="l">Events</div></div>
+</div>
+
+<div class="section-title">Child Records</div>
+<div class="panel">
+  <div class="filters">
+    <input id="child-search" placeholder="Search by name or location..." oninput="filterChildren()"/>
+  </div>
+  <div style="overflow-x:auto"><table id="children-table"><thead><tr>
+    <th>Record ID</th><th>Event ID</th><th>Name</th><th>Age</th><th>Location</th><th>Date</th><th>Status</th><th>Source</th>
+  </tr></thead><tbody>
+"""
+    for p in children:
+        body += f"""<tr>
+    <td><code>{p.get('record_id','')}</code></td>
+    <td>{p.get('event_id','')}</td>
+    <td><b>{p.get('victim_name','')}</b></td>
+    <td>{p.get('age','') or 'N/A'}</td>
+    <td>{p.get('location','')}</td>
+    <td>{p.get('event_date','')}</td>
+    <td><span class="tag tag-{p.get('verification_status','unverified')}">{p.get('verification_status','')}</span></td>
+    <td><a href="{p.get('source_url','')}" target="_blank" class="source-link">{p.get('source_name','')}</a></td>
+  </tr>"""
+    body += """</tbody></table></div>
+</div>
+
+<script>
+function filterChildren(){
+  const q=document.getElementById('child-search').value.toLowerCase();
+  const rows=document.querySelectorAll('#children-table tbody tr');
+  rows.forEach(r=>{{
+    const t=r.textContent.toLowerCase();
+    r.style.display=t.includes(q)?'':'none';
+  }});
+}
+</script>
+"""
+    return BASE_HTML(NAV_SUB, body)
+
+
+# ---------------------------------------------------------------------------
+# Medical workers page
+# ---------------------------------------------------------------------------
+def render_medical_workers(persons, events):
+    medical = [p for p in persons if (p.get("victim_role") or "").lower() in ("doctor", "nurse", "medic", "aid_worker", "medical", "health_worker")]
+    
+    body = f"""
+<div class="page-header">
+  <h2>Medical Workers</h2>
+  <p>Doctors, nurses, medics, and aid workers killed or injured</p>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="n">{len(medical)}</div><div class="l">Medical Workers</div></div>
+</div>
+
+<div class="section-title">Medical Worker Records</div>
+<div class="panel">
+  <div style="overflow-x:auto"><table><thead><tr>
+    <th>Record ID</th><th>Event ID</th><th>Name</th><th>Role</th><th>Location</th><th>Date</th><th>Status</th><th>Source</th>
+  </tr></thead><tbody>
+"""
+    for p in medical:
+        body += f"""<tr>
+    <td><code>{p.get('record_id','')}</code></td>
+    <td>{p.get('event_id','')}</td>
+    <td><b>{p.get('victim_name','')}</b></td>
+    <td>{p.get('victim_role','')}</td>
+    <td>{p.get('location','')}</td>
+    <td>{p.get('event_date','')}</td>
+    <td><span class="tag tag-{p.get('verification_status','unverified')}">{p.get('verification_status','')}</span></td>
+    <td><a href="{p.get('source_url','')}" target="_blank" class="source-link">{p.get('source_name','')}</a></td>
+  </tr>"""
+    body += """</tbody></table></div>
+</div>
+"""
+    return BASE_HTML(NAV_SUB, body)
+
+
+# ---------------------------------------------------------------------------
+# Journalists page
+# ---------------------------------------------------------------------------
+def render_journalists(persons, events):
+    journalists = [p for p in persons if (p.get("victim_role") or "").lower() in ("journalist", "reporter", "anchor", "editor", "photojournalist", "media")]
+    
+    body = f"""
+<div class="page-header">
+  <h2>Journalists & Media Workers</h2>
+  <p>Reporters, anchors, editors, and media personnel</p>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="n">{len(journalists)}</div><div class="l">Journalists</div></div>
+</div>
+
+<div class="section-title">Journalist Records</div>
+<div class="panel">
+  <div style="overflow-x:auto"><table><thead><tr>
+    <th>Record ID</th><th>Event ID</th><th>Name</th><th>Role</th><th>Organization</th><th>Location</th><th>Date</th><th>Status</th><th>Source</th>
+  </tr></thead><tbody>
+"""
+    for p in journalists:
+        body += f"""<tr>
+    <td><code>{p.get('record_id','')}</code></td>
+    <td>{p.get('event_id','')}</td>
+    <td><b>{p.get('victim_name','')}</b></td>
+    <td>{p.get('victim_role','')}</td>
+    <td>{p.get('organization','') or 'N/A'}</td>
+    <td>{p.get('location','')}</td>
+    <td>{p.get('event_date','')}</td>
+    <td><span class="tag tag-{p.get('verification_status','unverified')}">{p.get('verification_status','')}</span></td>
+    <td><a href="{p.get('source_url','')}" target="_blank" class="source-link">{p.get('source_name','')}</a></td>
+  </tr>"""
+    body += """</tbody></table></div>
+</div>
+"""
+    return BASE_HTML(NAV_SUB, body)
+
+
+# ---------------------------------------------------------------------------
+# Data dictionary page
+# ---------------------------------------------------------------------------
+def render_data_dictionary():
+    body = """
+<div class="page-header">
+  <h2>Data Dictionary & Sources</h2>
+  <p>Schema help, field definitions, source policy, and update policy</p>
+</div>
+
+<div class="section-title">Schema Overview</div>
+<div class="panel">
+  <h3>Events Table (events.csv)</h3>
+  <table>
+    <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>event_id</td><td>string</td><td>Stable unique identifier (EVT-XXX)</td></tr>
+      <tr><td>event_date</td><td>date</td><td>Date of the incident (YYYY-MM-DD)</td></tr>
+      <tr><td>phase</td><td>string</td><td>Phase key (phase1_palestine, phase2_sudan, phase3_iran)</td></tr>
+      <tr><td>country</td><td>string</td><td>Country name</td></tr>
+      <tr><td>location</td><td>string</td><td>Specific location of the incident</td></tr>
+      <tr><td>fatalities</td><td>integer</td><td>Number of people killed</td></tr>
+      <tr><td>injuries</td><td>integer</td><td>Number of people injured</td></tr>
+      <tr><td>verification_status</td><td>enum</td><td>verified | estimated | unverified | disputed</td></tr>
+      <tr><td>confidence_level</td><td>enum</td><td>high | medium | low</td></tr>
+      <tr><td>source_name</td><td>string</td><td>Name of the source organization</td></tr>
+      <tr><td>source_url</td><td>string</td><td>URL to the original source</td></tr>
+      <tr><td>source_date</td><td>date</td><td>Date the source was published</td></tr>
+      <tr><td>notes</td><td>string</td><td>Additional context or caveats</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-title">Source Policy</div>
+<div class="panel">
+  <p><b>Primary sources preferred:</b> OCHA, UNRWA, OHCHR, ICRC, ACLED, MoH, WHO, UNHCR.</p>
+  <p><b>Secondary sources:</b> Guardian, Reuters, AP, BBC, Al Jazeera, Wikipedia — only where appropriate and permitted.</p>
+  <p><b>Citation requirement:</b> Every record must store source_name, source_url, source_date, source_type, and citation_text.</p>
+  <p><b>Aggregate figures:</b> Explicitly labeled and marked confidence_level=medium.</p>
+</div>
+
+<div class="section-title">Update Policy</div>
+<div class="panel">
+  <p><b>Daily auto-update:</b> Schedule via Windows Task Scheduler or cron.</p>
+  <p><b>Manual update:</b> Use the "Run Now" button in the dashboard or run python scripts/run_pipeline.py.</p>
+  <p><b>Approval gate:</b> GitHub push requires --push flag; unverified rows are never auto-pushed.</p>
+  <p><b>Data retention:</b> All changes are logged in output/run_log.json and CHANGELOG_autopush.md.</p>
+</div>
+
+<div class="section-title">Verification Status Guide</div>
+<div class="panel">
+  <table>
+    <thead><tr><th>Status</th><th>Meaning</th><th>Color</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag tag-verified">verified</span></td><td>Confirmed by primary source with high confidence</td><td>Green</td></tr>
+      <tr><td><span class="tag tag-estimated">estimated</span></td><td>Approximated from aggregate data or reports</td><td>Orange</td></tr>
+      <tr><td><span class="tag tag-unverified">unverified</span></td><td>Reported but not yet confirmed by primary source</td><td>Red</td></tr>
+      <tr><td><span class="tag tag-disputed">disputed</span></td><td>Multiple sources disagree on facts</td><td>Purple</td></tr>
+    </tbody>
+  </table>
+</div>
+"""
+    return BASE_HTML(NAV_SUB, body)
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
@@ -565,6 +908,13 @@ def main():
     write_page("pages/news_intelligence.html", render_news(news))
     write_page("pages/logs.html", render_logs())
     write_page("pages/data_explorer.html", render_explorer(events, persons))
+    write_page("pages/gaza.html", render_gaza(events, persons))
+    write_page("pages/sudan.html", render_sudan(events, persons))
+    write_page("pages/iran.html", render_iran(events, persons))
+    write_page("pages/children.html", render_children(persons, events))
+    write_page("pages/medical_workers.html", render_medical_workers(persons, events))
+    write_page("pages/journalists.html", render_journalists(persons, events))
+    write_page("pages/data_dictionary.html", render_data_dictionary())
     print("[ok] Multi-page dashboard generated in output/")
 
 

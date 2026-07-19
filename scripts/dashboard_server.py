@@ -48,7 +48,7 @@ def find_free_port(start_port=8080, max_tries=20):
             continue
     raise RuntimeError(f"No free port in range {start_port}-{start_port + max_tries}")
 
-PORT = int(sys.argv[1]) if len(sys.argv) > 1 else find_free_port()
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else find_free_port(8000)
 
 PIPELINE_LOCK = threading.Lock()
 PIPELINE_RUNNING = False
@@ -151,6 +151,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         pass
 
     def do_GET(self):
+        if self.path == "/civid_dashboard.html":
+            self.path = "/index.html"
         if self.path == "/api/status":
             log_path = OUTPUT / "run_log.json"
             logs = []

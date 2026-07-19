@@ -1310,5 +1310,127 @@
     "records_added": 57,
     "records_reviewed": 50,
     "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:45:56+00:00",
+    "step": "validate",
+    "status": "success",
+    "duration": 0.11,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:45:56+00:00",
+    "step": "renumber",
+    "status": "success",
+    "duration": 0.08,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:45:56+00:00",
+    "step": "news",
+    "status": "success",
+    "duration": 0.17,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:45:56+00:00",
+    "step": "export",
+    "status": "success",
+    "duration": 0.34,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:45:57+00:00",
+    "step": "dashboard",
+    "status": "failed",
+    "duration": 0.2,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": [
+      {
+        "step": "dashboard",
+        "message": "Traceback (most recent call last):\n  File \"G:\\CIVID (Civilian Impact Verified Incident Dataset)\\scripts\\generate_html_dashboard.py\", line 907, in <module>\n    main()\n  File \"G:\\CIVID (Civilian Impact Verified Incident Dataset)\\scripts\\generate_html_dashboard.py\", line 896, in main\n    write_page(\"pages/gaza.html\", render_gaza(events, persons))\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\CIVID (Civilian Impact Verified Incident Dataset)\\scripts\\generate_html_dashboard.py\", line 646, in render_gaza\n    return render_phase_page(\"phase1_palestine\", \"Gaza / Palestine\", events, persons)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\CIVID (Civilian Impact Verified Incident Dataset)\\scripts\\generate_html_dashboard.py\", line 642, in render_phase_page\n    return BASE_HTML(NAV_SUB, body)\n                     ^^^^^^^\nNameError: name 'NAV_SUB' is not defined"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-07-19T08:45:57+00:00",
+    "step": "pipeline_summary",
+    "status": "failed",
+    "duration": 0.96,
+    "records_added": 57,
+    "records_reviewed": 50,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:49:10+00:00",
+    "step": "validate",
+    "status": "success",
+    "duration": 0.08,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:49:10+00:00",
+    "step": "renumber",
+    "status": "success",
+    "duration": 0.08,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:49:10+00:00",
+    "step": "news",
+    "status": "success",
+    "duration": 0.2,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:49:10+00:00",
+    "step": "export",
+    "status": "success",
+    "duration": 0.18,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:49:10+00:00",
+    "step": "dashboard",
+    "status": "success",
+    "duration": 0.18,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:49:10+00:00",
+    "step": "phase_orchestrator",
+    "status": "success",
+    "duration": 0.18,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:49:10+00:00",
+    "step": "pipeline_summary",
+    "status": "success",
+    "duration": 0.97,
+    "records_added": 57,
+    "records_reviewed": 50,
+    "errors": []
   }
 ]
