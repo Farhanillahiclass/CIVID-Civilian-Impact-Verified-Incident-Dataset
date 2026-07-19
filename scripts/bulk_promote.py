@@ -31,11 +31,13 @@ ROOT = Path(__file__).resolve().parent.parent
 STAGING_FILE = ROOT / "data" / "staging" / "pending_review.csv"
 
 PHASE_DIRS = {
-    1: ROOT / "data" / "phase1_palestine",
-    2: ROOT / "data" / "phase2_sudan",
-}
-PHASE_COUNTRY = {1: "Palestine", 2: "Sudan"}
-PHASE_CONFLICT = {1: "Israel-Palestine conflict", 2: "Sudan civil conflict"}
+     1: ROOT / "data" / "phase1_palestine",
+     2: ROOT / "data" / "phase2_sudan",
+     3: ROOT / "data" / "phase3_iran",
+     4: ROOT / "data" / "phase4_additional",
+ }
+ PHASE_COUNTRY = {1: "Palestine", 2: "Sudan", 3: "Iran", 4: "Yemen"}
+ PHASE_CONFLICT = {1: "Israeli-Palestinian conflict", 2: "Sudanese civil conflict", 3: "Iran-Israel Twelve-Day War", 4: "Yemen conflict (Red Sea crisis)"}
 
 EVENTS_FIELDS = [
     "record_id", "phase", "country", "conflict_name", "event_id", "event_date",

@@ -148,7 +148,7 @@ def main():
     phase = int(match["phase"])
     phase_dir = PHASE_DIRS.get(phase)
     if not phase_dir:
-        print(f"[error] Unknown phase {phase} — this script only supports Palestine (1) and Sudan (2).")
+        print(f"[error] Unknown phase {phase} — supported phases: 1 (Palestine), 2 (Sudan), 3 (Iran), 4 (Yemen/Additional).")
         sys.exit(1)
 
     print(f"\n--- Reviewing: {get_title(match)} ---")

@@ -1,9 +1,16 @@
 name: civid
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - python=3.11
-  - pandas
+  - pandas>=2.0
+  - matplotlib>=3.7
+  - seaborn>=0.13
+  - pillow>=10.0
+  - numpy>=1.25
+  - jupyter>=1.0
+  - ipykernel>=6.0
   - pip
   - pip:
       - jsonschema

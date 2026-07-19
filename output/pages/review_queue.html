@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>CIVID Dashboard</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--bg:#0f1419;--card:#1a212b;--ink:#e6edf3;--muted:#9aa7b4;--accent:#4C72B0;--green:#55A868;--red:#C44E52;--orange:#DD8452;--purple:#8172B2;--teal:#64B5CD;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:var(--card);border-bottom:1px solid #232c38;padding:14px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+header h1{font-size:18px;font-weight:700}
+header .sub{color:var(--muted);font-size:12px}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:6px;background:#232c38;font-size:13px;transition:background .2s}
+nav a:hover,nav a.active{background:var(--accent)}
+.wrap{padding:16px 20px;max-width:1400px;margin:0 auto}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.filters select,.filters input{padding:8px 10px;border-radius:8px;border:1px solid #2b3543;background:var(--card);color:var(--ink);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--card);border-radius:12px;padding:14px;text-align:center}
+.card .n{font-size:26px;font-weight:700}
+.card .l{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--card);border-radius:12px;padding:16px;margin:12px 0}
+.panel h3{margin:0 0 10px;font-size:15px;font-weight:600}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .1s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-success{background:var(--green);color:#fff}
+.btn-danger{background:var(--red);color:#fff}
+.btn:hover{transform:translateY(-1px);opacity:.95}
+.btn:active{transform:translateY(0)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid #232c38}
+th{color:var(--muted);font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.04em}
+tr:hover{background:#141b24}
+.tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;background:#232c38;color:var(--muted)}
+.tag-verified{background:#1e3a2f;color:var(--green)}
+.tag-unverified{background:#3a1e1e;color:var(--red)}
+.tag-estimated{background:#3a2a1e;color:var(--orange)}
+.tag-disputed{background:#3a1e3a;color:var(--purple)}
+.empty{color:var(--muted);font-style:italic;padding:20px;text-align:center}
+a{color:var(--accent)}
+footer{color:var(--muted);font-size:12px;padding:20px;text-align:center;border-top:1px solid #232c38;margin-top:20px}
+.status-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:10px 14px;background:#141b24;border-radius:10px;margin:12px 0;font-size:13px}
+.status-bar .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.dot-ok{background:var(--green)}.dot-err{background:var(--red)}.dot-warn{background:var(--orange)}.dot-idle{background:var(--muted)}
+.leader-card{width:260px;background:#141b24;border-radius:10px;padding:12px;display:inline-block;vertical-align:top;margin:6px}
+.leader-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;background:#222}
+.leader-card .nm{font-weight:600;margin-top:8px;font-size:14px}
+.leader-card .rl{color:var(--muted);font-size:12px}
+.leader-card .bio{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}
+.famous-grid{display:flex;flex-wrap:wrap;gap:14px}
+.news-item{border-left:3px solid var(--accent);padding:10px 12px;margin:8px 0;background:#141b24;border-radius:6px}
+.news-item b{font-size:14px}
+.source-link{font-size:11px;color:var(--muted);word-break:break-all}
+.pipeline-step{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:6px;background:#232c38;font-size:12px}
+
+</head>
+<body>
+<header><div><h1>CIVID Dashboard</h1><div class="sub" id="lastUpdated"></div></div><nav>
+  <a href="review_queue.html">Review Queue</a>
+  <a href="leaders.html">Leaders</a>
+  <a href="famous_persons.html">Famous Persons</a>
+  <a href="news_intelligence.html">News</a>
+  <a href="logs.html">Logs</a>
+  <a href="data_explorer.html">Data Explorer</a>
+</nav></header>
+<div class="wrap">
+
+
+<div class="panel"><h3>Unverified / Disputed Events (0)</h3>
+  <div class="filters">
+    <input id="rq-search" placeholder="Search events..." oninput="filterRQ()"/>
+    <select id="rq-phase" onchange="filterRQ()"><option value="">All phases</option></select>
+  </div>
+  <div style="overflow-x:auto"><table id="rq-table"><thead><tr>
+    <th>Event ID</th><th>Date</th><th>Phase</th><th>Location</th><th>Fatalities</th><th>Status</th><th>Confidence</th><th>Source</th><th>Notes</th>
+  </tr></thead><tbody>
+</tbody></table></div></div>
+<script>
+function filterRQ(){
+  const q=document.getElementById('rq-search').value.toLowerCase();
+  const ph=document.getElementById('rq-phase').value;
+  const rows=document.querySelectorAll('#rq-table tbody tr');
+  rows.forEach(r=>{{
+    const t=r.textContent.toLowerCase();
+    const p=r.cells[2]?r.cells[2].textContent:'';
+    r.style.display=(t.includes(q)&&(!ph||p===ph))?'':'none';
+  }});
+}
+</script>
+
+</div>
+<footer>CIVID — code MIT (c) Muhammad Farhan; underlying data per each publisher. No victim imagery. No identifiable images of minors unless public, relevant, and ethically safe.</footer>
+</body></html>

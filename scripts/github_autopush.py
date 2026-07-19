@@ -2,11 +2,11 @@
 """CIVID GitHub auto-push (guarded).
 
 After an approval step, run this to:
-  1. re-validate the dataset (abort if any ERROR),
-  2. renumber (idempotent),
-  3. rebuild exports + news intelligence + HTML dashboard,
-  4. stage changes, write a changelog entry, and
-  5. push to origin/master  --  BUT only if there are approved, non-empty changes.
+   1. re-validate the dataset (abort if any ERROR),
+   2. renumber (idempotent),
+   3. rebuild exports + news intelligence + HTML dashboard + infographics,
+   4. stage changes (including output/), write a changelog entry, and
+   5. push to origin/master  --  BUT only if there are approved, non-empty changes.
 
 SAFETY:
   - Never pushes if validation has errors.
@@ -26,7 +26,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-GIT = "C:\\Program Files\\Git\\cmd\\git.exe"  # adjust if git lives elsewhere
 
 
 def run(cmd, check=True):
@@ -37,9 +36,21 @@ def run(cmd, check=True):
     return p
 
 
+def find_git() -> str:
+    for candidate in ["git", str(Path("C:/Program Files/Git/cmd/git.exe"))]:
+        try:
+            p = subprocess.run([candidate, "--version"], capture_output=True, text=True)
+            if p.returncode == 0:
+                return candidate
+        except FileNotFoundError:
+            continue
+    return "git"
+
+
 def main():
     do_push = "--push" in sys.argv
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    GIT = find_git()
 
     print("=== CIVID auto-push (guarded) ===")
     # 1. validate
@@ -49,13 +60,14 @@ def main():
         raise SystemExit(1)
     print("[ok] validation clean")
 
-    # 2-4. regenerate outputs
+    # 2-5. regenerate outputs
     run([sys.executable, "scripts/renumber_records.py"])
-    run([sys.executable, "scripts/build_exports.py"])
     run([sys.executable, "scripts/generate_news_intelligence.py"])
+    run([sys.executable, "scripts/build_exports.py"])
     run([sys.executable, "scripts/generate_html_dashboard.py"])
+    run([sys.executable, "scripts/infographic.py"])
 
-    # 5. see what changed
+    # 6. see what changed
     st = run([GIT, "status", "--porcelain"]).stdout.strip()
     if not st:
         print("[ok] No changes to push.")

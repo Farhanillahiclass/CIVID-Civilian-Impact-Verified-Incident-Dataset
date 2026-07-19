@@ -4,35 +4,225 @@
   "description": "Separate leaders table for Hamas and other conflict organizations. Stores all verified leaders/senior figures reported as killed, confirmed dead, or officially acknowledged by reliable sources. Must NOT be merged into general casualty tables. Leaders reported by one source but not yet confirmed by another are included with verification_status='unverified' and needs_review=true (review queue). Politically sensitive records are NOT excluded. Only deaths supported by a reliable source are included; named-person data is never fabricated.",
   "type": "object",
   "properties": {
-    "leader_id": { "type": "string", "description": "Stable primary key, e.g. LDR-001." },
-    "legacy_record_id": { "type": ["string", "null"] },
-    "phase": { "type": "string", "description": "phase1_palestine, phase2_sudan, phase3_iran, etc." },
-    "country": { "type": "string" },
-    "conflict_name": { "type": ["string", "null"] },
-    "leader_name": { "type": "string", "description": "Full name." },
-    "aka": { "type": ["string", "null"], "description": "Aliases / alternate spellings, pipe-separated." },
-    "role": { "type": "string", "enum": ["political leader", "military commander", "local commander", "government official", "armed group leader", "other"] },
-    "organization": { "type": "string", "description": "Hamas, IRGC, RSF, Iranian Armed Forces, etc." },
-    "leadership_level": { "type": "string", "enum": ["top", "senior", "mid", "local"], "description": "Leadership level within the organization." },
-    "death_status": { "type": "string", "enum": ["confirmed dead", "reported killed", "officially acknowledged", "alive"], "description": "How the death is characterized by sources. 'alive' is used for verified living senior leaders (e.g. a sitting head of state) who are included for completeness but are NOT death records." },
-    "death_date": { "type": ["string", "null"], "format": "date" },
-    "death_location": { "type": ["string", "null"] },
-    "death_cause": { "type": ["string", "null"] },
-    "bio": { "type": ["string", "null"], "description": "Short verified bio; only facts stated by sources." },
-    "image_available": { "type": ["boolean", "string"] },
-    "image_url": { "type": ["string", "null"], "format": "uri" },
-    "image_source": { "type": ["string", "null"] },
-    "image_license": { "type": ["string", "null"] },
-    "source_id": { "type": ["string", "null"] },
-    "source_url": { "type": ["string", "null"], "format": "uri" },
-    "citation_text": { "type": "string" },
-    "verified_by": { "type": "string", "description": "Pipe-separated list of authoritative sources independently corroborating the death." },
-    "verification_status": { "type": "string", "enum": ["verified", "estimated", "unverified", "disputed"] },
-    "confidence_level": { "type": "string", "enum": ["high", "medium", "low"] },
-    "needs_review": { "type": ["boolean", "string"], "description": "true when reported by a single source / unconfirmed -> review queue." },
-    "event_id": { "type": ["string", "null"], "description": "Link to the corresponding event row if one exists." },
-    "notes": { "type": ["string", "null"] }
+    "leader_id": {
+      "type": "string",
+      "description": "Stable primary key, e.g. LDR-001."
+    },
+    "legacy_record_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "description": "phase1_palestine, phase2_sudan, phase3_iran, etc."
+    },
+    "country": {
+      "type": "string"
+    },
+    "conflict_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "leader_name": {
+      "type": "string",
+      "description": "Full name."
+    },
+    "aka": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aliases / alternate spellings, pipe-separated."
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "political leader",
+        "military commander",
+        "local commander",
+        "government official",
+        "armed group leader",
+        "other"
+      ]
+    },
+    "organization": {
+      "type": "string",
+      "description": "Hamas, IRGC, RSF, Iranian Armed Forces, etc."
+    },
+    "leadership_level": {
+      "type": "string",
+      "enum": [
+        "top",
+        "senior",
+        "mid",
+        "local"
+      ],
+      "description": "Leadership level within the organization."
+    },
+    "death_status": {
+      "type": "string",
+      "enum": [
+        "confirmed dead",
+        "reported killed",
+        "officially acknowledged",
+        "alive",
+        "dead"
+      ],
+      "description": "How the death is characterized by sources. 'alive' = verified living senior leader (not a death record). 'dead' = death confirmed via the funeral/burial/memorial verification rule (reliable outlet reports rites for 'late'/'slain'/'deceased' person, no equally reliable contradiction)."
+    },
+    "death_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "death_location": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "death_cause": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bio": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Short verified bio; only facts stated by sources."
+    },
+    "image_available": {
+      "type": [
+        "boolean",
+        "string"
+      ]
+    },
+    "image_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "image_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "image_license": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "citation_text": {
+      "type": "string"
+    },
+    "verified_by": {
+      "type": "string",
+      "description": "Pipe-separated list of authoritative sources independently corroborating the death."
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "estimated",
+        "unverified",
+        "disputed"
+      ]
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "needs_review": {
+      "type": [
+        "boolean",
+        "string"
+      ],
+      "description": "true when reported by a single source / unconfirmed -> review queue."
+    },
+    "event_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Link to the corresponding event row if one exists."
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "burial_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "buried",
+        "not buried",
+        null
+      ],
+      "description": "Set to 'buried' when a reliable outlet reports burial rites; 'not buried' if death confirmed but burial not reported; blank if unknown."
+    },
+    "last_checked": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Date the latest confirmation/source check was performed (ISO or YYYY-MM-DD)."
+    },
+    "source_set": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Pipe-separated list of ALL supporting source URLs for the death/burial confirmation."
+    }
   },
-  "required": ["leader_id", "phase", "country", "leader_name", "role", "organization", "leadership_level", "death_status", "citation_text", "verified_by", "verification_status", "confidence_level"],
+  "required": [
+    "leader_id",
+    "phase",
+    "country",
+    "leader_name",
+    "role",
+    "organization",
+    "leadership_level",
+    "death_status",
+    "citation_text",
+    "verified_by",
+    "verification_status",
+    "confidence_level"
+  ],
   "additionalProperties": false
 }

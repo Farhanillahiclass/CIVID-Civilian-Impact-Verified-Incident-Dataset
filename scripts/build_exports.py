@@ -219,9 +219,29 @@ def main():
     }
     write_json(os.path.join(EXPORTS, "news_aggregates.json"), agg)
 
-    # image index: media rows that are images with a URL
+    # image index: media images (if any) + leader portraits keyed by leader_id.
+    # Leader portraits live in data/leaders.csv (image_local_path / image_url) and are
+    # the authoritative source for the provenance index used by notebooks.
     images = [m for m in all_media if (m.get("media_type") == "image" and (m.get("image_url") or "").strip())]
-    write_csv(os.path.join(EXPORTS, "image_index.csv"), images, media_fields)
+    img_fields = ["leader_id", "phase", "leader_name", "image_available", "verified_local",
+                  "image_url", "image_license", "image_source", "image_local_path", "source_url"]
+    leader_imgs = []
+    for r in leaders:
+        lp = str(r.get("image_local_path") or "").strip()
+        verified_local = bool(lp and os.path.exists(os.path.join(REPO, lp)))
+        leader_imgs.append({
+            "leader_id": r.get("leader_id"),
+            "phase": r.get("phase"),
+            "leader_name": r.get("leader_name"),
+            "image_available": r.get("image_available"),
+            "verified_local": str(verified_local).lower(),
+            "image_url": r.get("image_url"),
+            "image_license": r.get("image_license"),
+            "image_source": r.get("image_source"),
+            "image_local_path": lp,
+            "source_url": r.get("source_url"),
+        })
+    write_csv(os.path.join(EXPORTS, "image_index.csv"), leader_imgs, img_fields)
 
     # dashboard-ready curated view
     dash_fields = [

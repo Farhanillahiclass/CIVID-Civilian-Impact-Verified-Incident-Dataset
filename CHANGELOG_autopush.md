@@ -103,3 +103,17 @@
 
 ## 2026-07-18 19:32 UTC
 - auto-push run; files: CHANGELOG_autopush.md, CHANGELOG_renumber.md, README.md, data/leaders.csv, data/phase1_palestine/events.csv, data/phase1_palestine/news_intelligence.csv, data/phase2_sudan/events.csv, data/phase2_sudan/famous_victims.csv, data/phase2_sudan/news_intelligence.csv, data/phase2_sudan/persons.csv, data/phase2_sudan/sources.csv, data/phase3_iran/news_intelligence.csv, data/phase4_additional/news_intelligence.csv, data/staging/pending_review.csv, exports/civid_dashboard.csv, exports/civid_dashboard.html, exports/civid_events_all.csv, exports/civid_events_all.json, exports/civid_famous_victims_all.csv, exports/civid_famous_victims_all.json, exports/civid_leaders_all.csv, exports/civid_leaders_all.json, exports/civid_news_intelligence_all.csv, exports/civid_news_intelligence_all.json, exports/civid_persons_all.csv, exports/civid_persons_all.json, exports/news_aggregates.json, exports/summary.json, notebooks/master_dashboard.ipynb, schema/leaders_schema.json, scripts/daily_update.py, scripts/generate_news_intelligence.py, scripts/promote_entry.py, data/staging/current_phase.txt, data/staging/pending_review_old_20260719000039.csv, data/staging/unresolved_leads.csv, notebooks/iran_leaders_photos.ipynb, scripts/phase_orchestrator.py, scripts/verify_leader_images.py
+
+## 2026-07-19 03:35 UTC
+- ADDED death-verification policy (funeral/burial/memorial confirmation rule):
+  - docs/death_verification_policy.md documents the rule.
+  - schema/leaders_schema.json: added death_status='dead' enum value + new fields burial_status, last_checked, source_set.
+  - scripts/verify_deaths.py applies the rule; refuses to promote without a real read source URL (no fabrication). Demonstrated refusal on LDR-025 with no sources.
+  - LDR-024 (Houthi) and LDR-025 (Khamenei) remain unverified/needs_review=true: this sandbox has no network to fetch/confirm a reliable outlet report, so the rule is NOT applied to them yet. Apply via verify_deaths.py once cited sources are supplied.
+  - Validation 0 errors / 0 warnings.
+
+## 2026-07-19 03:43 UTC
+- DEATH VERIFICATION (funeral/burial rule): LDR-025 promoted unverified -> verified (death_status=dead, burial_status=buried, last_checked=2026-07-19, sources=2).
+
+## 2026-07-19 07:59 UTC
+- auto-push run; files: CHANGELOG_autopush.md, CHANGELOG_renumber.md, README.md, data/leaders.csv, environment.yml, exports/civid_dashboard.html, exports/civid_leaders_all.csv, exports/civid_leaders_all.json, exports/image_index.csv, notebooks/iran_leaders_photos.ipynb, notebooks/master_dashboard.ipynb, notebooks/phase1_analysis.ipynb, schema/leaders_schema.json, scripts/build_exports.py, scripts/bulk_promote.py, scripts/generate_html_dashboard.py, scripts/github_autopush.py, scripts/infographic.py, scripts/promote_entry.py, output/, requirements.txt, scripts/cleanup_logs.py, scripts/dashboard_server.py, scripts/run_pipeline.py, scripts/setup_daily_schedule.py, scripts/verify_deaths.py

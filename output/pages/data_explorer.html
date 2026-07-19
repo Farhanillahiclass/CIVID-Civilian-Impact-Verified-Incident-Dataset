@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>CIVID Dashboard</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--bg:#0f1419;--card:#1a212b;--ink:#e6edf3;--muted:#9aa7b4;--accent:#4C72B0;--green:#55A868;--red:#C44E52;--orange:#DD8452;--purple:#8172B2;--teal:#64B5CD;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:var(--card);border-bottom:1px solid #232c38;padding:14px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+header h1{font-size:18px;font-weight:700}
+header .sub{color:var(--muted);font-size:12px}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:6px;background:#232c38;font-size:13px;transition:background .2s}
+nav a:hover,nav a.active{background:var(--accent)}
+.wrap{padding:16px 20px;max-width:1400px;margin:0 auto}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.filters select,.filters input{padding:8px 10px;border-radius:8px;border:1px solid #2b3543;background:var(--card);color:var(--ink);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--card);border-radius:12px;padding:14px;text-align:center}
+.card .n{font-size:26px;font-weight:700}
+.card .l{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--card);border-radius:12px;padding:16px;margin:12px 0}
+.panel h3{margin:0 0 10px;font-size:15px;font-weight:600}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .1s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-success{background:var(--green);color:#fff}
+.btn-danger{background:var(--red);color:#fff}
+.btn:hover{transform:translateY(-1px);opacity:.95}
+.btn:active{transform:translateY(0)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid #232c38}
+th{color:var(--muted);font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.04em}
+tr:hover{background:#141b24}
+.tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;background:#232c38;color:var(--muted)}
+.tag-verified{background:#1e3a2f;color:var(--green)}
+.tag-unverified{background:#3a1e1e;color:var(--red)}
+.tag-estimated{background:#3a2a1e;color:var(--orange)}
+.tag-disputed{background:#3a1e3a;color:var(--purple)}
+.empty{color:var(--muted);font-style:italic;padding:20px;text-align:center}
+a{color:var(--accent)}
+footer{color:var(--muted);font-size:12px;padding:20px;text-align:center;border-top:1px solid #232c38;margin-top:20px}
+.status-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:10px 14px;background:#141b24;border-radius:10px;margin:12px 0;font-size:13px}
+.status-bar .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.dot-ok{background:var(--green)}.dot-err{background:var(--red)}.dot-warn{background:var(--orange)}.dot-idle{background:var(--muted)}
+.leader-card{width:260px;background:#141b24;border-radius:10px;padding:12px;display:inline-block;vertical-align:top;margin:6px}
+.leader-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;background:#222}
+.leader-card .nm{font-weight:600;margin-top:8px;font-size:14px}
+.leader-card .rl{color:var(--muted);font-size:12px}
+.leader-card .bio{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}
+.famous-grid{display:flex;flex-wrap:wrap;gap:14px}
+.news-item{border-left:3px solid var(--accent);padding:10px 12px;margin:8px 0;background:#141b24;border-radius:6px}
+.news-item b{font-size:14px}
+.source-link{font-size:11px;color:var(--muted);word-break:break-all}
+.pipeline-step{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:6px;background:#232c38;font-size:12px}
+
+</head>
+<body>
+<header><div><h1>CIVID Dashboard</h1><div class="sub" id="lastUpdated"></div></div><nav>
+  <a href="review_queue.html">Review Queue</a>
+  <a href="leaders.html">Leaders</a>
+  <a href="famous_persons.html">Famous Persons</a>
+  <a href="news_intelligence.html">News</a>
+  <a href="logs.html">Logs</a>
+  <a href="data_explorer.html">Data Explorer</a>
+</nav></header>
+<div class="wrap">
+
+<div class="panel">
+  <h3>Data Explorer & Downloads</h3>
+  <div class="filters">
+    <select id="ex-phase"><option value="">All phases</option></select>
+    <select id="ex-verify"><option value="">All verification</option><option value="verified">verified</option><option value="estimated">estimated</option><option value="unverified">unverified</option><option value="disputed">disputed</option></select>
+    <input id="ex-search" placeholder="Search..." oninput="filterExplorer()"/>
+  </div>
+  <div style="margin:10px 0">
+    <a href="exports/civid_events_all.csv" class="btn btn-primary" download>Download Events CSV</a>
+    <a href="exports/civid_events_all.json" class="btn btn-primary" download>Download Events JSON</a>
+    <a href="exports/civid_persons_all.csv" class="btn btn-primary" download>Download Persons CSV</a>
+    <a href="exports/civid_persons_all.json" class="btn btn-primary" download>Download Persons JSON</a>
+    <a href="exports/civid_leaders_all.csv" class="btn btn-primary" download>Download Leaders CSV</a>
+    <a href="exports/civid_leaders_all.json" class="btn btn-primary" download>Download Leaders JSON</a>
+    <a href="exports/summary.json" class="btn btn-primary" download>Download Summary JSON</a>
+  </div>
+  <div style="overflow-x:auto"><table id="ex-table"><thead><tr>
+    <th>Event ID</th><th>Date</th><th>Phase</th><th>Country</th><th>Location</th><th>Fatalities</th><th>Injuries</th><th>Status</th><th>Source</th><th>Source URL</th>
+  </tr></thead><tbody><tr>
+    <td>EVT-037</td>
+    <td>2023-11-12</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Khartoum</td>
+    <td>1</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Reuters</td>
+    <td><a href="https://www.reuters.com/world/africa/sudan-paramilitary-rsf-loses-senior-commander-khartoum-2023-11-13/" target="_blank" class="source-link">https://www.reuters.com/world/africa/sudan-paramil</a></td>
+  </tr><tr>
+    <td>EVT-036</td>
+    <td>2024-02-27</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Wad Madani</td>
+    <td>1</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Reuters</td>
+    <td><a href="https://www.reuters.com/world/africa/rsf-commander-yagoub-mousa-killed-sudan-fighting-2024-02-28/" target="_blank" class="source-link">https://www.reuters.com/world/africa/rsf-commander</a></td>
+  </tr><tr>
+    <td>EVT-003</td>
+    <td>2025-06-13</td>
+    <td>phase3_iran</td>
+    <td>Iran</td>
+    <td>Tehran (command center strike)</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ACLED Iran Crisis</td>
+    <td><a href="https://acleddata.com/iran-crisis-live" target="_blank" class="source-link">https://acleddata.com/iran-crisis-live</a></td>
+  </tr><tr>
+    <td>EVT-004</td>
+    <td>2025-06-13</td>
+    <td>phase3_iran</td>
+    <td>Iran</td>
+    <td>Tehran / multiple provinces</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ACLED Iran Crisis</td>
+    <td><a href="https://acleddata.com/iran-crisis-live" target="_blank" class="source-link">https://acleddata.com/iran-crisis-live</a></td>
+  </tr><tr>
+    <td>EVT-005</td>
+    <td>2025-06-13</td>
+    <td>phase3_iran</td>
+    <td>Iran</td>
+    <td>Tehran (fuel/logistics sites)</td>
+    <td>9</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Human Rights Activists in Iran (HRANA)</td>
+    <td><a href="https://www.en-hrana.org/twelve-days-under-fire-a-comprehensive-report-on-the-iran-israel-war/" target="_blank" class="source-link">https://www.en-hrana.org/twelve-days-under-fire-a-</a></td>
+  </tr><tr>
+    <td>EVT-001</td>
+    <td>2025-06-24</td>
+    <td>phase3_iran</td>
+    <td>Iran</td>
+    <td>Iran (nationwide)</td>
+    <td>1060</td>
+    <td>4000</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Iran Ministry of Health</td>
+    <td><a href="https://www.iranintl.com/" target="_blank" class="source-link">https://www.iranintl.com/</a></td>
+  </tr><tr>
+    <td>EVT-002</td>
+    <td>2025-06-28</td>
+    <td>phase3_iran</td>
+    <td>Iran</td>
+    <td>Iran (nationwide)</td>
+    <td>1190</td>
+    <td>4475</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Human Rights Activists in Iran (HRANA)</td>
+    <td><a href="https://www.en-hrana.org/twelve-days-under-fire-a-comprehensive-report-on-the-iran-israel-war/" target="_blank" class="source-link">https://www.en-hrana.org/twelve-days-under-fire-a-</a></td>
+  </tr><tr>
+    <td>EVT-036</td>
+    <td>2025-10-03</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip</td>
+    <td>67075</td>
+    <td>169430</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Gaza Ministry of Health (MoH)</td>
+    <td><a href="https://www.ochaopt.org/" target="_blank" class="source-link">https://www.ochaopt.org/</a></td>
+  </tr><tr>
+    <td>EVT-030</td>
+    <td>2025-12-31</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Khartoum</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-010</td>
+    <td>2026-01-01</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>West Bank - multiple communities</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-039</td>
+    <td>2026-01-15</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip (winter storm)</td>
+    <td>31</td>
+    <td>34</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt Gaza Humanitarian Response SitRep #62</td>
+    <td><a href="https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-62" target="_blank" class="source-link">https://www.unocha.org/publications/report/occupie</a></td>
+  </tr><tr>
+    <td>EVT-042</td>
+    <td>2026-01-31</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Khan Younis</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt Gaza Humanitarian Response SitRep #62</td>
+    <td><a href="https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-62" target="_blank" class="source-link">https://www.unocha.org/publications/report/occupie</a></td>
+  </tr><tr>
+    <td>EVT-040</td>
+    <td>2026-02-04</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Mawasi area of Khan Younis</td>
+    <td>1</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt Gaza Humanitarian Response SitRep #69</td>
+    <td><a href="https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-69" target="_blank" class="source-link">https://www.unocha.org/publications/report/occupie</a></td>
+  </tr><tr>
+    <td>EVT-041</td>
+    <td>2026-02-05</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip</td>
+    <td>82</td>
+    <td>162</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt Gaza Humanitarian Response SitRep #69</td>
+    <td><a href="https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-69" target="_blank" class="source-link">https://www.unocha.org/publications/report/occupie</a></td>
+  </tr><tr>
+    <td>EVT-038</td>
+    <td>2026-02-25</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip (ceasefire period cumulative)</td>
+    <td>618</td>
+    <td>1663</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt Gaza Humanitarian Response SitRep #69</td>
+    <td><a href="https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-situation-report-no-69" target="_blank" class="source-link">https://www.unocha.org/publications/report/occupie</a></td>
+  </tr><tr>
+    <td>EVT-024</td>
+    <td>2026-05-08</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Port Sudan to Khartoum humanitarian corridor</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-020</td>
+    <td>2026-06-01</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Al Obeid and North Kordofan</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-estimated">estimated</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-025</td>
+    <td>2026-06-01</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Al Obeid and North Kordofan</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-028</td>
+    <td>2026-06-05</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Kalandiya Camp</td>
+    <td>1</td>
+    <td>2</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-10-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-027</td>
+    <td>2026-06-10</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Khartoum</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-estimated">estimated</span></td>
+    <td>ACLED Sudan Conflict Events Database</td>
+    <td><a href="https://acleddata.com/" target="_blank" class="source-link">https://acleddata.com/</a></td>
+  </tr><tr>
+    <td>EVT-028</td>
+    <td>2026-06-12</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>El Geneina, West Darfur</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-estimated">estimated</span></td>
+    <td>ACLED Sudan Conflict Events Database</td>
+    <td><a href="https://acleddata.com/" target="_blank" class="source-link">https://acleddata.com/</a></td>
+  </tr><tr>
+    <td>EVT-034</td>
+    <td>2026-06-13</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip (water access)</td>
+    <td>0</td>
+    <td>0</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Security Council Report / OCHA</td>
+    <td><a href="https://www.securitycouncilreport.org/whatsinblue/2026/06/the-middle-east-including-the-palestinian-question-briefing-on-the-humanitarian-situation-in-gaza-3.php" target="_blank" class="source-link">https://www.securitycouncilreport.org/whatsinblue/</a></td>
+  </tr><tr>
+    <td>EVT-017</td>
+    <td>2026-06-14</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Khan al Ahmar in Jerusalem governorate</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-011</td>
+    <td>2026-06-15</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Al Bowereh and Hiwara communities in Hebron governorate</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-022</td>
+    <td>2026-06-15</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Al Obeid Teaching Hospital</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-026</td>
+    <td>2026-06-15</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Tawila town in North Darfur</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-029</td>
+    <td>2026-06-18</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Gedaref</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-estimated">estimated</span></td>
+    <td>ACLED Sudan Conflict Events Database</td>
+    <td><a href="https://acleddata.com/" target="_blank" class="source-link">https://acleddata.com/</a></td>
+  </tr><tr>
+    <td>EVT-008</td>
+    <td>2026-06-20</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip - 130 health facilities across territory</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-023</td>
+    <td>2026-06-20</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Al Obeid displacement sites</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-033</td>
+    <td>2026-06-20</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>North Darfur (Al Fasher)</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-007</td>
+    <td>2026-06-22</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Shufat Camp</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-009</td>
+    <td>2026-06-22</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Al Shifa Hospital - Gaza City</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-012</td>
+    <td>2026-06-22</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Kafr Aqab</td>
+    <td>2</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-013</td>
+    <td>2026-06-22</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>East Jerusalem areas West Bank side of Barrier</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-003</td>
+    <td>2026-06-23</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>near a temporary education learning space</td>
+    <td>1</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-006</td>
+    <td>2026-06-24</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Wadi Salman Bedouin community in Area C of Ramallah governorate</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-005</td>
+    <td>2026-06-27</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>eastern Deir al Balah governorate and eastern Gaza city</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-015</td>
+    <td>2026-06-27</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Rammun village in Ramallah governorate</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-018</td>
+    <td>2026-06-27</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>East Jerusalem - Kafr Aqab and Shufat Camp</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-014</td>
+    <td>2026-06-28</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Kafr ad Dik in Salfit governorate</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-002</td>
+    <td>2026-06-29</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Al Mawasi area of Khan Younis</td>
+    <td>2</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-004</td>
+    <td>2026-06-29</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>West Bank</td>
+    <td>3</td>
+    <td>20</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-016</td>
+    <td>2026-06-29</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Jalud village in Nablus governorate</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-001</td>
+    <td>2026-06-30</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip</td>
+    <td>23</td>
+    <td>112</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-019</td>
+    <td>2026-06-30</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>UNRWA Kalandia Training Centre (KTC) in East Jerusalem</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UN OCHA Humanitarian Situation Report | 3 July 2026</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-031</td>
+    <td>2026-06-30</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>West Bank including East Jerusalem (cumulative since 7 Oct 2023)</td>
+    <td>1109</td>
+    <td>0</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UNRWA</td>
+    <td><a href="https://www.unrwa.org/resources/reports/unrwa-situation-report-229-humanitarian-crisis-gaza-strip-and-occupied-west-bank" target="_blank" class="source-link">https://www.unrwa.org/resources/reports/unrwa-situ</a></td>
+  </tr><tr>
+    <td>EVT-032</td>
+    <td>2026-06-30</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip (post-ceasefire cumulative)</td>
+    <td>1053</td>
+    <td>3406</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UNRWA</td>
+    <td><a href="https://www.unrwa.org/resources/reports/unrwa-situation-report-229-humanitarian-crisis-gaza-strip-and-occupied-west-bank" target="_blank" class="source-link">https://www.unrwa.org/resources/reports/unrwa-situ</a></td>
+  </tr><tr>
+    <td>EVT-032</td>
+    <td>2026-07-01</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Khartoum State</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-estimated">estimated</span></td>
+    <td>UN OCHA Sudan Situation Report</td>
+    <td><a href="https://www.unocha.org/sudan" target="_blank" class="source-link">https://www.unocha.org/sudan</a></td>
+  </tr><tr>
+    <td>EVT-021</td>
+    <td>2026-07-02</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Al Obeid and displacement sites in North Kordofan</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>ICRC Sudan Operations and Humanitarian Response</td>
+    <td><a href="https://www.icrc.org/en/where-we-work/sudan" target="_blank" class="source-link">https://www.icrc.org/en/where-we-work/sudan</a></td>
+  </tr><tr>
+    <td>EVT-035</td>
+    <td>2026-07-03</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip (shelter recovery)</td>
+    <td>0</td>
+    <td>0</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>UNRWA</td>
+    <td><a href="https://www.unrwa.org/resources/reports/unrwa-situation-report-229-humanitarian-crisis-gaza-strip-and-occupied-west-bank" target="_blank" class="source-link">https://www.unrwa.org/resources/reports/unrwa-situ</a></td>
+  </tr><tr>
+    <td>EVT-030</td>
+    <td>2026-07-05</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip (29 June-5 July reporting period)</td>
+    <td>44</td>
+    <td>0</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-10-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-034</td>
+    <td>2026-07-05</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>Sudan (cholera outbreak)</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>WHO Sudan Health Cluster</td>
+    <td><a href="https://www.emro.who.int/sudan/" target="_blank" class="source-link">https://www.emro.who.int/sudan/</a></td>
+  </tr><tr>
+    <td>EVT-029</td>
+    <td>2026-07-08</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Kerem Shalom to Gaza warehouse route</td>
+    <td>1</td>
+    <td>0</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-10-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-031</td>
+    <td>2026-07-08</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>North Darfur displacement cluster</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-estimated">estimated</span></td>
+    <td>ACLED Sudan Conflict Events Database</td>
+    <td><a href="https://acleddata.com/" target="_blank" class="source-link">https://acleddata.com/</a></td>
+  </tr><tr>
+    <td>EVT-033</td>
+    <td>2026-07-10</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>West Bank, near Ramallah (Israeli-staffed road gate)</td>
+    <td>1</td>
+    <td>0</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>OCHA oPt</td>
+    <td><a href="https://www.ochaopt.org/content/humanitarian-situation-report-10-july-2026" target="_blank" class="source-link">https://www.ochaopt.org/content/humanitarian-situa</a></td>
+  </tr><tr>
+    <td>EVT-035</td>
+    <td>2026-07-10</td>
+    <td>phase2_sudan</td>
+    <td>Sudan</td>
+    <td>White Nile State</td>
+    <td></td>
+    <td></td>
+    <td><span class="tag tag-estimated">estimated</span></td>
+    <td>UN OCHA Sudan Situation Report</td>
+    <td><a href="https://www.unocha.org/sudan" target="_blank" class="source-link">https://www.unocha.org/sudan</a></td>
+  </tr><tr>
+    <td>EVT-037</td>
+    <td>2026-07-13</td>
+    <td>phase1_palestine</td>
+    <td>Palestine</td>
+    <td>Gaza Strip</td>
+    <td>73231</td>
+    <td></td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td>Gaza Ministry of Health (MoH)</td>
+    <td><a href="https://www.ochaopt.org/" target="_blank" class="source-link">https://www.ochaopt.org/</a></td>
+  </tr></tbody></table></div></div>
+<script>
+function filterExplorer(){
+  const ph=document.getElementById('ex-phase').value;
+  const vf=document.getElementById('ex-verify').value;
+  const q=document.getElementById('ex-search').value.toLowerCase();
+  const rows=document.querySelectorAll('#ex-table tbody tr');
+  rows.forEach(r=>{{
+    const t=r.textContent.toLowerCase();
+    const p=r.cells[2]?r.cells[2].textContent:'';
+    const s=r.cells[7]?r.cells[7].textContent:'';
+    r.style.display=(t.includes(q)&&(!ph||p===ph)&&(!vf||s.includes(vf)))?'':'none';
+  }});
+}
+</script>
+
+</div>
+<footer>CIVID — code MIT (c) Muhammad Farhan; underlying data per each publisher. No victim imagery. No identifiable images of minors unless public, relevant, and ethically safe.</footer>
+</body></html>

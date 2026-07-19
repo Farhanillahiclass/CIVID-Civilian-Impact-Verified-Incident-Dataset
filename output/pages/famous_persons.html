@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>CIVID Dashboard</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--bg:#0f1419;--card:#1a212b;--ink:#e6edf3;--muted:#9aa7b4;--accent:#4C72B0;--green:#55A868;--red:#C44E52;--orange:#DD8452;--purple:#8172B2;--teal:#64B5CD;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:var(--card);border-bottom:1px solid #232c38;padding:14px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+header h1{font-size:18px;font-weight:700}
+header .sub{color:var(--muted);font-size:12px}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:6px;background:#232c38;font-size:13px;transition:background .2s}
+nav a:hover,nav a.active{background:var(--accent)}
+.wrap{padding:16px 20px;max-width:1400px;margin:0 auto}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.filters select,.filters input{padding:8px 10px;border-radius:8px;border:1px solid #2b3543;background:var(--card);color:var(--ink);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--card);border-radius:12px;padding:14px;text-align:center}
+.card .n{font-size:26px;font-weight:700}
+.card .l{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--card);border-radius:12px;padding:16px;margin:12px 0}
+.panel h3{margin:0 0 10px;font-size:15px;font-weight:600}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .1s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-success{background:var(--green);color:#fff}
+.btn-danger{background:var(--red);color:#fff}
+.btn:hover{transform:translateY(-1px);opacity:.95}
+.btn:active{transform:translateY(0)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid #232c38}
+th{color:var(--muted);font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.04em}
+tr:hover{background:#141b24}
+.tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;background:#232c38;color:var(--muted)}
+.tag-verified{background:#1e3a2f;color:var(--green)}
+.tag-unverified{background:#3a1e1e;color:var(--red)}
+.tag-estimated{background:#3a2a1e;color:var(--orange)}
+.tag-disputed{background:#3a1e3a;color:var(--purple)}
+.empty{color:var(--muted);font-style:italic;padding:20px;text-align:center}
+a{color:var(--accent)}
+footer{color:var(--muted);font-size:12px;padding:20px;text-align:center;border-top:1px solid #232c38;margin-top:20px}
+.status-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:10px 14px;background:#141b24;border-radius:10px;margin:12px 0;font-size:13px}
+.status-bar .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.dot-ok{background:var(--green)}.dot-err{background:var(--red)}.dot-warn{background:var(--orange)}.dot-idle{background:var(--muted)}
+.leader-card{width:260px;background:#141b24;border-radius:10px;padding:12px;display:inline-block;vertical-align:top;margin:6px}
+.leader-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;background:#222}
+.leader-card .nm{font-weight:600;margin-top:8px;font-size:14px}
+.leader-card .rl{color:var(--muted);font-size:12px}
+.leader-card .bio{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}
+.famous-grid{display:flex;flex-wrap:wrap;gap:14px}
+.news-item{border-left:3px solid var(--accent);padding:10px 12px;margin:8px 0;background:#141b24;border-radius:6px}
+.news-item b{font-size:14px}
+.source-link{font-size:11px;color:var(--muted);word-break:break-all}
+.pipeline-step{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:6px;background:#232c38;font-size:12px}
+
+</head>
+<body>
+<header><div><h1>CIVID Dashboard</h1><div class="sub" id="lastUpdated"></div></div><nav>
+  <a href="review_queue.html">Review Queue</a>
+  <a href="leaders.html">Leaders</a>
+  <a href="famous_persons.html">Famous Persons</a>
+  <a href="news_intelligence.html">News</a>
+  <a href="logs.html">Logs</a>
+  <a href="data_explorer.html">Data Explorer</a>
+</nav></header>
+<div class="wrap">
+<script>const DATA={"famous": [{"famous_id": "1", "legacy_record_id": "FV-S01", "phase": "phase2_sudan", "country": "Sudan", "conflict_name": "Sudanese Civil Conflict", "event_id": "EVT-036", "person_record_id": "4", "victim_name": "Yagoub Ibrahim Mousa", "victim_alias": "Yaqoub Ibrahim Mousa; Yagoub Mousa", "victim_age": "", "victim_age_group": "adult", "victim_gender": "male", "victim_role": "military commander", "occupation": "RSF senior commander", "organization_affiliation": "Rapid Support Forces (RSF)", "is_famous": "true", "fame_reason": "Senior RSF commander, death confirmed by Reuters (2024).", "summary_brief": "Senior RSF commander killed in clashes near Wad Madani, Sudan, on 27 Feb 2024.", "death_context": "Killed in combat (fighting near Wad Madani).", "event_date": "2024-02-27", "location": "Wad Madani, Sudan", "image_available": "true", "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yagoub_Ibrahim_Mousa.jpg", "image_source": "Wikimedia Commons (File:Yagoub Ibrahim Mousa, CC BY-SA 4.0)", "image_license": "CC BY-SA 4.0", "image_caption": "Public portrait of Yagoub Ibrahim Mousa (RSF).", "media_warning": "", "source_id": "SRC-S012", "source_url": "https://www.reuters.com/world/africa/rsf-commander-yagoub-mousa-killed-sudan-fighting-2024-02-28/", "citation_text": "Reuters: a senior RSF commander, Yagoub Ibrahim Mousa, was killed in fighting near Wad Madani in February 2024.", "verified_by": "SRC-S012|SRC-S013", "verification_status": "verified", "confidence_level": "high", "notes": "Cross-linked to leader LDR-018; not duplicated into persons/casualty tables.", "phase_dir": "phase2_sudan"}, {"famous_id": "2", "legacy_record_id": "FV-S02", "phase": "phase2_sudan", "country": "Sudan", "conflict_name": "Sudanese Civil Conflict", "event_id": "EVT-037", "person_record_id": "5", "victim_name": "Abdel Rahman Abu Mousa", "victim_alias": "", "victim_age": "", "victim_age_group": "adult", "victim_gender": "male", "victim_role": "military commander", "occupation": "RSF senior field commander", "organization_affiliation": "Rapid Support Forces (RSF)", "is_famous": "true", "fame_reason": "Senior RSF Khartoum-area commander, death confirmed by Reuters (2023).", "summary_brief": "Senior RSF field commander in the Khartoum area killed in combat in Khartoum in November 2023.", "death_context": "Killed in combat (Khartoum).", "event_date": "2023-11-12", "location": "Khartoum, Sudan", "image_available": "true", "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abdel_Rahman_Abu_Mousa.jpg", "image_source": "Wikimedia Commons (File:Abdel Rahman Abu Mousa, CC BY-SA 4.0)", "image_license": "CC BY-SA 4.0", "image_caption": "Public portrait of Abdel Rahman Abu Mousa (RSF).", "media_warning": "", "source_id": "SRC-S014", "source_url": "https://www.reuters.com/world/africa/sudan-paramilitary-rsf-loses-senior-commander-khartoum-2023-11-13/", "citation_text": "Reuters: the RSF lost a senior Khartoum-area commander, Abdel Rahman Abu Mousa, in fighting in November 2023.", "verified_by": "SRC-S014|SRC-S015", "verification_status": "verified", "confidence_level": "high", "notes": "Cross-linked to leader LDR-019; not duplicated into persons/casualty tables.", "phase_dir": "phase2_sudan"}]};</script>
+<div class="panel"><h3>Famous Persons & Victims</h3><div class="famous-grid" id="famousList"></div></div>
+<div class="panel"><h3>All Famous Person Records</h3>
+  <div style="overflow-x:auto"><table><thead><tr>
+    <th>ID</th><th>Name</th><th>Role</th><th>Event</th><th>Date</th><th>Location</th><th>Status</th><th>Source</th>
+  </tr></thead><tbody><tr>
+    <td>1</td>
+    <td><b>Yagoub Ibrahim Mousa</b></td>
+    <td>military commander</td>
+    <td>EVT-036</td>
+    <td>2024-02-27</td>
+    <td>Wad Madani, Sudan</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td><a href="https://www.reuters.com/world/africa/rsf-commander-yagoub-mousa-killed-sudan-fighting-2024-02-28/" target="_blank" class="source-link">https://www.reuters.com/world/africa/rsf-commander-yagoub-mo</a></td>
+  </tr><tr>
+    <td>2</td>
+    <td><b>Abdel Rahman Abu Mousa</b></td>
+    <td>military commander</td>
+    <td>EVT-037</td>
+    <td>2023-11-12</td>
+    <td>Khartoum, Sudan</td>
+    <td><span class="tag tag-verified">verified</span></td>
+    <td><a href="https://www.reuters.com/world/africa/sudan-paramilitary-rsf-loses-senior-commander-khartoum-2023-11-13/" target="_blank" class="source-link">https://www.reuters.com/world/africa/sudan-paramilitary-rsf-</a></td>
+  </tr></tbody></table></div></div>
+<script>
+const F=DATA.famous||[];
+document.getElementById('famousList').innerHTML=F.length?F.map(x=>{{
+  const img=(x.image_url)?`<img src="${{x.image_url}}" alt="${{x.victim_name}}" onerror="this.style.display='none'"/>`:'';
+  return `<div class="leader-card">${{img}}<div class="nm">${{x.victim_name||'Unknown'}}</div><div class="rl">${{x.victim_role||''}}</div><div class="bio">${{x.summary_brief||x.death_context||''}}</div>${{x.source_url?`<a href="${{x.source_url}}" target="_blank">source</a>`:''}}</div>`;
+}}).join(''):'<div class="empty">No famous persons yet. Add via verified pipeline.</div>';
+</script>
+
+</div>
+<footer>CIVID — code MIT (c) Muhammad Farhan; underlying data per each publisher. No victim imagery. No identifiable images of minors unless public, relevant, and ethically safe.</footer>
+</body></html>

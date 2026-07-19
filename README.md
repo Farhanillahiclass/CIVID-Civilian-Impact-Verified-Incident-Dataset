@@ -123,13 +123,39 @@ python scripts/validate_dataset.py             # integrity, FK, controlled-vocab
 python scripts/renumber_records.py             # sequential record_id/famous_id (legacy preserved) + change log
 python scripts/build_exports.py                # regenerate exports/ (combined CSV/JSON + derived fields)
 python scripts/generate_news_intelligence.py  # build the news_intelligence table from verified aggregates
-python scripts/generate_html_dashboard.py      # write exports/civid_dashboard.html (filters, charts, map, sections)
+python scripts/generate_html_dashboard.py      # write output/ multi-page dashboard
+python scripts/dashboard_server.py             # serve dashboard at http://localhost:8080/
+python scripts/run_pipeline.py                 # full pipeline: validate -> renumber -> news -> export -> dashboard -> infographic -> phase check
+python scripts/infographic.py                  # regenerate output/images/*.png placeholders (requires matplotlib for real charts)
 python scripts/daily_update.py                 # pull new report leads into the staging review queue (unverified)
-python scripts/infographic.py                  # regenerate aggregate, non-graphic summary charts
+python scripts/promote_entry.py                # promote a reviewed staging row to verified events.csv
+python scripts/bulk_promote.py                 # bulk-promote all staging rows as unverified
+python scripts/verify_deaths.py                # apply funeral/burial death-verification rule to a leader
+python scripts/fetch_leader_photos.py          # download verified leader portraits locally
+python scripts/verify_leader_images.py         # check local/remote image integrity
 python scripts/github_autopush.py              # guarded auto-push (dry-run by default; --push after approval)
+python scripts/setup_daily_schedule.py         # print Windows Task Scheduler / cron command for daily runs
 ```
 
-Full pipeline (validate → renumber → export → news → html → push):
+Full pipeline (validate → renumber → export → news → dashboard → infographic → phase check):
+
+```bash
+python scripts/run_pipeline.py
+```
+
+With infographics (requires matplotlib in the active environment):
+
+```bash
+python scripts/run_pipeline.py
+```
+
+Dry-run push (no commit):
+
+```bash
+python scripts/github_autopush.py
+```
+
+Commit and push after approval:
 
 ```bash
 python scripts/github_autopush.py --push
@@ -187,8 +213,122 @@ Full rules are defined in `docs/` and `schema/*.json`.
   and confidence level are recorded per-row precisely so downstream users can filter by
   certainty rather than treat all rows as equally authoritative.
 
+## Dashboard
+
+A multi-page HTML dashboard is generated into `output/`:
+
+- **Home** — summary cards, charts (timeline, verification, phase, roles), pipeline status, and a big **Run Now / Refresh Dataset** button.
+- **Review Queue** — all unverified / disputed events and persons with search and phase filter.
+- **Leaders** — verified leader deaths with images, bios, and source links.
+- **Famous Persons** — notable individuals with images and bios (ethics-gated).
+- **News Intelligence** — curated source-linked stories and aggregate metrics.
+- **Logs** — pipeline run history with timestamps, durations, and errors.
+- **Data Explorer** — full event table with CSV/JSON downloads.
+
+Start the dashboard server:
+```bash
+python scripts/dashboard_server.py
+# open http://localhost:8080/
+```
+
+Trigger a manual pipeline run from the dashboard with the **Run Now** button, or from the command line:
+```bash
+python scripts/run_pipeline.py
+```
+
+Auto-update workflow (daily):
+```
+source discovery -> extract -> verify -> deduplicate -> confidence scores -> exports -> infographic -> dashboard -> README update -> push (approval-gated)
+```
+
+## Workflow diagram
+
+```
+[Daily Schedule / Run Now Button]
+        |
+        v
+[validate_dataset.py] --> abort on errors
+        |
+        v
+[renumber_records.py]  --> gap-free IDs, legacy preserved
+        |
+        v
+[generate_news_intelligence.py] --> aggregates + curated stories
+        |
+        v
+[build_exports.py]     --> CSV/JSON exports + summary
+        |
+        v
+[generate_html_dashboard.py] --> multi-page dashboard
+        |
+        v
+[infographic.py]       --> PNG summary images
+        |
+        v
+[phase_orchestrator.py] --> advance phase if complete
+        |
+        v
+[github_autopush.py --push] --> commit + push (approval required)
+```
+
+## Update frequency
+
+- **Daily auto-update:** schedule `python scripts/run_pipeline.py` via Windows Task Scheduler or cron.
+- **Manual update:** click **Run Now** in the dashboard or run `python scripts/run_pipeline.py` directly.
+- **Approval gate:** GitHub push requires `--push` flag; unverified rows are never auto-pushed.
+
+## Leader image verification
+
+For every leader or famous person:
+- If a public-safe image exists, `image_url`, `image_source`, `image_license`, and `image_caption` are stored.
+- If rights are unclear or no image exists, image fields are left blank.
+- If sources disagree on identity, `verification_status = "needs_review"`.
+- Run `python scripts/fetch_leader_photos.py` to download verified portraits locally.
+- Run `python scripts/verify_leader_images.py` to check local integrity and remote Commons provenance.
+
+## Source policy
+
+- Prefer official and primary sources (OCHA, UNRWA, OHCHR, ICRC, ACLED, MoH, WHO, UNHCR).
+- Use Guardian, Reuters, AP, BBC, Al Jazeera, and Wikipedia only where appropriate and permitted.
+- Every record stores `source_name`, `source_url`, `source_date`, `source_type`, and `citation_text`.
+- Aggregate figures are explicitly labeled and marked `confidence_level=medium`.
+- No data is fabricated; missing evidence is marked `unverified` or `needs_review`.
+
+## Screenshots
+
+### Dashboard Home
+![Dashboard Home](output/images/dashboard_home.png)
+
+### Infographic Summary
+![Infographic Summary](output/images/infographic_summary.png)
+
+### Leaders Page
+![Leaders Page](output/images/leaders_page.png)
+
+## Output files
+
+| File | Description |
+|---|---|
+| `output/latest_dataset.csv` | Latest combined events CSV |
+| `output/latest_dataset.json` | Latest combined events JSON |
+| `output/images/infographic_summary.png` | Infographic summary |
+| `output/images/dashboard_home.png` | Dashboard home preview |
+| `output/images/leaders_page.png` | Leaders page preview |
+| `output/images/famous_persons_page.png` | Famous persons preview |
+| `output/images/news_summary.png` | News summary preview |
+| `output/run_log.json` | Pipeline run logs |
+| `output/changelog.md` | Change log |
+
+## How to run
+
+```bash
+conda activate civid
+python scripts/run_pipeline.py
+python scripts/dashboard_server.py
+```
+
+Open `http://localhost:8080/` to view the dashboard.
+
 ## Disclaimer
 
-This is a research and educational dataset. It is not a legal record, an official casualty
-count, or a substitute for the primary humanitarian reports it cites. Always consult the
-original source (linked per row) before using any figure in publication or policy work.
+This is a research and educational dataset. It is not a legal record, an official casualty count, or a substitute for the primary humanitarian reports it cites. Always consult the original source (linked per row) before using any figure in publication or policy work.
