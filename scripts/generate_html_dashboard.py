@@ -350,7 +350,7 @@ function filterRQ(){
 }
 </script>
 """
-    return BASE_HTML(NAV, body)
+    return BASE_HTML(NAV, body, data_js=j({"events": events, "persons": persons}))
 
 
 # ---------------------------------------------------------------------------
@@ -472,7 +472,7 @@ document.getElementById('logTable').innerHTML=LOGS.length?LOGS.map(l=>`<tr>
 </tr>`).join(''):'<tr><td colspan="7" class="empty">No logs yet. Run the pipeline to generate logs.</td></tr>';
 </script>
 """
-    return BASE_HTML(NAV, body)
+    return BASE_HTML(NAV, body, data_js=j({"logs": logs}))
 
 
 # ---------------------------------------------------------------------------
@@ -527,7 +527,7 @@ function filterExplorer(){
 }
 </script>
 """
-    return BASE_HTML(NAV, body)
+    return BASE_HTML(NAV, body, data_js=j({"events": events, "persons": persons}))
 
 
 # ---------------------------------------------------------------------------

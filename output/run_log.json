@@ -1184,5 +1184,131 @@
     "records_added": 57,
     "records_reviewed": 50,
     "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:05:58+00:00",
+    "step": "validate",
+    "status": "success",
+    "duration": 0.08,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:05:58+00:00",
+    "step": "renumber",
+    "status": "success",
+    "duration": 0.08,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:05:58+00:00",
+    "step": "news",
+    "status": "success",
+    "duration": 0.09,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:05:58+00:00",
+    "step": "export",
+    "status": "success",
+    "duration": 0.13,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:05:59+00:00",
+    "step": "dashboard",
+    "status": "success",
+    "duration": 0.17,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:05:59+00:00",
+    "step": "phase_orchestrator",
+    "status": "success",
+    "duration": 0.19,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:05:59+00:00",
+    "step": "pipeline_summary",
+    "status": "success",
+    "duration": 0.81,
+    "records_added": 57,
+    "records_reviewed": 50,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:13:52+00:00",
+    "step": "validate",
+    "status": "success",
+    "duration": 0.09,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:13:52+00:00",
+    "step": "renumber",
+    "status": "success",
+    "duration": 0.08,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:13:53+00:00",
+    "step": "news",
+    "status": "success",
+    "duration": 0.1,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:13:53+00:00",
+    "step": "export",
+    "status": "success",
+    "duration": 0.14,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:13:53+00:00",
+    "step": "dashboard",
+    "status": "success",
+    "duration": 0.19,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:13:53+00:00",
+    "step": "phase_orchestrator",
+    "status": "success",
+    "duration": 0.19,
+    "records_added": 0,
+    "records_reviewed": 0,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-19T08:13:53+00:00",
+    "step": "pipeline_summary",
+    "status": "success",
+    "duration": 0.87,
+    "records_added": 57,
+    "records_reviewed": 50,
+    "errors": []
   }
 ]

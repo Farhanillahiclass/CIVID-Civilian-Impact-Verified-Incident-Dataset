@@ -117,3 +117,6 @@
 
 ## 2026-07-19 07:59 UTC
 - auto-push run; files: CHANGELOG_autopush.md, CHANGELOG_renumber.md, README.md, data/leaders.csv, environment.yml, exports/civid_dashboard.html, exports/civid_leaders_all.csv, exports/civid_leaders_all.json, exports/image_index.csv, notebooks/iran_leaders_photos.ipynb, notebooks/master_dashboard.ipynb, notebooks/phase1_analysis.ipynb, schema/leaders_schema.json, scripts/build_exports.py, scripts/bulk_promote.py, scripts/generate_html_dashboard.py, scripts/github_autopush.py, scripts/infographic.py, scripts/promote_entry.py, output/, requirements.txt, scripts/cleanup_logs.py, scripts/dashboard_server.py, scripts/run_pipeline.py, scripts/setup_daily_schedule.py, scripts/verify_deaths.py
+
+## 2026-07-19 08:16 UTC
+- auto-push run; files: CHANGELOG_renumber.md, output/pages/data_explorer.html, output/pages/logs.html, output/pages/review_queue.html, output/run_log.json, scripts/generate_html_dashboard.py
