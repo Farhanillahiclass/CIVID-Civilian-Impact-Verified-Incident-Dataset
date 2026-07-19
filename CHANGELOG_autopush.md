@@ -129,3 +129,6 @@
 
 ## 2026-07-19 08:49 UTC
 - auto-push run; files: CHANGELOG_renumber.md, README.md, exports/civid_dashboard.html, output/pages/logs.html, output/run_log.json, scripts/dashboard_server.py, scripts/generate_html_dashboard.py, output/pages/children.html, output/pages/data_dictionary.html, output/pages/gaza.html, output/pages/iran.html, output/pages/journalists.html, output/pages/medical_workers.html, output/pages/sudan.html
+
+## 2026-07-19 08:51 UTC
+- auto-push run; files: CHANGELOG_renumber.md, scripts/open_dashboard.py

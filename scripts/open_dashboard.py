@@ -16,7 +16,7 @@ import webbrowser
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-PORT = 8080
+PORT = 8000
 for i, arg in enumerate(sys.argv[1:], 1):
     if arg == "--port" and i < len(sys.argv):
         PORT = int(sys.argv[i + 1])
