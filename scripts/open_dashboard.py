@@ -16,7 +16,14 @@ import webbrowser
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
+PORT = 8080
+for i, arg in enumerate(sys.argv[1:], 1):
+    if arg == "--port" and i < len(sys.argv):
+        PORT = int(sys.argv[i + 1])
+        break
+    elif arg.isdigit():
+        PORT = int(arg)
+        break
 
 # Start dashboard server
 server_cmd = [sys.executable, str(REPO / "scripts" / "dashboard_server.py"), str(PORT)]
