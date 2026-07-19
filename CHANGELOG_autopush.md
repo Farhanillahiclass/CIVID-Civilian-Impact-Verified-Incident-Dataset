@@ -120,3 +120,6 @@
 
 ## 2026-07-19 08:16 UTC
 - auto-push run; files: CHANGELOG_renumber.md, output/pages/data_explorer.html, output/pages/logs.html, output/pages/review_queue.html, output/run_log.json, scripts/generate_html_dashboard.py
+
+## 2026-07-19 08:21 UTC
+- auto-push run; files: CHANGELOG_renumber.md, README.md, scripts/open_dashboard.py

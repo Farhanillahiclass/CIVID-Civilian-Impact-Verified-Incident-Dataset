@@ -125,6 +125,7 @@ python scripts/build_exports.py                # regenerate exports/ (combined C
 python scripts/generate_news_intelligence.py  # build the news_intelligence table from verified aggregates
 python scripts/generate_html_dashboard.py      # write output/ multi-page dashboard
 python scripts/dashboard_server.py             # serve dashboard at http://localhost:8080/
+python scripts/open_dashboard.py               # start server and open browser automatically
 python scripts/run_pipeline.py                 # full pipeline: validate -> renumber -> news -> export -> dashboard -> infographic -> phase check
 python scripts/infographic.py                  # regenerate output/images/*.png placeholders (requires matplotlib for real charts)
 python scripts/daily_update.py                 # pull new report leads into the staging review queue (unverified)
@@ -135,6 +136,7 @@ python scripts/fetch_leader_photos.py          # download verified leader portra
 python scripts/verify_leader_images.py         # check local/remote image integrity
 python scripts/github_autopush.py              # guarded auto-push (dry-run by default; --push after approval)
 python scripts/setup_daily_schedule.py         # print Windows Task Scheduler / cron command for daily runs
+python scripts/cleanup_logs.py                 # trim old run_log.json entries
 ```
 
 Full pipeline (validate → renumber → export → news → dashboard → infographic → phase check):
@@ -294,40 +296,55 @@ For every leader or famous person:
 - Aggregate figures are explicitly labeled and marked `confidence_level=medium`.
 - No data is fabricated; missing evidence is marked `unverified` or `needs_review`.
 
-## Screenshots
+## Dashboard
 
-### Dashboard Home
+A professional multi-page HTML dashboard is generated into `output/`:
+
+### Screenshots
+
 ![Dashboard Home](output/images/dashboard_home.png)
 
-### Infographic Summary
 ![Infographic Summary](output/images/infographic_summary.png)
 
-### Leaders Page
 ![Leaders Page](output/images/leaders_page.png)
 
-## Output files
+![Famous Persons](output/images/famous_persons_page.png)
 
-| File | Description |
-|---|---|
-| `output/latest_dataset.csv` | Latest combined events CSV |
-| `output/latest_dataset.json` | Latest combined events JSON |
-| `output/images/infographic_summary.png` | Infographic summary |
-| `output/images/dashboard_home.png` | Dashboard home preview |
-| `output/images/leaders_page.png` | Leaders page preview |
-| `output/images/famous_persons_page.png` | Famous persons preview |
-| `output/images/news_summary.png` | News summary preview |
-| `output/run_log.json` | Pipeline run logs |
-| `output/changelog.md` | Change log |
+![News Summary](output/images/news_summary.png)
 
-## How to run
+### How to run
 
+**Option 1 — One-click launcher (recommended):**
 ```bash
-conda activate civid
-python scripts/run_pipeline.py
-python scripts/dashboard_server.py
+python scripts/open_dashboard.py
+# Browser opens automatically at http://localhost:8080/
 ```
 
-Open `http://localhost:8080/` to view the dashboard.
+**Option 2 — Manual:**
+```bash
+# Terminal 1: start server
+python scripts/dashboard_server.py
+
+# Terminal 2: open browser
+# Navigate to http://localhost:8080/
+```
+
+**Option 3 — Jupyter Notebook:**
+```bash
+jupyter notebook notebooks/master_dashboard.ipynb
+```
+
+### Dashboard pages
+
+| Page | URL | Description |
+|---|---|---|
+| Home | `/` | Summary cards, charts, pipeline status, Run Now button |
+| Review Queue | `/pages/review_queue.html` | Unverified/disputed events and persons |
+| Leaders | `/pages/leaders.html` | Leaders with images, bios, source links |
+| Famous Persons | `/pages/famous_persons.html` | Notable individuals gallery |
+| News Intelligence | `/pages/news_intelligence.html` | Curated source-linked stories |
+| Logs | `/pages/logs.html` | Pipeline run history |
+| Data Explorer | `/pages/data_explorer.html` | Full data table with CSV/JSON downloads |
 
 ## Disclaimer
 
