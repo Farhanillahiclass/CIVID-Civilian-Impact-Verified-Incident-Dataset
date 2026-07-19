@@ -1,0 +1,592 @@
+[
+  {
+    "image_id": "IMG-31609135",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/5b09e84f8ee654465ab883055e6cfabce4c856c7/183_0_1835_1469/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Ayatollah Ali Khamenei obituary",
+    "person_or_article": "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-71373553",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/e18ca90ef5dfcbe37babe82e9482b34963ed5350/0_122_2048_1229/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Middle East crisis: Palestinian medics killed by Israel and buried in mass grave, says UN – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-07970267",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Relief trucks start to deliver aid inside Gaza – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-72280744",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/f2eb3a03e5199c660dcb735cdcdb13c0acd83299/0_74_5246_3149/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Islamist groups in Middle East will emerge from Gaza war weakened",
+    "person_or_article": "https://www.theguardian.com/world/2025/jan/16/islamist-groups-middle-east-gaza-war-weakened-ceasefire-hamas-hezbollah",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-60060497",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/29f87edfef38884d357c70e7f7e4f5579f9bea18/0_327_5500_3300/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Middle East crisis: Iran confirms resumption of air traffic – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-14084727",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/f3da5c4583568269e977f051b0e92f6d842b377a/0_173_2594_1556/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Night of bombing in south Beirut – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-22524419",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/79e841fe68e5daf7754b55e8501b078df4d8ce82/0_266_3984_2390/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Iran seems like it’s in escalation mode – but all-out war with Israel is the last thing it wants",
+    "person_or_article": "https://www.theguardian.com/commentisfree/2024/apr/22/iran-israel-middle-east-escalation-tehran",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-84718481",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/d0c3d84b31324de85afaa4fcfe74848fedce498c/0_464_7010_4209/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Belgium summons Israeli ambassador over bombing of Gaza development office building – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-58842437",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/1d62f2f2d9e524aefdb0b66964a11826c3a344cc/0_216_5434_3262/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Seemingly disparate Middle East conflicts show collective erosion of self-restraint",
+    "person_or_article": "https://www.theguardian.com/world/2024/jan/20/seemingly-disparate-middle-east-conflicts-show-collective-erosion-of-self-restraint",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-41050291",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/a4c5a61b5cf7d871723f92f22bc3554f6d5fe6b7/0_216_6400_3839/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "US says it conducted strikes against three Houthi missiles – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-07652511",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Gaza conditions go from catastrophic ‘to near collapse’, says Unicef – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-66131711",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/dce4f208553f1967eb8cd79e76ded5d06127ed52/0_379_2581_1549/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Explainer: what we know about the latest Middle East attacks",
+    "person_or_article": "https://www.theguardian.com/world/2024/jan/17/middle-east-attacks-crisis-explained-updates-israel-gaza-war-red-sea-houthis-yemen-palestine-us-military",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-79683741",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/8d70e78b27b404900db547573862793ef7164e86/0_236_5500_3301/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "US military says it seized Iranian weapons bound for Houthis",
+    "person_or_article": "https://www.theguardian.com/world/2024/jan/16/us-seized-iranian-weapons-houthis-yemen",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-85526433",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/885dfc9ba3e93987912f6ff40460e85abfe16561/0_491_7363_4418/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Gaza humanitarian crisis ‘staining our shared humanity’, says UN refugee agency – as it happened",
+    "person_or_article": "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-06881256",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/fe58504967ad275b58c8cebe2250c668a46e4e11/0_416_6240_3744/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Angry protests flare up across Middle East after Gaza hospital blast",
+    "person_or_article": "https://www.theguardian.com/world/2023/oct/18/gaza-hospital-al-ahli-al-arabi-blast-explosion-protests-demonstrations-middle-east",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-93299846",
+    "source_name": "The Guardian",
+    "image_url": "https://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/4/1407166436615/A-Yemeni-boy-body-painted-004.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "A guide to Middle East politics in 2014",
+    "person_or_article": "https://www.theguardian.com/world/2014/aug/04/-sp-middle-east-politics-2014-egypt-syria-palestine-iraq-gaza",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-16924883",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/d8bca429d9ad2a591d7f9ac06371092198b118b5/406_0_3167_2533/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "The Guardian view on atrocities in Sudan: when ‘never again’ becomes again, and again",
+    "person_or_article": "https://www.theguardian.com/commentisfree/2026/jul/06/the-guardian-view-on-atrocities-in-sudan-when-never-again-becomes-again-and-again",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-80478991",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/44e2787e66b60b8c57b8311b2fe08158f3630873/289_0_4923_3939/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "‘The situation is terrible’: aid workers on life in Sudanese city pummelled by drone strikes",
+    "person_or_article": "https://www.theguardian.com/world/2026/jul/04/el-obeid-aid-workers-sudan-war-drone-strikes",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-78100277",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/466a1b70cd289029729e78c1fb7b44514b24e8b2/1713_271_1099_879/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Sudan’s RSF committed crimes against humanity in El Fasher, Amnesty says",
+    "person_or_article": "https://www.theguardian.com/world/2026/jul/01/sudan-rsf-rapid-support-forces-crimes-against-humanity-el-fasher-amnesty-ethnic-cleansing",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-85114034",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/ee5e29adad7546123929dd5f156720461349e890/0_517_2456_1965/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Burnham could become PM on 17 July based on Labour leadership contest timetable – as it happened",
+    "person_or_article": "https://www.theguardian.com/politics/live/2026/jun/25/andy-burnham-rachel-reeves-keir-starmer-uk-politics-latest-news-updates",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-54298579",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/f56a8c7df24d29aa0d3f710f615c9963d95a493b/227_58_762_609/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "UK prioritised ties with UAE over averting mass atrocities in Sudan, MPs to be told",
+    "person_or_article": "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-08886309",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/6b68b8fbf0275861448ae20d5d19fa54b5af5a5a/667_0_3333_2668/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "‘Every day it’s more barriers’: how the US is shutting out climate refugees",
+    "person_or_article": "https://www.theguardian.com/us-news/2026/jun/10/climate-change-crisis-refugees",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-67626271",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/e568abb057651e11af43846809a978df3c5a45ff/0_0_1500_1200/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Trump targeting immigrants from countries hit most by climate shocks",
+    "person_or_article": "https://www.theguardian.com/us-news/2026/jun/10/trump-administration-immigrants-climate-crisis",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-39899376",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/840b0784ac505207ebc630a2cb132c43fd2139e6/1161_0_5840_4672/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Poverty, racism and forced disappearances: why Sudanese war refugees are leaving Egypt for Europe",
+    "person_or_article": "https://www.theguardian.com/global-development/2026/may/26/poverty-racism-forced-disappearances-sudanese-war-refugees-leaving-egypt-europe",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-11091573",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/f428ad0e4cf717eb6e16d62e3d1369c851836ee6/1043_0_5193_4157/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Hunger increasingly used as weapon of war as ‘food-related violence’ surges, analysis shows",
+    "person_or_article": "https://www.theguardian.com/global-development/2026/may/24/hunger-weapon-of-war-food-violence-surges",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-66216811",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/9485a41adc42635f45ff610e84968d47b18855f1/397_0_4433_3546/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Iranian American woman arrested in Los Angeles for alleged arms trafficking",
+    "person_or_article": "https://www.theguardian.com/us-news/2026/apr/19/woman-arrested-la-arms-trafficking-iran-africa",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-35384223",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/3e6ac1c80cc88f5d0de15225bfd6357e3905efd1/607_0_2877_2302/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "UK to call for end to Sudan bloodshed at Berlin talks on third anniversary of war",
+    "person_or_article": "https://www.theguardian.com/world/2026/apr/15/uk-sudan-war-berlin-talks-aid-rsf-hunger-saudi-uae",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-96857885",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/79b28ad9e8c0365c22c6974a18e2bb253df0cf46/108_0_4270_3416/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "The Guardian view on three years of war in Sudan: a vast humanitarian crisis persists because the fighting does",
+    "person_or_article": "https://www.theguardian.com/commentisfree/2026/apr/14/the-guardian-view-on-three-years-of-war-in-sudan-a-vast-humanitarian-crisis-persists-because-the-fighting-does",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-92804392",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/f3d3f3a0318248d64ad49c59b3fc0a24ba7bdfdd/985_0_5000_4000/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Anger at ‘bloody unacceptable’ efforts to end Sudan’s war as conflict enters fourth year",
+    "person_or_article": "https://www.theguardian.com/global-development/2026/apr/14/no-end-sudan-war-conflict-third-anniversary",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-11027980",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/fcfebbaffd603b0b2ae4adca6191fed185b8761a/447_0_2102_1682/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Two drone strikes on civilian targets kill 28 people in Sudan",
+    "person_or_article": "https://www.theguardian.com/world/2026/mar/26/sudan-drone-strikes-civilian-targets-north-darfur-market-north-kordofan-truck",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-84231162",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/721f37747765cad93f4f8b359f06ce60cf6e8b60/87_0_686_549/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "WHO warns of health crisis ‘unfolding in real time’ across Middle East",
+    "person_or_article": "https://www.theguardian.com/world/2026/mar/26/who-warns-of-health-crisis-unfolding-in-real-time-across-middle-east",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-91684260",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/694f568b3f0dd77901f4ba7365b0966bd80ae4dc/1973_454_4883_3908/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Heroism, horror and the ‘pits of hell’: inside the last days of El Fasher",
+    "person_or_article": "https://www.theguardian.com/global-development/2026/mar/25/heroism-horror-and-the-pits-of-hell-inside-the-last-days-of-el-fasher",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-49371914",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/721ce8b4016b5e221d41536e010bba6eaf16f5cd/0_8_1330_1064/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "‘Extraordinary cruelty’: images show longterm ‘starvation strategy’ in Sudan",
+    "person_or_article": "https://www.theguardian.com/global-development/ng-interactive/2026/mar/10/extraordinary-cruelty-images-show-longterm-starvation-strategy-in-sudan",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-84453409",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/29d327aaee0098ad44fd2e2f85787de73d2b21cb/549_55_2818_2255/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "UK’s partial study visa ban ‘will drive people to small boats’, campaigners say",
+    "person_or_article": "https://www.theguardian.com/uk-news/2026/mar/04/uks-study-visa-ban-for-four-countries-will-drive-more-people-to-use-small-boats",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-28740106",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/b811e0f2e21092d50146ecede9734b90a211d2bd/1170_0_6385_5108/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "These atrocities in Sudan were entirely predictable. So why did the rest of the world fail to stop them?",
+    "person_or_article": "https://www.theguardian.com/commentisfree/2026/feb/20/atrocities-el-fasher-sudan-predictable",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-16589570",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/eaaf1f6fe6562b826cc582ee5130e339da2cb914/569_0_3312_2649/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "RSF siege of El Fasher in Sudan has ‘hallmarks of genocide’, UN mission finds",
+    "person_or_article": "https://www.theguardian.com/world/2026/feb/19/rsf-siege-el-fasher-sudan-hallmarks-of-genocide-un-mission-north-darfur",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-84489705",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/5ac0ebc8155b34eaca475eb6b1d639fab60b7fd1/480_0_4800_3840/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "International humanitarian law is at risk – but it still carries weight",
+    "person_or_article": "https://www.theguardian.com/commentisfree/2026/feb/16/international-humanitarian-law-gaza-sudan-ukraine",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-71382098",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/32d52a593c29c35475ce02d73232d577b2a35c7c/497_0_4974_3979/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Ukrainian civilian casualties surged by 26% in 2025, say researchers",
+    "person_or_article": "https://www.theguardian.com/world/2026/feb/16/ukrainian-civilian-casualties-surged-by-26-in-2025-say-researchers",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-12415961",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/b4774dc6223200543fc528087cb730bfd58eee3d/1104_405_2889_2311/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "‘People are dying, you have to help’: Guardiola decries wars in Sudan, Ukraine and Palestine",
+    "person_or_article": "https://www.theguardian.com/football/2026/feb/03/people-are-dying-you-have-to-help-guardiola-decries-wars-in-sudan-ukraine-and-palestine",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-77539973",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/1103bf5c0f0d955d82c0bd1fd61b9198cd77993e/134_0_4164_3333/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "US ‘adapt, shrink or die’ terms for $2bn aid pot will mean UN bowing down to Washington, say experts",
+    "person_or_article": "https://www.theguardian.com/global-development/2026/jan/01/us-aid-cuts-conditions-un-humanitarian-pledge-ocha",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-25343261",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/44ebdcbb74a36bc2e51198bb8c6cf915fdc863eb/378_241_1316_1053/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "We can be heroes: the inspiring people we met around the world in 2025 – part two",
+    "person_or_article": "https://www.theguardian.com/global-development/2025/dec/26/inspiring-people-we-met-around-the-world-in-2025-part-two",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-03561305",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/c626f61abafb4a76336ba05b680d03d7064f622a/0_0_6797_5438/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "‘You sneak in and hope you make it back’: the Sudanese volunteers risking it all to bring care to millions",
+    "person_or_article": "https://www.theguardian.com/global-development/2025/dec/24/sudan-war-volunteers-emergency-response-rooms-aid-food-medicine",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-00945356",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/e4de5b35206a9b33354b8a6206afdf7790c37610/299_0_2937_2349/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "The Guardian view on the festive season: a suffering world needs messages of peace, hope and goodwill",
+    "person_or_article": "https://www.theguardian.com/commentisfree/2025/dec/23/the-guardian-view-on-the-festive-season-a-suffering-world-needs-messages-of-peace-hope-and-goodwill",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-49728538",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/84cf6579d2a3a5277269d09dd5640fef049e99fa/0_0_5000_4000/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Childbirth under attack: how women and babies became targets in conflicts around the world",
+    "person_or_article": "https://www.theguardian.com/global-development/ng-interactive/2025/dec/22/childbirth-under-attack-how-women-and-babies-became-targets-in-conflicts-around-the-world",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-65144238",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/01bb970ce41a106060323141962ecf9653d4463c/0_0_5000_4000/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Colombian mercenaries in Sudan ‘recruited by UK-registered firms’",
+    "person_or_article": "https://www.theguardian.com/global-development/2025/dec/19/colombian-mercenaries-sudan-rsf-us-sanctions-recruited-uk-registered-firms-investigation",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-93068593",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/aa2d2fadeee7c7f8d5faea3b8fc7e63e0aec253c/0_0_5610_4488/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Welcome to our age of impunity – where the ICC prosecuting atrocities is a rare feat",
+    "person_or_article": "https://www.theguardian.com/commentisfree/2025/dec/14/icc-sudan-militia-leader-putin-netanyahu-hegseth-international-law",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-45995150",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/f48e4d73361e28fdda7a90691b30e92e7c68e7b2/515_28_4713_3770/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "UK imposes sanctions on four RSF officers for ‘heinous’ mass killings in Sudan",
+    "person_or_article": "https://www.theguardian.com/world/2025/dec/12/uk-sanctions-four-rsf-commanders-heinous-violence-against-sudan-civilians",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-59217049",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/b07482773f7335265c8940a06a5182ff5765dfad/327_0_4508_3608/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "US puts sanctions on network said to funnel Colombian mercenaries to Sudan",
+    "person_or_article": "https://www.theguardian.com/world/2025/dec/09/colombian-mercenaries-sudan-sanctions",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-48857723",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/12b11e3894e099d28c93363064daa4264ea40731/949_310_909_727/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "RSF massacres left Sudanese city ‘a slaughterhouse’, satellite images show",
+    "person_or_article": "https://www.theguardian.com/global-development/2025/dec/05/rsf-massacres-sudanese-city-el-fasher-slaughterhouse-satellite-images",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-89981324",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/133e30df2f19743744b75285c6e38bb2f1fd9072/374_0_4583_3667/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "US considers wider sanctions on Sudanese army and RSF as ceasefire efforts falter",
+    "person_or_article": "https://www.theguardian.com/world/2025/dec/05/us-sanctions-sudan-army-rsf-ceasefire",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-28283706",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/f85bb7bc499de0185fd9f9f3c4627bede46bce99/483_0_4208_3366/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Whistleblower accuses Foreign Office of ‘censoring’ warning of Sudan genocide",
+    "person_or_article": "https://www.theguardian.com/global-development/2025/dec/03/whistleblower-accuses-foreign-office-of-censoring-warning-of-sudan-genocide",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-88772103",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/fde6849e61f33dc4c7ac8a56e45bf8edcda2bf01/0_1_2065_1651/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "An existential battle of interests: what the Sudanese war is actually about",
+    "person_or_article": "https://www.theguardian.com/news/2025/nov/19/an-existential-battle-of-interests-what-the-sudanese-war-is-actually-about",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-24807161",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/60fec0b91918b4fc06cddf7732a6d1ecaa1e5852/746_0_3448_2758/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Chinese spying amounts to interference in UK democracy, minister says, after MI5 warns MPs – as it happened",
+    "person_or_article": "https://www.theguardian.com/politics/live/2025/nov/18/labour-asylum-seekers-keir-starmer-reform-nigel-farage-uk-politics-latest-news",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-72053320",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/597f1957ddb58bdcf12ca37b70fa241627fd3b3e/530_0_3911_3129/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Tanzania’s descent into repression is a stark warning of how fast Africa’s progress can be eroded",
+    "person_or_article": "https://www.theguardian.com/global-development/2025/nov/18/tanzania-africa-governance-human-rights-tanzania-samia-suluhu-hassan-uganda-drc-rwanda-sudan",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-11963967",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/69e97fd081a8f04cf23828bfc144e857c054cb3c/286_0_1349_1080/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "‘His role is to recruit’: the Sheffield-based propagandist for Sudan’s RSF militia",
+    "person_or_article": "https://www.theguardian.com/world/2025/nov/17/sheffield-based-propagandist-sudan-rsf-militia-abdalmonim-alrabea",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-92049295",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/bd322841a934e86ec9447a931b2632cb1d00844c/0_0_2291_1833/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Australia is selling arms at a weapons fair in Dubai. Are they destined to be used in Sudan atrocities?",
+    "person_or_article": "https://www.theguardian.com/australia-news/2025/nov/16/australia-dubai-international-airshow-defence-weapons-arms-fair-sudan-uae",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-65336818",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/89e1c113cd91f8b08a7188b734fa3aff2641082b/48_0_1115_892/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "Dire warnings over aid and hunger following RSF’s capture of Sudanese city",
+    "person_or_article": "https://www.theguardian.com/world/2025/nov/12/sudan-north-darfur-aid-malnutrition-rsf-el-fasher-tawila",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-84845854",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/7b6d609593ef1a61735acf2e0d55bd8e04dcf851/0_0_3938_3151/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "From Kenya to Madagascar, the African countries struggling to escape old politics",
+    "person_or_article": "https://www.theguardian.com/news/2025/nov/12/from-kenya-to-madagascar-the-african-countries-struggling-to-escape-old-politics",
+    "safe_flag": true
+  },
+  {
+    "image_id": "IMG-43092018",
+    "source_name": "The Guardian",
+    "image_url": "https://media.guim.co.uk/3b5d53e35c24497a70f15094fbf12486bb6c6346/0_0_3190_2552/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_caption": "UK rejected atrocity prevention plans for Sudan despite warning of possible genocide",
+    "person_or_article": "https://www.theguardian.com/global-development/2025/nov/07/aid-cuts-uk-rejected-atrocity-prevention-sudan-civilians-rsf-massacres-el-fasher",
+    "safe_flag": true
+  }
+]

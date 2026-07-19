@@ -1,0 +1,21 @@
+# Al Jazeera adapter config
+# Primary: official RSS feeds (non-commercial use per AJ terms).
+# HTML fallback is used ONLY when RSS is empty, for publicly accessible pages,
+# after checking robots.txt and honoring Crawl-delay.
+rss_feeds:
+  - "https://www.aljazeera.com/xml/rss/all.xml"
+  # section feeds can be added:
+  # - "https://www.aljazeera.com/xml/rss/news.xml"
+  # - "https://www.aljazeera.com/xml/rss/middle-east.xml"
+language: "en"
+max_items_per_run: 20
+request_rate_per_sec: 0.5
+html_fallback_enabled: true
+# Modular CSS-selector map with fallback chains per field.
+selectors:
+  headline: ["h1.Article-headline", "h1.article-heading", "h1"]
+  author:   ["span.Article-author", "span.author", ".article-author"]
+  date:     ["time", "span.article-dated__date", "span.date"]
+  body:     ["div.wysiwyg--all-content p", "article p", ".article-body p"]
+  image:    ["meta[property='og:image'][content]", "figure img[src]"]
+enabled: true

@@ -1,0 +1,31 @@
+run_at,source,status,records,review,notes
+2026-07-19T04:19:17+00:00,wikipedia,failed,0,0,no titles configured or all failed
+2026-07-19T04:19:21+00:00,all,ok,30,0,30 records extracted across 3 sources.
+2026-07-19T04:21:49+00:00,guardian,failed,0,0,Guardian API returned no results.
+2026-07-19T04:21:50+00:00,all,ok,26,0,26 records extracted across 3 sources.
+2026-07-19T04:31:53+00:00,guardian,failed,0,0,Guardian API returned no results.
+2026-07-19T04:31:53+00:00,guardian,ok,0,0,0 records from ['guardian'].
+2026-07-19T04:32:01+00:00,guardian,failed,0,0,Guardian API returned no results.
+2026-07-19T04:36:36+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T04:36:36+00:00,all,ok,26,0,26 records extracted across 3 sources.
+2026-07-19T04:36:58+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T04:36:58+00:00,guardian,ok,0,0,0 records from ['guardian'].
+2026-07-19T04:41:09+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T04:41:09+00:00,guardian,ok,0,0,0 records from ['guardian'].
+2026-07-19T04:44:31+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T04:44:32+00:00,all,ok,26,0,26 records extracted across 3 sources.
+2026-07-19T05:05:53+00:00,all,ok,85,36,85 records extracted across 3 sources.
+2026-07-19T05:12:06+00:00,all,ok,39,10,39 records extracted across 3 sources.
+2026-07-19T05:14:43+00:00,all,ok,34,6,34 records extracted across 3 sources.
+2026-07-19T05:16:44+00:00,all,ok,34,6,34 records extracted across 3 sources.
+2026-07-19T05:18:32+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T05:18:33+00:00,all,ok,26,0,26 records extracted across 3 sources.
+2026-07-19T05:22:19+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T05:22:20+00:00,all,ok,26,0,26 records extracted across 3 sources.
+2026-07-19T05:23:55+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T05:23:56+00:00,all,ok,26,0,26 records extracted across 3 sources.
+2026-07-19T05:27:52+00:00,guardian,failed,0,0,No conflict-relevant Guardian articles found for current scope.
+2026-07-19T05:27:53+00:00,all,ok,26,0,26 records extracted across 3 sources.
+2026-07-19T05:36:48+00:00,all,ok,85,37,85 records extracted across 3 sources.
+2026-07-19T05:43:48+00:00,all,ok,85,38,85 records extracted across 3 sources.
+2026-07-19T05:45:53+00:00,all,ok,85,38,85 records extracted across 3 sources.

@@ -1,0 +1,84 @@
+# The Guardian Content API config
+# API key is read from GUARDIAN_API_KEY env var (set in .env, gitignored).
+content_api: "https://content.guardianapis.com/search"
+
+# --- Two-pass scope refinement ---
+# Pass 1 (article discovery): broad conflict + country query.
+# Pass 2 (named-entity extraction): only articles whose text matches the
+# role/entity keyword groups below are scanned for person names.
+query: "(Gaza OR Rafah OR Khan Younis OR Sudan OR Khartoum OR Darfur OR Iran OR Israel OR Yemen OR Sanaa) (killed OR death OR massacre OR airstrike OR hospital OR journalist OR doctor OR nurse OR medic OR child OR student OR teacher OR commander OR leader)"
+# Restrict to relevant Guardian sections/pillars where conflict reporting lives.
+section: null
+pillar: "news"
+order_by: "newest"
+page_size: 20
+max_pages: 3            # pagination cap for daily runs
+max_items_per_run: 40
+request_rate_per_sec: 0.5   # ~2 req/sec max; stay well under free-tier limit
+
+# Role / identity keyword groups for Pass-2 named-entity gating.
+# An article is promoted to entity extraction only if it matches >=1 keyword
+# from each of: a role group AND a conflict/country group (set in query).
+role_keywords:
+  - killed
+  - death
+  - dead
+  - massacre
+  - airstrike
+  - strike
+  - bombed
+  - buried
+  - funeral
+  - journalist
+  - reporter
+  - doctor
+  - nurse
+  - medic
+  - paramedic
+  - child
+  - children
+  - student
+  - teacher
+  - aid worker
+  - humanitarian
+  - commander
+  - leader
+  - minister
+  - president
+
+# Body text is permitted for internal use by API terms but NOT for republication.
+# full_text is stored with a restrictive license note and routed to review if promoted.
+store_full_text: true
+enabled: true
+
+# Conflict / country terms an article MUST contain to be in-scope (Pass-1 country gate).
+country_keywords:
+  - gaza
+  - rafah
+  - khan younis
+  - sudan
+  - khartoum
+  - darfur
+  - iran
+  - israel
+  - yemen
+  - sanaa
+  - palestine
+  - west bank
+  - lebanon
+  - idf
+  - hamas
+  - houthi
+  - gaza strip
+
+# Guardian topic tags (OR-combined) to scope discovery to the conflicts.
+# Reliable alternative to free-text query for in-scope reporting.
+tags:
+  - world/gaza
+  - world/israel
+  - world/iran
+  - world/yemen
+  - world/sudan
+
+# Light free-text signal used together with topic tags (tag-scoping dominates).
+tag_query: "killed OR dead OR massacre OR airstrike OR funeral"

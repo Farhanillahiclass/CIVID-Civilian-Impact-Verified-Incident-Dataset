@@ -1,0 +1,2689 @@
+[
+  {
+    "record_id": "PER-b87c7083a2",
+    "person_name": "Barack Obama",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "role_snippets": [
+      "ly and had a phone conversation with US president Barack Obama , the first top-level contact between t"
+    ],
+    "image_url": "https://media.guim.co.uk/5b09e84f8ee654465ab883055e6cfabce4c856c7/183_0_1835_1469/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-71b94a3298",
+    "person_name": "Qasem Soleimani",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "role_snippets": [
+      "out. In early 2020, the IRGC Quds Force commander Qasem Soleimani was assassinated by the US while visiti"
+    ],
+    "image_url": "https://media.guim.co.uk/5b09e84f8ee654465ab883055e6cfabce4c856c7/183_0_1835_1469/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-f872d25931",
+    "person_name": "Hossein Amir",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "role_snippets": [
+      "h that May killed Raisi and the foreign minister Hossein Amir-Abdollahian – brought about a snap pres"
+    ],
+    "image_url": "https://media.guim.co.uk/5b09e84f8ee654465ab883055e6cfabce4c856c7/183_0_1835_1469/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-dbb0ece028",
+    "person_name": "Hassan Nasrallah",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary",
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates",
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary",
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates",
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "role_snippets": [
+      "p in Tehran and the Hezbollah secretary-general Hassan Nasrallah prompted speculation that Khamenei woul",
+      "in response to the killing of Hezbollah leader Hassan Nasrallah and Iranian general Abbas Nilforoushan ",
+      "ike in southern Beirut killed Hezbollah leader Hassan Nasrallah. Updated at 6.53pm BST 5.52pm BST Thous",
+      "militants and Israeli forces. Hezbollah leader Hassan Nasrallah said in a televised speech on Sunday th"
+    ],
+    "image_url": "https://media.guim.co.uk/5b09e84f8ee654465ab883055e6cfabce4c856c7/183_0_1835_1469/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-172b1c20d1",
+    "person_name": "Mohammad Mossadegh",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "role_snippets": [
+      " MI6-backed CIA coup d’etat against the prime minister Mohammad Mossadegh in 1953. His pro-Palestine leanings wer"
+    ],
+    "image_url": "https://media.guim.co.uk/5b09e84f8ee654465ab883055e6cfabce4c856c7/183_0_1835_1469/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-2870159b1f",
+    "person_name": "Ali Akbar Hashemi Rafsanjani",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2026/mar/01/ayatollah-ali-khamenei-obituary"
+    ],
+    "role_snippets": [
+      "for me.” When Khomeini died, the former president Ali Akbar Hashemi Rafsanjani pushed the uncharismatic, underqualifie"
+    ],
+    "image_url": "https://media.guim.co.uk/5b09e84f8ee654465ab883055e6cfabce4c856c7/183_0_1835_1469/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-08682370eb",
+    "person_name": "Donald Trump",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live",
+      "https://www.theguardian.com/global-development/2026/mar/25/heroism-horror-and-the-pits-of-hell-inside-the-last-days-of-el-fasher"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live",
+      "https://www.theguardian.com/global-development/2026/mar/25/heroism-horror-and-the-pits-of-hell-inside-the-last-days-of-el-fasher"
+    ],
+    "role_snippets": [
+      "rldwide to pick up weapons and fight US president Donald Trump’s plan to relocate more than two millio",
+      "tment officials were briefed to stop US president Donald Trump meddling in Sudan. “Keep Darfur off the"
+    ],
+    "image_url": "https://media.guim.co.uk/e18ca90ef5dfcbe37babe82e9482b34963ed5350/0_122_2048_1229/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-64f8bb88c2",
+    "person_name": "Eli Sharvit",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live"
+    ],
+    "role_snippets": [
+      "r Benjamin Netanyahu picked former navy commander Eli Sharvit to head the domestic security agency, h"
+    ],
+    "image_url": "https://media.guim.co.uk/e18ca90ef5dfcbe37babe82e9482b34963ed5350/0_122_2048_1229/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-acf77b0391",
+    "person_name": "Benjamin Netanyahu",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live",
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks",
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran",
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live",
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks",
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran",
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "role_snippets": [
+      "Jews or other sects of Judaism. Israeli prime minister Benjamin Netanyahu’s office had denounced Kogan’s killing ",
+      "nd bring all the hostages back. Israeli prime minister Benjamin Netanyahu has become more reliant on the support ",
+      "pdated at 2.18pm BST 1.17pm BST Israeli prime minister Benjamin Netanyahu visited troops along the border with Le",
+      "port. “The Americans have realised that prime minister Benjamin Netanyahu is incapacitated because of the politic",
+      "Kirby’s latest comments comes as Israel prime minister Benjamin Netanyahu has rejected the idea of a future state"
+    ],
+    "image_url": "https://media.guim.co.uk/e18ca90ef5dfcbe37babe82e9482b34963ed5350/0_122_2048_1229/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-06c9ccb480",
+    "person_name": "Benny Gantz",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live",
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/mar/31/israel-orders-rafah-evacuation-yemen-iran-middle-east-crisis-live",
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "l. Opposition leader and former defence minister Benny Gantz praised Sharvit, who has served in the ",
+      "ion government since the former defence minister Benny Gantz quit Israel’s emergency war cabinet las"
+    ],
+    "image_url": "https://media.guim.co.uk/e18ca90ef5dfcbe37babe82e9482b34963ed5350/0_122_2048_1229/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-b51ce449b5",
+    "person_name": "Itai Pessach",
+    "person_role": "teacher",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "l Aviv. A member of the hospital staff, Professor Itai Pessach, said: “I’m happy to report that they a"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": true,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-b2312e55b7",
+    "person_name": "Bezalel Smotrich",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "other most prominent hardliner, finance minister Bezalel Smotrich, stayed in the government but said he w"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-62f100bfa4",
+    "person_name": "Joe Biden",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates",
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates",
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "role_snippets": [
+      "t 8.31pm GMT 8.08pm GMT The outgoing US president Joe Biden has posted on X: “Following the ceasefi",
+      "crude oil export terminal. On Friday US president Joe Biden advised Israel against striking Iran’s ",
+      "nomic crisis. 10.44am BST Yesterday, US president Joe Biden took questions from reporters during a ",
+      "t the Israeli bombardment continues. US president Joe Biden said he was “engaged day and night” to "
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-0a7d4e0a7d",
+    "person_name": "Keir Starmer",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "n: 'Wonderful and long-overdue news' UK prime minister Keir Starmer has hailed Hamas’s release of three hos"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-2bedaeaa98",
+    "person_name": "Emmanuel Macron",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "role_snippets": [
+      "Updated at 6.24pm GMT 4.31pm GMT French president Emmanuel Macron told Palestinian president Mahmoud Abba",
+      " Saturday morning. Earlier today French president Emmanuel Macron led a group of 88 Francophone countries"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-2a868d08c1",
+    "person_name": "Mahmoud Abbas",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks",
+      "https://www.theguardian.com/world/2014/aug/04/-sp-middle-east-politics-2014-egypt-syria-palestine-iraq-gaza"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates",
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks",
+      "https://www.theguardian.com/world/2014/aug/04/-sp-middle-east-politics-2014-egypt-syria-palestine-iraq-gaza"
+    ],
+    "role_snippets": [
+      "sident Emmanuel Macron told Palestinian president Mahmoud Abbas that a return to Palestinian governance",
+      "id the spokesperson for the Palestinian president Mahmoud Abbas . The remarks come in response to Israe",
+      "d crackdown. Western-backed Palestinian leader Mahmoud Abbas looks weak, with nothing to show for se"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-519593b019",
+    "person_name": "Itamar Ben Gvir",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "s. Israel’s far-right national security minister Itamar Ben Gvir’s party announced it was leaving the co"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-cb788a7f17",
+    "person_name": "Itamar Ben",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "lier today, far-right national security minister Itamar Ben-Gvir announced his Otzma Yehudit party’"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-3944d3fa2e",
+    "person_name": "Jonathan Whittall",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "e took effect on Sunday morning, UN aid official Jonathan Whittall, interim chief of the UN’s OCHA aid age"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-9cedd33518",
+    "person_name": "An Israeli",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2025/jan/19/israel-gaza-ceasefire-live-news-updates"
+    ],
+    "role_snippets": [
+      "ostages to be released by Hamas today - official An Israeli official has confirmed to the Reuters n"
+    ],
+    "image_url": "https://media.guim.co.uk/fc08f9cd884692babc5ff348e1d4fd329b9e923c/0_392_6000_3600/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-a6bc53d7e3",
+    "person_name": "Brig Gen Moran Omer",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "role_snippets": [
+      "head, Maj Gen Uri Gordin , and division commander Brig Gen Moran Omer, his office said. “A year ago we suffer"
+    ],
+    "image_url": "https://media.guim.co.uk/29f87edfef38884d357c70e7f7e4f5579f9bea18/0_327_5500_3300/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-f5b44d42a5",
+    "person_name": "Kamala Harris",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "role_snippets": [
+      "a’s health ministry. 4.32pm BST US vice-president Kamala Harris , asked if the US has a “real close all"
+    ],
+    "image_url": "https://media.guim.co.uk/29f87edfef38884d357c70e7f7e4f5579f9bea18/0_327_5500_3300/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-2e710e8a08",
+    "person_name": "Abbas Nilforoushan",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "role_snippets": [
+      "lah leader Hassan Nasrallah and Iranian general Abbas Nilforoushan in a September 27 strike on Beirut. 12."
+    ],
+    "image_url": "https://media.guim.co.uk/29f87edfef38884d357c70e7f7e4f5579f9bea18/0_327_5500_3300/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-4972ec4383",
+    "person_name": "Mohsen Paknejad",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "role_snippets": [
+      "in a September 27 strike on Beirut. Oil minister Mohsen Paknejad said on state television: “We are not a",
+      "a a weapon of war 1.32pm BST Iran’s oil minister Mohsen Paknejad said on Saturday that he was “not worri"
+    ],
+    "image_url": "https://media.guim.co.uk/29f87edfef38884d357c70e7f7e4f5579f9bea18/0_327_5500_3300/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-1ab60bd292",
+    "person_name": "Abbas Araghchi",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque",
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "role_snippets": [
+      "r possible air strikes. Iranian foreign minister Abbas Araghchi warned Iran would respond to Israeli st",
+      "ities said on Saturday. Iranian foreign minister Abbas Araghchi has arrived in Damascus to discuss regi"
+    ],
+    "image_url": "https://media.guim.co.uk/29f87edfef38884d357c70e7f7e4f5579f9bea18/0_327_5500_3300/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-14bc495e2f",
+    "person_name": "The Israeli",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/06/middle-east-crisis-live-heavy-israeli-airstrikes-hit-beirut-as-up-to-18-reported-killed-in-attack-on-gaza-mosque"
+    ],
+    "role_snippets": [
+      "BST IDF says they have killed Hezbollah commander The Israeli foreign ministry has said its air force"
+    ],
+    "image_url": "https://media.guim.co.uk/29f87edfef38884d357c70e7f7e4f5579f9bea18/0_327_5500_3300/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-5057cf18ab",
+    "person_name": "Macron",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "role_snippets": [
+      "Heights “relocate”. 3.23am BST France’s president Macron has responded to Netanyahu’s criticism "
+    ],
+    "image_url": "https://media.guim.co.uk/f3da5c4583568269e977f051b0e92f6d842b377a/0_173_2594_1556/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-8be03634ab",
+    "person_name": "Isaac Herzog",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates",
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates",
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      "wful Iranian attack”. It came as Israel president Isaac Herzog said on Saturday that Iran remains an “",
+      " 12.06pm GMT Here is a clip of Israel’s president Isaac Herzog speaking at Davos earlier today. During"
+    ],
+    "image_url": "https://media.guim.co.uk/f3da5c4583568269e977f051b0e92f6d842b377a/0_173_2594_1556/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-5dd911f1c3",
+    "person_name": "Mones Kalakish",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "role_snippets": [
+      " message, so we decided to close,” said Dr Mones Kalakish, the director of Marjayoun governmental"
+    ],
+    "image_url": "https://media.guim.co.uk/f3da5c4583568269e977f051b0e92f6d842b377a/0_173_2594_1556/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-94d7097430",
+    "person_name": "Halim Saad",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates"
+    ],
+    "role_snippets": [
+      "a hospital operate without water?” said Dr Halim Saad, the director of Mays al-Jabal hospital"
+    ],
+    "image_url": "https://media.guim.co.uk/f3da5c4583568269e977f051b0e92f6d842b377a/0_173_2594_1556/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-1eedae6b29",
+    "person_name": "Qassem Soleimani",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/commentisfree/2024/apr/22/iran-israel-middle-east-escalation-tehran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/commentisfree/2024/apr/22/iran-israel-middle-east-escalation-tehran"
+    ],
+    "role_snippets": [
+      "aliation after the US assassinated IRGC commander Qassem Soleimani in Iraq in 2020; Iran indicated then th"
+    ],
+    "image_url": "https://media.guim.co.uk/79e841fe68e5daf7754b55e8501b078df4d8ce82/0_266_3984_2390/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-ddd69ec928",
+    "person_name": "Hadja Lahbib",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "role_snippets": [
+      " Gaza was bombed and destroyed, foreign minister Hadja Lahbib has said. “Targeting civilian buildings"
+    ],
+    "image_url": "https://media.guim.co.uk/d0c3d84b31324de85afaa4fcfe74848fedce498c/0_464_7010_4209/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-d7124e6b58",
+    "person_name": "Adnan",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "role_snippets": [
+      "ity able to provide maternity services. Dr Adnan, the hospital’s head of obstetrics and "
+    ],
+    "image_url": "https://media.guim.co.uk/d0c3d84b31324de85afaa4fcfe74848fedce498c/0_464_7010_4209/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-90002c11f9",
+    "person_name": "Hind Rajab",
+    "person_role": "child",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "role_snippets": [
+      "on the mission to rescue the 6-year-old girl Hind Rajab from #Gaza City. Information about them"
+    ],
+    "image_url": "https://media.guim.co.uk/d0c3d84b31324de85afaa4fcfe74848fedce498c/0_464_7010_4209/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": true,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-f7be5e3740",
+    "person_name": "Philippe Lazzarin",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "role_snippets": [
+      "’s 7 October attack. UNRWA commissioner general Philippe Lazzarin i warned that “if the funding remains s"
+    ],
+    "image_url": "https://media.guim.co.uk/d0c3d84b31324de85afaa4fcfe74848fedce498c/0_464_7010_4209/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-a74469b07c",
+    "person_name": "Eden Solomon",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "role_snippets": [
+      "imated 136 hostages held there. Haaretz correspondent Eden Solomon reported that several protesters attack"
+    ],
+    "image_url": "https://media.guim.co.uk/d0c3d84b31324de85afaa4fcfe74848fedce498c/0_464_7010_4209/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-3f40462915",
+    "person_name": "Telegram",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/feb/01/middle-east-crisis-live-updates-us-houthi-drone-strikes-yemen-ceasefire-israel-gaza-war-hamas"
+    ],
+    "role_snippets": [
+      "oughout the day”. In a statement on its official Telegram channel, the IDF said it had “struck th"
+    ],
+    "image_url": "https://media.guim.co.uk/d0c3d84b31324de85afaa4fcfe74848fedce498c/0_464_7010_4209/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-34c7af2f1d",
+    "person_name": "Qassem Suleimani",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2024/jan/20/seemingly-disparate-middle-east-conflicts-show-collective-erosion-of-self-restraint"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2024/jan/20/seemingly-disparate-middle-east-conflicts-show-collective-erosion-of-self-restraint"
+    ],
+    "role_snippets": [
+      "sassination of the Revolutionary Guards leader Qassem Suleimani, but instead for the killing in Decembe"
+    ],
+    "image_url": "https://media.guim.co.uk/1d62f2f2d9e524aefdb0b66964a11826c3a344cc/0_216_5434_3262/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-f6b433d0c1",
+    "person_name": "Israel Katz",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "role_snippets": [
+      "e peace settlement. The Israeli foreign minister Israel Katz and his Palestinian counterpart Riyad a"
+    ],
+    "image_url": "https://media.guim.co.uk/a4c5a61b5cf7d871723f92f22bc3554f6d5fe6b7/0_216_6400_3839/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-b2844034cc",
+    "person_name": "Subhi Sukeyk",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "role_snippets": [
+      "rate and we have no drugs at all,” said Dr Subhi Sukeyk, the director general of oncology in Ga"
+    ],
+    "image_url": "https://media.guim.co.uk/a4c5a61b5cf7d871723f92f22bc3554f6d5fe6b7/0_216_6400_3839/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-898fa2c627",
+    "person_name": "Swiss",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "role_snippets": [
+      "riminal complaint filed against Israeli president Swiss prosecutors have confirmed that Israel’"
+    ],
+    "image_url": "https://media.guim.co.uk/a4c5a61b5cf7d871723f92f22bc3554f6d5fe6b7/0_216_6400_3839/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-760ece5aec",
+    "person_name": "Hoda Abdel",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "role_snippets": [
+      "ee camp in the West Bank , Al Jazeera’s reporter Hoda Abdel-Hamid said the “mood is one of anger” a"
+    ],
+    "image_url": "https://media.guim.co.uk/a4c5a61b5cf7d871723f92f22bc3554f6d5fe6b7/0_216_6400_3839/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-d84fe7e07b",
+    "person_name": "Lisa",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "role_snippets": [
+      "T My colleague, the Guardian’s Brussels correspondent Lisa O’Carroll, has more on the news about n"
+    ],
+    "image_url": "https://media.guim.co.uk/a4c5a61b5cf7d871723f92f22bc3554f6d5fe6b7/0_216_6400_3839/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-f5bc87fae1",
+    "person_name": "Detainees",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/19/middle-east-crisis-live-news-updates-israel-gaza-war-houthi-rebels-yemen-russia-china-ships-red-sea-crisis-attacks"
+    ],
+    "role_snippets": [
+      "to ill-treatment', says UN human rights official Detainees in Gaza described being “beaten, humili"
+    ],
+    "image_url": "https://media.guim.co.uk/a4c5a61b5cf7d871723f92f22bc3554f6d5fe6b7/0_216_6400_3839/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-27d11ae286",
+    "person_name": "Gadi Eisenkot",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      "9am GMT 12.22am GMT Israeli war cabinet minister Gadi Eisenkot has appeared to criticise Benjamin Neta"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-d58d460957",
+    "person_name": "Mousa Abu Marzouk",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      "li media had reported that senior Hamas official Mousa Abu Marzouk had said the ICRC would deliver the med"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-17684a3307",
+    "person_name": "British",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      "ck Wintour is the Guardian’s diplomatic editor British based relatives of Israeli hostages cap"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-08ec79bd37",
+    "person_name": "Andrew Mitchell",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      " Westminster attended by Foreign Office minister Andrew Mitchell and the deputy Israeli ambassador Oren "
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-6c80abcf59",
+    "person_name": "Talat Barhoum",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      "illed 16 people, half of them children. Dr Talat Barhoum at Rafah’s el-Najjar Hospital confirmed"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-2cc4433747",
+    "person_name": "Hakan Fidan",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      " conference in Jordan, Turkey’s foreign minister Hakan Fidan said he has held calls with his counter"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-8200466ddf",
+    "person_name": "IRNA",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      ", bringing the death toll to nine,” the official IRNA news agency said, quoting Alireza Marha"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-fb6ebfcfe1",
+    "person_name": "Yair Lapid",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      " including opposition leader and former prime minister Yair Lapid, the officials told NBC. The broadcaste"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-e347573377",
+    "person_name": "Mahmud Abbas",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      "Brigades, the armed wing of Palestinian president Mahmud Abbas’s Fatah party, said. Forty-six people w"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-06e49d0c0f",
+    "person_name": "Patrick Wintour",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      " including this piece by our diplomatic correspondent Patrick Wintour . He covered Tuesday’s attack by Iran o"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-a4cdde8f38",
+    "person_name": "Young Journalist Club",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/18/middle-east-crisis-live-updates-latest-news-us-military-strikes-houthi-rebels-yemen-pakistan-attack-iran"
+    ],
+    "role_snippets": [
+      " said on Thursday according to the semi-official Young Journalist Club news agency. Reports of the attack came"
+    ],
+    "image_url": "https://media.guim.co.uk/16998ec8011ab8009a17a6b1b3e4103415b70524/0_85_4000_2400/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-f962cc535f",
+    "person_name": "Hage Geingob",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "role_snippets": [
+      "draw lessons from its horrific history, president Hage Geingob expresses deep concern with the shockin"
+    ],
+    "image_url": "https://media.guim.co.uk/885dfc9ba3e93987912f6ff40460e85abfe16561/0_491_7363_4418/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-c36685ca82",
+    "person_name": "Sayyed Hassan Nasrallah",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "role_snippets": [
+      "Yemen as an act of stupidity, Hezbollah leader Sayyed Hassan Nasrallah said the Houthis would continue targeti"
+    ],
+    "image_url": "https://media.guim.co.uk/885dfc9ba3e93987912f6ff40460e85abfe16561/0_491_7363_4418/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-27417ff55b",
+    "person_name": "Sahar Tibi",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "role_snippets": [
+      "e people who were killed were named as: Dr Sahar Tibi, an education lecturer, Faisal Tibi, a "
+    ],
+    "image_url": "https://media.guim.co.uk/885dfc9ba3e93987912f6ff40460e85abfe16561/0_491_7363_4418/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-01cf16714f",
+    "person_name": "Wael",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "role_snippets": [
+      "ho spoke via a video feed). Palestinian journalist Wael al-Dahdouh, who works for Al Jazeera an"
+    ],
+    "image_url": "https://media.guim.co.uk/885dfc9ba3e93987912f6ff40460e85abfe16561/0_491_7363_4418/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-1ab9e53eb1",
+    "person_name": "Osama Hamdan",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/live/2024/jan/14/middle-east-crisis-live-netanyahu-says-world-court-cannot-stop-israel-in-gaza-as-war-enters-100th-day"
+    ],
+    "role_snippets": [
+      "ence in Beirut, the Lebanon-based Hamas leader Osama Hamdan said: “Some medicine will be used to tr"
+    ],
+    "image_url": "https://media.guim.co.uk/885dfc9ba3e93987912f6ff40460e85abfe16561/0_491_7363_4418/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-d99802dcf6",
+    "person_name": "Khalifa Haftar",
+    "person_role": "military commander",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2014/aug/04/-sp-middle-east-politics-2014-egypt-syria-palestine-iraq-gaza"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2014/aug/04/-sp-middle-east-politics-2014-egypt-syria-palestine-iraq-gaza"
+    ],
+    "role_snippets": [
+      "ed jihadists of Ansar al-Sharia. Former general Khalifa Haftar is waging a war of “dignity” against Is"
+    ],
+    "image_url": "https://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/4/1407166436615/A-Yemeni-boy-body-painted-004.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": true,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-c06133ba06",
+    "person_name": "Olivia Bailey",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/politics/live/2026/jun/25/andy-burnham-rachel-reeves-keir-starmer-uk-politics-latest-news-updates"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/politics/live/2026/jun/25/andy-burnham-rachel-reeves-keir-starmer-uk-politics-latest-news-updates"
+    ],
+    "role_snippets": [
+      "or gender identity. PA says: Equalities minister Olivia Bailey told the Commons: “This bill does not r"
+    ],
+    "image_url": "https://media.guim.co.uk/ee5e29adad7546123929dd5f156720461349e890/0_517_2456_1965/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-930cd03484",
+    "person_name": "Hanan Balkhy",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/mar/26/who-warns-of-health-crisis-unfolding-in-real-time-across-middle-east"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/world/2026/mar/26/who-warns-of-health-crisis-unfolding-in-real-time-across-middle-east"
+    ],
+    "role_snippets": [
+      "must be treated as “safe havens”, urged Dr Hanan Balkhy , the WHO’s regional director for the E"
+    ],
+    "image_url": "https://media.guim.co.uk/721f37747765cad93f4f8b359f06ce60cf6e8b60/87_0_686_549/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-24995fcdde",
+    "person_name": "Mustafa Ibrahim",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/global-development/2026/mar/25/heroism-horror-and-the-pits-of-hell-inside-the-last-days-of-el-fasher"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/global-development/2026/mar/25/heroism-horror-and-the-pits-of-hell-inside-the-last-days-of-el-fasher"
+    ],
+    "role_snippets": [
+      " ward of the last functioning hospital, Dr Mustafa Ibrahim was jumpy. Several women were in labour"
+    ],
+    "image_url": "https://media.guim.co.uk/694f568b3f0dd77901f4ba7365b0966bd80ae4dc/1973_454_4883_3908/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-1df38cbe20",
+    "person_name": "Anas",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/global-development/2025/dec/26/inspiring-people-we-met-around-the-world-in-2025-part-two"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/global-development/2025/dec/26/inspiring-people-we-met-around-the-world-in-2025-part-two"
+    ],
+    "role_snippets": [
+      " the IDF I first interviewed Al Jazeera journalist Anas al-Sharif for a story on his colleague "
+    ],
+    "image_url": "https://media.guim.co.uk/44ebdcbb74a36bc2e51198bb8c6cf915fdc863eb/378_241_1316_1053/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-5265fa2d88",
+    "person_name": "Abraha Gebreegziabher",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/global-development/2025/dec/26/inspiring-people-we-met-around-the-world-in-2025-part-two"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/global-development/2025/dec/26/inspiring-people-we-met-around-the-world-in-2025-part-two"
+    ],
+    "role_snippets": [
+      "r who cared for Tigray’s rape survivors Dr Abraha Gebreegziabher still remembers the first of the girls "
+    ],
+    "image_url": "https://media.guim.co.uk/44ebdcbb74a36bc2e51198bb8c6cf915fdc863eb/378_241_1316_1053/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-020c013fcb",
+    "person_name": "Adnan Radi",
+    "person_role": "doctor",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/global-development/ng-interactive/2025/dec/22/childbirth-under-attack-how-women-and-babies-became-targets-in-conflicts-around-the-world"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/global-development/ng-interactive/2025/dec/22/childbirth-under-attack-how-women-and-babies-became-targets-in-conflicts-around-the-world"
+    ],
+    "role_snippets": [
+      "rating rooms and maternity wards,” says Dr Adnan Radi, head of the gynecology and obstetrics "
+    ],
+    "image_url": "https://media.guim.co.uk/84cf6579d2a3a5277269d09dd5640fef049e99fa/0_0_5000_4000/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": true,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-21297e6e96",
+    "person_name": "Omar",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/news/2025/nov/19/an-existential-battle-of-interests-what-the-sudanese-war-is-actually-about",
+      "https://www.theguardian.com/news/2025/nov/12/from-kenya-to-madagascar-the-african-countries-struggling-to-escape-old-politics"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/news/2025/nov/19/an-existential-battle-of-interests-what-the-sudanese-war-is-actually-about",
+      "https://www.theguardian.com/news/2025/nov/12/from-kenya-to-madagascar-the-african-countries-struggling-to-escape-old-politics"
+    ],
+    "role_snippets": [
+      "’s popular revolution of 2019, in which president Omar al-Bashir who ruled Sudan for almost 30",
+      " Sudan’s 2019 revolution, which toppled president Omar al Bashir, who had ruled for almost 30 "
+    ],
+    "image_url": "https://media.guim.co.uk/fde6849e61f33dc4c7ac8a56e45bf8edcda2bf01/0_1_2065_1651/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-1775ceadad",
+    "person_name": "Michael Crick",
+    "person_role": "journalist",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/politics/live/2025/nov/18/labour-asylum-seekers-keir-starmer-reform-nigel-farage-uk-politics-latest-news"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/politics/live/2025/nov/18/labour-asylum-seekers-keir-starmer-reform-nigel-farage-uk-politics-latest-news"
+    ],
+    "role_snippets": [
+      "antisemitic comments. The investigative journalist Michael Crick covered these claims in some detail whe"
+    ],
+    "image_url": "https://media.guim.co.uk/60fec0b91918b4fc06cddf7732a6d1ecaa1e5852/746_0_3448_2758/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": true,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": false,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-d4cbc681d1",
+    "person_name": "Dan Jarvis",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/politics/live/2025/nov/18/labour-asylum-seekers-keir-starmer-reform-nigel-farage-uk-politics-latest-news"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/politics/live/2025/nov/18/labour-asylum-seekers-keir-starmer-reform-nigel-farage-uk-politics-latest-news"
+    ],
+    "role_snippets": [
+      "inkedIn, ahead of statement by security minister Dan Jarvis, the security minister, will soon make "
+    ],
+    "image_url": "https://media.guim.co.uk/60fec0b91918b4fc06cddf7732a6d1ecaa1e5852/746_0_3448_2758/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-dd81601488",
+    "person_name": "Nigel Farage",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/politics/live/2025/nov/18/labour-asylum-seekers-keir-starmer-reform-nigel-farage-uk-politics-latest-news"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/politics/live/2025/nov/18/labour-asylum-seekers-keir-starmer-reform-nigel-farage-uk-politics-latest-news"
+    ],
+    "role_snippets": [
+      " backed a wealth tax. But the Reform UK leader Nigel Farage has consistently opposed the idea, sayi"
+    ],
+    "image_url": "https://media.guim.co.uk/60fec0b91918b4fc06cddf7732a6d1ecaa1e5852/746_0_3448_2758/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-1677157879",
+    "person_name": "Hassan",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/global-development/2025/nov/18/tanzania-africa-governance-human-rights-tanzania-samia-suluhu-hassan-uganda-drc-rwanda-sudan"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/global-development/2025/nov/18/tanzania-africa-governance-human-rights-tanzania-samia-suluhu-hassan-uganda-drc-rwanda-sudan"
+    ],
+    "role_snippets": [
+      "en Magufuli died suddenly in 2021, vice-president Hassan, a Zanzibari and the first woman to lea"
+    ],
+    "image_url": "https://media.guim.co.uk/597f1957ddb58bdcf12ca37b70fa241627fd3b3e/530_0_3911_3129/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  },
+  {
+    "record_id": "PER-b8ec0ff696",
+    "person_name": "William Ruto",
+    "person_role": "political leader",
+    "verification_status": "unverified",
+    "confidence_level": "low",
+    "source_urls": [
+      "https://www.theguardian.com/news/2025/nov/12/from-kenya-to-madagascar-the-african-countries-struggling-to-escape-old-politics"
+    ],
+    "related_articles": [
+      "https://www.theguardian.com/news/2025/nov/12/from-kenya-to-madagascar-the-african-countries-struggling-to-escape-old-politics"
+    ],
+    "role_snippets": [
+      " have achieved breakthroughs. In Kenya, president William Ruto, a broadly intransigent and fiery polit"
+    ],
+    "image_url": "https://media.guim.co.uk/7b6d609593ef1a61735acf2e0d55bd8e04dcf851/0_0_3938_3151/500.jpg",
+    "image_source": "The Guardian",
+    "image_license": "Guardian Content API - internal use; no republication",
+    "image_available": true,
+    "notes": "Name + role explicitly present in Guardian source text (Pass-2).",
+    "update_mode": "new",
+    "last_updated": "2026-07-18T22:41:47+00:00",
+    "child_flag": false,
+    "adult_flag": false,
+    "doctor_flag": false,
+    "nurse_flag": false,
+    "medic_flag": false,
+    "journalist_flag": false,
+    "teacher_flag": false,
+    "student_flag": false,
+    "aid_worker_flag": false,
+    "leader_flag": true,
+    "commander_flag": false,
+    "civilian_flag": false,
+    "combatant_flag": false
+  }
+]

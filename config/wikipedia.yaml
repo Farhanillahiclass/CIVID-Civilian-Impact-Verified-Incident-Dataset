@@ -1,0 +1,18 @@
+# Wikipedia / Wikimedia adapter config
+# Primary: MediaWiki REST summary API + Action API. No auth required.
+rest_summary_api: "https://en.wikipedia.org/api/rest_v1/page/summary/"
+action_api: "https://en.wikipedia.org/w/api.php"
+language: "en"
+# Pages to extract (verified-incident relevant, scope-locked to project phases)
+titles:
+  - "Gaza humanitarian crisis"
+  - "Gaza genocide"
+  - "Gaza war"
+  - "Sudanese civil war (2023-present)"
+  - "Sudanese humanitarian crisis"
+  - "Israel–Iran war (2024)"
+  - "Yemeni civil war (2014-present)"
+  - "Casualties of the Gaza war"
+max_items_per_run: 20
+request_rate_per_sec: 1.0
+enabled: true
